@@ -2,6 +2,8 @@
 
 本项目先提供完整本地候选包。推送仓库与发布 Pages 是不同的动作：前者上传项目文件，后者让网页可从互联网上访问。
 
+当前状态（2026-10-08）：用户已确认创建公开仓库，项目已推送至 [TUANZIDING/clinical-stats-languages-guide](https://github.com/TUANZIDING/clinical-stats-languages-guide)，自动检查首次执行通过。GitHub Pages 尚未启用。
+
 ## 1. 确认仓库范围
 
 建议名称：`clinical-stats-languages-guide`。确认账号、名称和**公开 / 私有**可见性；不要把已有同名仓库视为可覆盖目标。

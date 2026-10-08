@@ -2,6 +2,8 @@
 
 **从研究问题出发，选择统计方法、学习工具与 AI 协作方式。**
 
+[公开仓库](https://github.com/TUANZIDING/clinical-stats-languages-guide) · [自动检查记录](https://github.com/TUANZIDING/clinical-stats-languages-guide/actions/workflows/checks.yml)
+
 ![医学统计学习实验室：问题、设计、方法、复现](docs/assets/cover.svg)
 
 面向没有编程基础的临床科研人员。你不需要先成为程序员，但需要说清楚：研究对象是谁、比较什么、每一行代表什么、希望估计什么。
@@ -75,7 +77,7 @@ tests/          向导关键分支与信息不足保护检查
 
 运行 `npm test` 检查向导关键分支；运行 `python3 scripts/check_project.py` 检查本地链接与数据一致性。示例和图表的重建命令见 [examples/README.md](examples/README.md)。
 
-GitHub Pages 工作流已准备，但只接受手动触发。推送仓库、选择公开范围与启用 Pages 需要仓库所有者决定。具体步骤见 [发布说明](docs/publishing.md)。
+项目已按仓库所有者确认的范围上传为公开仓库。GitHub Pages 工作流已准备，只接受手动触发；网页发布仍需要单独启用。具体步骤见 [发布说明](docs/publishing.md)。
 
 内容核查日期：**2026-10-08**。软件文档与授权条款会变化；本指南不声称完成了真实数据分析、软件易用性试验或正式临床研究方法学审查。具体执行验证状态见 [VALIDATION.md](VALIDATION.md)。
 

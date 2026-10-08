@@ -15,7 +15,10 @@
 | SAS 示例 | 未执行 | 本机无 SAS；核查官方 TTEST 参数及 Satterthwaite 输出选择 |
 | 浏览器跨视口/视觉回归验收 | 未执行 | 已提供响应式规则和轻量静态自检，不声称完成浏览器验收 |
 | 本地页面人工预览 | 已查看 | 当前面板视口显示正常；两独立组示例和 AI 提问生成均已查看；非全面浏览器验收 |
-| GitHub Actions | 未执行 | 只有本地工作流配置，未推送远端 |
-| 仓库上传 / GitHub Pages | 未执行 | 等待账号范围与可见性确认 |
+| GitHub Actions | 已执行，通过 | [首次检查日志](https://github.com/TUANZIDING/clinical-stats-languages-guide/actions/runs/37715736970)，教学代码提交 `9410bc855d7d54129f309a8d3f03d6d18a643bfe`；涵盖向导、链接、JS 语法及 R/Python/C++ 数值核对 |
+| 公开仓库上传 | 已执行，已核对远端文件 | 用户明确确认公开；[TUANZIDING/clinical-stats-languages-guide](https://github.com/TUANZIDING/clinical-stats-languages-guide) |
+| GitHub Pages | 未启用 / 未发布 | 已备好手动工作流；本次授权范围为公开仓库创建与推送 |
+
+首次远端检查提示部分 Action 的 Node 20 运行时已弃用；后续配置已改为官方 Node 24 Action，并固定 Ubuntu 24.04。工作流的后续执行状态可在仓库 Actions 页面查看。
 
 这些检查证明特定教学计算和代码分支的一致性，不证明选法覆盖所有医学问题，也不验证真实研究的模型假设或 AI 决策正确性。
