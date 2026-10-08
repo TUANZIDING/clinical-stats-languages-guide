@@ -10,14 +10,16 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="method-engine.js"></script>
   <script defer src="assets/demo-result.js"></script>
+  <script defer src="assets/clinical-resultsv2.0.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="report-labv2.0.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="site-header">
     <a class="wordmark" href="#main" aria-label="医学统计学习实验室首页"><span class="mark" aria-hidden="true">Σ</span><span>医学统计<span class="wordmark-sub">学习实验室</span></span></a>
-    <nav aria-label="主导航"><a href="#navigator">方法向导</a><a href="#software">选工具</a><a href="#ai">AI 协作</a><a href="#practice">动手练习</a></nav>
-    <span class="edition">入门版 <span>2026.10</span></span>
+    <nav aria-label="主导航"><a href="#navigator">方法向导</a><a href="#software">选工具</a><a href="#ai">AI 协作</a><a href="#practice">动手练习</a><a href="#reporting">统计实操</a></nav>
+    <span class="edition">实操版 v2.0 <span>2026.10</span></span>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -124,6 +126,21 @@ result = stats.ttest_ind(
 result.confidence_interval(0.95)</code></pre></div></div><p class="small">这两段是关键指令；完整数据读入、检查和输出脚本位于仓库 examples/。SAS 示例与 C++（需 Boost）也使用同一数据和方向。运行验证状态见仓库 VALIDATION.md。</p></details>
       <div class="quiz"><div><p class="eyebrow">CHECK YOUR UNDERSTANDING</p><h3>同一患者前后阳性/阴性，<br>可以直接当两个独立组吗？</h3></div><div><button class="button secondary" id="quiz-reveal" type="button" aria-expanded="false" aria-controls="quiz-answer">展开解析</button><p id="quiz-answer" hidden>应该保留配对信息。讨论 McNemar 等配对方案，核对逐对记录和不一致对；前后总阳性人数不够。</p></div></div>
     </section>
+
+    <section class="report-section section" id="reporting" aria-labelledby="report-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">REPORTING LAB / V2.0</p><h2 id="report-title">从一张基线表，<br>走到可核查的报告。</h2></div><p>96 个独立模拟对象，A / B 各 48 个。<br>只做教学计算，不提供临床疗效证据。</p></div>
+      <div class="report-path" aria-label="统计报告工作流"><span>01 变量字典</span><span>02 Table 1</span><span>03 分布诊断</span><span>04 效应与 CI</span><span>05 人工复核</span></div>
+      <div class="lab-intro"><div><h3>先知道分母，再读百分比。</h3><p>基线表按每个变量的已知记录汇总。类别百分比排除该变量缺失；随访结局另行报告。默认不加基线 P 值，也不以基线显著性筛选协变量。</p></div><div class="lab-meta"><span>一个对象 / 一行</span><strong>48 + 48</strong><p>主要结局缺失 3 / 5<br>实际分析 n = 45 / 43</p></div></div>
+      <div class="table-scroll"><table class="method-table clinical-table" id="clinical-table"><caption>Table 1 · 独立模拟对象的基线描述</caption><thead><tr><th scope="col">基线变量 / 汇总规则</th><th scope="col">A 组（48）</th><th scope="col">B 组（48）</th></tr></thead><tbody id="clinical-table-body"><tr><td colspan="3">启用 JavaScript 查看表格，或打开下方离线基线表。</td></tr></tbody></table></div>
+      <p class="small muted">SD：样本标准差；Q1 / Q3：25% / 75% 分位数，线性插值。F / M 是模拟分类标签。已知 n 与缺失 n 按变量计算。</p>
+      <div class="lab-links"><a href="assets/table-onev2.0.html">离线基线表 ↗</a><a href="assets/table-onev2.0.csv" download>下载 Table 1 CSV ↓</a><a href="assets/synthetic-clinicalv2.0.csv" download>模拟源数据 ↓</a><a href="临床统计实操v2.0.md">完整实操说明 ↗</a></div>
+      <details class="lab-diagnostics"><summary>分布与方差检查：提供线索，不自动换方法</summary><div class="diagnostic-content"><p>先看独立性、目标量、原始分布与极端值。Shapiro P&gt;0.05 不证明正态；Levene P&gt;0.05 不证明方差相等。Welch 不要求等方差，仍有适用条件。偏态不自动等于“必须换秩检验”。</p><img src="assets/distribution-checkv2.0.png" width="1920" height="1280" loading="lazy" alt="上排为第28天结局的两组Q–Q图，下排为基线CRP直方图；不同变量分开诊断，无自动选法阈值。"><p class="small">上排：随访结局 A n=45 / B n=43，每点为独立模拟对象，参考线为正态分位拟合。下排：基线 CRP A n=44 / B n=45，柱高为计数。缺失不绘制、未删除极端值。</p><p id="diagnostic-values" class="small muted"></p></div></details>
+      <figure class="lab-effect"><img src="assets/clinical-effectv2.0.png" width="1920" height="768" loading="lazy" alt="第28天收缩压原始模拟点与A减B均值差的Welch 95%置信区间，均值差为9.03 mmHg，区间2.53到15.53。"><figcaption>左：每点一个有结局记录的独立模拟对象，横线为组均值。右：点为 A−B 均值差，线为 95% CI。A n=45 / B n=43；缺失 3 / 5，未插补、未删除异常值。</figcaption></figure>
+      <div class="lab-report"><div class="lab-report-heading"><div><p class="eyebrow">SIMULATED REPORT / CHECK EVERY NUMBER</p><h3>看看方法、结果和图注如何对应。</h3></div><a href="assets/clinical-reportv2.0.md" download>下载模拟报告 ↓</a></div><div class="report-tabs" role="tablist" aria-label="模拟报告段落"><button type="button" id="report-methods-tab" role="tab" aria-selected="true" aria-controls="report-output" data-report="methods">方法段</button><button type="button" id="report-results-tab" role="tab" aria-selected="false" aria-controls="report-output" tabindex="-1" data-report="results">结果段</button><button type="button" id="report-legend-tab" role="tab" aria-selected="false" aria-controls="report-output" tabindex="-1" data-report="legend">图注</button></div><div id="report-output" role="tabpanel" aria-labelledby="report-methods-tab"><label class="sr-only" for="report-text">模拟报告文字</label><textarea id="report-text" readonly rows="8"></textarea></div><div class="report-actions"><button type="button" class="button secondary" id="copy-report">复制当前段落</button><span class="small muted">文字来自已计算的模拟输出；真实研究需重新制定并审核方案。</span></div><p id="report-copy-status" class="small" role="status"></p></div>
+      <div class="lab-review"><div><p class="eyebrow">HUMAN REVIEW / AI CAN HELP</p><h3>带着这些问题去复核。</h3><p>AI 可以找缺口、核对参数与报告一致性。你需要判断来源、实际设计和数据质量。</p><a href="assets/统计核查提示词v2.0.md">打开 AI / Codex 核查提示词 ↗</a></div><fieldset><legend>练习记录：逐项读过并能解释</legend><label><input type="checkbox" data-review>独立分析单位与主要结局时点</label><label><input type="checkbox" data-review>Table 1 分母及缺失数</label><label><input type="checkbox" data-review>比较方向、效应单位与 CI 含义</label><label><input type="checkbox" data-review>诊断、缺失与异常值处理</label><label><input type="checkbox" data-review>调整、多重性与复现记录</label><p id="review-progress" class="small" role="status">已记录 0 / 5 项。勾选是学习记录，仍需人工审核。</p></fieldset></div>
+      <div class="lab-resources"><div class="form-heading"><h3>接着学：从任务选择资源。</h3><a href="相关项目导航v2.0.md">查看 12 个项目及使用边界 ↗</a></div><div class="resource-cards"><a href="https://github.com/htlin222/learn-r-with-ai" target="_blank" rel="noopener noreferrer"><span>LEARNING</span><strong>learn-r-with-ai ↗</strong><p>临床情境与 AI 辅助学 R</p></a><a href="https://github.com/ddsjoberg/gtsummary" target="_blank" rel="noopener noreferrer"><span>TABLE 1</span><strong>gtsummary ↗</strong><p>明确汇总规则与缺失展示</p></a><a href="https://github.com/IndrajeetPatil/ggstatsplot" target="_blank" rel="noopener noreferrer"><span>STATISTICAL FIGURES</span><strong>ggstatsplot ↗</strong><p>核对图中检验与效应定义</p></a><a href="https://github.com/jamovi/jamovi" target="_blank" rel="noopener noreferrer"><span>START WITHOUT CODE</span><strong>jamovi ↗</strong><p>先用菜单理解设计与结果</p></a></div></div>
+      <p class="source-line">报告依据：<a href="https://www.equator-network.org/reporting-guidelines/sampl/" target="_blank" rel="noopener noreferrer">SAMPL</a>；随机试验基线报告：<a href="https://www.bmj.com/content/389/bmj-2024-081124" target="_blank" rel="noopener noreferrer">CONSORT 2025</a>。可选 gtsummary / ggstatsplot 示例与运行状态见项目文档。网页无需这些包即可离线使用。</p>
+    </div></section>
 
     <section class="sources-section section" id="sources" aria-labelledby="sources-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">READ THE SOURCE</p><h2 id="sources-title">让每一步，有据可查。</h2></div><p>核查日期：2026-10-08<br>来源支持原理与工具角色，不构成软件排名。</p></div><div class="source-grid">
       <a href="https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf" target="_blank" rel="noopener noreferrer"><span>01 / REPORTING</span><strong>SAMPL 医学统计报告指南 ↗</strong><p>方法、效应量、置信区间与复核信息。</p></a>

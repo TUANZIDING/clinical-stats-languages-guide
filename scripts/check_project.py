@@ -22,6 +22,8 @@ def check_link(path, raw, ids=None):
     target=(path.parent/unquote(parsed.path)).resolve()
     if not target.is_relative_to(ROOT) or not target.exists():
         errors.append(f'{path.relative_to(ROOT)}: broken local link {raw}')
+    if path.suffix == '.html' and not target.is_relative_to(ROOT/'docs'):
+        errors.append(f'{path.relative_to(ROOT)}: link outside standalone docs web root: {raw}')
     links+=1
 
 class PageParser(HTMLParser):
@@ -35,7 +37,7 @@ class PageParser(HTMLParser):
             if tag in ('img','script','link') and ref and urlsplit(ref).scheme:self.external.append(ref)
 
 for path in ROOT.rglob('*.md'):
-    if '.git' in path.parts:continue
+    if any(part in ('.git','build','node_modules','.venv','__pycache__') for part in path.relative_to(ROOT).parts):continue
     for raw in re.findall(r'!?\[[^\]]*\]\(([^)\s]+)\)',path.read_text(encoding='utf-8')):check_link(path,raw)
 for path in (ROOT/'docs').rglob('*.html'):
     parser=PageParser();parser.feed(path.read_text(encoding='utf-8'))

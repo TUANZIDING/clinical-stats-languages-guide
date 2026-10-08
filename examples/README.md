@@ -76,3 +76,11 @@ python3 scripts/build_assets.py
 ```
 
 它从同一 CSV 重建 PNG/SVG、基准 JSON 和网页本地数值文件。macOS 使用已有中文字体；Linux 如需完整中文图表，应提供 Noto CJK 字体。不影响离线网页使用。
+## v2.0 临床报告实操
+
+原来的四语言比较继续使用相同 24 行数据。新增的 96 行模拟案例是另一个教学任务，包含变量级缺失、Table 1、诊断和完整报告。运行命令、可选 R 包及限制见 [临床统计实操 v2.0](../docs/临床统计实操v2.0.md)。
+
+- 核心报告重建：`python3 scripts/clinical-reportv2.0.py`
+- 76 个 R / Python 输出核对及 7 项保护检查：`python3 tests/clinical-reportv2.0.py`
+- 可选 gtsummary：`Rscript examples/r/clinical-tablesv2.0.R`
+- 加 ggstatsplot：`Rscript examples/r/clinical-tablesv2.0.R --plot`

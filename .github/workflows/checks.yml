@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '22'
@@ -22,6 +24,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y r-base libboost-dev
       - name: Check method rules
         run: npm test
+      - name: Check clinical reporting and R cross-check
+        run: python tests/clinical-reportv2.0.py
+      - name: Check versioned new filenames
+        run: python scripts/check-filenamesv2.0.py
       - name: Check links and offline assets
         run: python scripts/check_project.py
       - name: Compile C++ teaching example
@@ -34,3 +40,5 @@ jobs:
         run: |
           node --check docs/app.js
           node --check docs/method-engine.js
+          node --check docs/report-labv2.0.js
+          node --check docs/assets/clinical-resultsv2.0.js
