@@ -1,0 +1,23 @@
+{
+  "pmid": "30695049",
+  "doi": "10.1371/journal.pone.0211196",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350963/",
+  "extraction": "Manual transcription of Methods exclusions, Table 1 and the first two model columns of Tables 2/3, frozen independently of replay output; authors Nickels, Hopf, Pfeiffer, Schuster (2019), CC BY.",
+  "rounding_tolerance": 0.0050001,
+  "percent_tolerance": 0.0500001,
+  "scope": "Counts, descriptives, 16 education coefficients/ORs and 32 CI endpoints. Not all paper results, supplementary models or P values.",
+  "flow": {"analysis": 19756, "refractive_surgery_yes": 350, "refractive_surgery_missing": 24, "cataract_surgery_yes": 1194, "cataract_surgery_missing": 6},
+  "descriptives": [
+    {"education": "1", "n": 2457, "mean_spherical_equivalent": 0.34, "myopia_percent": 16.8},
+    {"education": "2", "n": 3275, "mean_spherical_equivalent": -0.14, "myopia_percent": 23.5},
+    {"education": "3", "n": 4805, "mean_spherical_equivalent": -0.33, "myopia_percent": 28.6},
+    {"education": "4", "n": 5397, "mean_spherical_equivalent": -0.70, "myopia_percent": 35.4},
+    {"education": "5", "n": 3822, "mean_spherical_equivalent": -1.22, "myopia_percent": 45.0}
+  ],
+  "models": {
+    "linear_crude": [[-0.45,-0.60,-0.30],[-0.68,-0.83,-0.52],[-1.07,-1.22,-0.92],[-1.65,-1.83,-1.48]],
+    "linear_adjusted": [[-0.23,-0.36,-0.10],[-0.49,-0.63,-0.35],[-0.80,-0.93,-0.66],[-1.47,-1.63,-1.30]],
+    "logistic_crude": [[1.42,1.15,1.74],[1.87,1.57,2.23],[2.66,2.22,3.19],[4.05,3.37,4.86]],
+    "logistic_adjusted": [[1.27,1.04,1.57],[1.71,1.43,2.03],[2.32,1.94,2.78],[3.74,3.12,4.48]]
+  }
+}

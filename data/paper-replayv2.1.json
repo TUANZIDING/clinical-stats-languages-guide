@@ -1,0 +1,293 @@
+{
+  "pmid": "30695049",
+  "doi": "10.1371/journal.pone.0211196",
+  "scope": "Selected primary models and sample flow; not whole-paper replication",
+  "flow": {
+    "downloaded_demographics": 51623,
+    "complete_core": 21330,
+    "refractive_surgery_yes": 350,
+    "refractive_surgery_missing": 24,
+    "cataract_surgery_yes": 1194,
+    "cataract_surgery_missing": 6,
+    "analysis": 19756
+  },
+  "descriptives": [
+    {
+      "education": "1",
+      "n": 2457,
+      "mean_spherical_equivalent": 0.337543752543753,
+      "myopia_percent": 16.8091168091168
+    },
+    {
+      "education": "2",
+      "n": 3275,
+      "mean_spherical_equivalent": -0.143978625954199,
+      "myopia_percent": 23.5419847328244
+    },
+    {
+      "education": "3",
+      "n": 4805,
+      "mean_spherical_equivalent": -0.331833506763789,
+      "myopia_percent": 28.5535900104058
+    },
+    {
+      "education": "4",
+      "n": 5397,
+      "mean_spherical_equivalent": -0.700665184361683,
+      "myopia_percent": 35.4270891235872
+    },
+    {
+      "education": "5",
+      "n": 3822,
+      "mean_spherical_equivalent": -1.21705520669806,
+      "myopia_percent": 45.0287807430665
+    }
+  ],
+  "estimates": [
+    {
+      "model": "linear_crude",
+      "term": "DMDEDUC22",
+      "n": 19756,
+      "estimate": -0.453832466792126,
+      "lower": -0.606546939262451,
+      "upper": -0.301117994321802,
+      "normal_lower": -0.603944486414463,
+      "normal_upper": -0.30372044716979,
+      "p": 1.02010816220466e-07,
+      "_row": "linear_crude.1"
+    },
+    {
+      "model": "linear_crude",
+      "term": "DMDEDUC23",
+      "n": 19756,
+      "estimate": -0.677209040333662,
+      "lower": -0.8358205159466,
+      "upper": -0.518597564720723,
+      "normal_lower": -0.833117570510222,
+      "normal_upper": -0.521300510157101,
+      "p": 1.86763593384016e-12,
+      "_row": "linear_crude.2"
+    },
+    {
+      "model": "linear_crude",
+      "term": "DMDEDUC24",
+      "n": 19756,
+      "estimate": -1.07016011679262,
+      "lower": -1.22078036664044,
+      "upper": -0.919539866944803,
+      "normal_lower": -1.21821360206443,
+      "normal_upper": -0.922106631520815,
+      "p": 2.22701345898021e-22,
+      "_row": "linear_crude.3"
+    },
+    {
+      "model": "linear_crude",
+      "term": "DMDEDUC25",
+      "n": 19756,
+      "estimate": -1.65426330138584,
+      "lower": -1.83256355839479,
+      "upper": -1.47596304437688,
+      "normal_lower": -1.82952509056562,
+      "normal_upper": -1.47900151220606,
+      "p": 7.22725769889669e-29,
+      "_row": "linear_crude.4"
+    },
+    {
+      "model": "linear_adjusted",
+      "term": "DMDEDUC22",
+      "n": 19756,
+      "estimate": -0.231267962494611,
+      "lower": -0.366329633239706,
+      "upper": -0.0962062917495168,
+      "normal_lower": -0.363815649482001,
+      "normal_upper": -0.0987202755072222,
+      "p": 0.00108737533505244,
+      "_row": "linear_adjusted.1"
+    },
+    {
+      "model": "linear_adjusted",
+      "term": "DMDEDUC23",
+      "n": 19756,
+      "estimate": -0.49201432844038,
+      "lower": -0.633617041132228,
+      "upper": -0.350411615748533,
+      "normal_lower": -0.63098130504374,
+      "normal_upper": -0.353047351837021,
+      "p": 2.22044204848326e-09,
+      "_row": "linear_adjusted.2"
+    },
+    {
+      "model": "linear_adjusted",
+      "term": "DMDEDUC24",
+      "n": 19756,
+      "estimate": -0.79551782705678,
+      "lower": -0.929727323625486,
+      "upper": -0.661308330488073,
+      "normal_lower": -0.927229201896041,
+      "normal_upper": -0.663806452217519,
+      "p": 7.11099164591299e-18,
+      "_row": "linear_adjusted.3"
+    },
+    {
+      "model": "linear_adjusted",
+      "term": "DMDEDUC25",
+      "n": 19756,
+      "estimate": -1.46572486368854,
+      "lower": -1.62986435261246,
+      "upper": -1.30158537476462,
+      "normal_lower": -1.62680912601207,
+      "normal_upper": -1.30464060136501,
+      "p": 9.92599052076597e-27,
+      "_row": "linear_adjusted.4"
+    },
+    {
+      "model": "logistic_crude",
+      "term": "DMDEDUC22",
+      "n": 19756,
+      "estimate": 1.41763095659421,
+      "lower": 1.14755680633026,
+      "upper": 1.75126627109719,
+      "normal_lower": 1.15169742758317,
+      "normal_upper": 1.7449700598112,
+      "p": 0.00154998457822733,
+      "_row": "logistic_crude.1"
+    },
+    {
+      "model": "logistic_crude",
+      "term": "DMDEDUC23",
+      "n": 19756,
+      "estimate": 1.86867963055536,
+      "lower": 1.5606129047882,
+      "upper": 2.23755907114356,
+      "normal_lower": 1.56541142492217,
+      "normal_upper": 2.23070018913791,
+      "p": 1.6449057353306e-09,
+      "_row": "logistic_crude.2"
+    },
+    {
+      "model": "logistic_crude",
+      "term": "DMDEDUC24",
+      "n": 19756,
+      "estimate": 2.66150206446253,
+      "lower": 2.21072155984116,
+      "upper": 3.2041996458601,
+      "normal_lower": 2.21772377296398,
+      "normal_upper": 3.19408274623449,
+      "p": 3.95605796580222e-16,
+      "_row": "logistic_crude.3"
+    },
+    {
+      "model": "logistic_crude",
+      "term": "DMDEDUC25",
+      "n": 19756,
+      "estimate": 4.0467089588283,
+      "lower": 3.36075635451607,
+      "upper": 4.87266902745148,
+      "normal_lower": 3.37141072310966,
+      "normal_upper": 4.85727036614416,
+      "p": 1.02456761642478e-23,
+      "_row": "logistic_crude.4"
+    },
+    {
+      "model": "logistic_adjusted",
+      "term": "DMDEDUC22",
+      "n": 19756,
+      "estimate": 1.2742672561996,
+      "lower": 1.03329050141626,
+      "upper": 1.57144291755018,
+      "normal_lower": 1.03733010868231,
+      "normal_upper": 1.56532334946401,
+      "p": 0.0241240974500569,
+      "_row": "logistic_adjusted.1"
+    },
+    {
+      "model": "logistic_adjusted",
+      "term": "DMDEDUC23",
+      "n": 19756,
+      "estimate": 1.70732686713611,
+      "lower": 1.42900858856096,
+      "upper": 2.0398513029094,
+      "normal_lower": 1.43374967366956,
+      "normal_upper": 2.03310597712932,
+      "p": 9.54691608992589e-08,
+      "_row": "logistic_adjusted.2"
+    },
+    {
+      "model": "logistic_adjusted",
+      "term": "DMDEDUC24",
+      "n": 19756,
+      "estimate": 2.32190124365885,
+      "lower": 1.92925359874212,
+      "upper": 2.79446174874037,
+      "normal_lower": 1.93591758789937,
+      "normal_upper": 2.78484240186818,
+      "p": 3.56162828671617e-13,
+      "_row": "logistic_adjusted.3"
+    },
+    {
+      "model": "logistic_adjusted",
+      "term": "DMDEDUC25",
+      "n": 19756,
+      "estimate": 3.73992960658033,
+      "lower": 3.11193659425605,
+      "upper": 4.49465245789171,
+      "normal_lower": 3.12260257341309,
+      "normal_upper": 4.47929992156761,
+      "p": 8.55139595943344e-22,
+      "_row": "logistic_adjusted.4"
+    }
+  ],
+  "confidence_interval": "Current survey default t interval; normal Wald also recorded for version audit",
+  "domain_sensitivity": [
+    {
+      "model": "linear_adjusted_domain",
+      "term": "DMDEDUC22",
+      "n": 19756,
+      "estimate": -0.231267962494611,
+      "lower": -0.366329633239706,
+      "upper": -0.0962062917495168,
+      "normal_lower": -0.363815649482001,
+      "normal_upper": -0.0987202755072222,
+      "p": 0.00108737533505244
+    },
+    {
+      "model": "linear_adjusted_domain",
+      "term": "DMDEDUC23",
+      "n": 19756,
+      "estimate": -0.49201432844038,
+      "lower": -0.633617041132228,
+      "upper": -0.350411615748533,
+      "normal_lower": -0.63098130504374,
+      "normal_upper": -0.353047351837021,
+      "p": 2.22044204848326e-09
+    },
+    {
+      "model": "linear_adjusted_domain",
+      "term": "DMDEDUC24",
+      "n": 19756,
+      "estimate": -0.79551782705678,
+      "lower": -0.929727323625486,
+      "upper": -0.661308330488073,
+      "normal_lower": -0.927229201896041,
+      "normal_upper": -0.663806452217519,
+      "p": 7.11099164591299e-18
+    },
+    {
+      "model": "linear_adjusted_domain",
+      "term": "DMDEDUC25",
+      "n": 19756,
+      "estimate": -1.46572486368854,
+      "lower": -1.62986435261246,
+      "upper": -1.30158537476462,
+      "normal_lower": -1.62680912601207,
+      "normal_upper": -1.30464060136501,
+      "p": 9.92599052076597e-27
+    }
+  ],
+  "versions": {
+    "R": "R version 4.5.2 (2025-10-31)",
+    "survey": "4.5",
+    "foreign": "0.8.90",
+    "jsonlite": "2.0.0"
+  }
+}

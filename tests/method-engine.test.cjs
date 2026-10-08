@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { recommend, makePrompt } = require('../docs/method-engine.js');
-const base = { goal:'compare', design:'randomized', outcome:'continuous', structure:'independent', groups:'two', adjust:'no', missing:'none', distribution:'approx' };
+const base = { goal:'compare', design:'randomized', sampling:'simple', outcome:'continuous', structure:'independent', groups:'two', adjust:'no', missing:'none', distribution:'approx' };
 
 test('Incomplete descriptions never silently choose a test', () => {
   assert.equal(recommend({}).level, 'incomplete');
@@ -31,7 +31,7 @@ test('Repeated and clustered data require correlation-aware discussion', () => {
   }
 });
 test('Unknown missingness, design or dependence is explicitly incomplete', () => {
-  for (const field of ['missing','design','structure','adjust']) {
+  for (const field of ['missing','design','sampling','structure','adjust']) {
     assert.equal(recommend({...base, [field]:'unknown'}).level, 'incomplete');
   }
 });

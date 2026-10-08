@@ -4,6 +4,7 @@
   const labels = {
     goal: { describe: '描述数据', compare: '比较组别或条件', associate: '研究关联', predict: '建立预测', causal: '研究因果' },
     design: { randomized: '随机分组研究', cohort: '队列研究', casecontrol: '病例对照研究', cross: '横断面研究', other: '其他设计', unknown: '尚不清楚' },
+    sampling: { simple: '常规样本（已确认不涉及复杂抽样）', survey: '复杂抽样调查（如 NHANES）', unknown: '尚未核查抽样设计' },
     outcome: { continuous: '连续数值', binary: '二分类', ordinal: '有序等级', nominal: '无序多分类', count: '计数', survival: '事件时间（可能删失）' },
     structure: { independent: '独立观测', paired: '同一人/匹配对象两个条件', repeated: '重复测量（三个及以上时间/条件）', clustered: '中心/病区等聚类', unknown: '尚不清楚' },
     groups: { two: '两个组/条件', multi: '三个及以上组/条件' },
@@ -27,12 +28,14 @@
     correlation: ['R：相关分析', 'https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.test.html'],
     km: ['R survival：生存曲线', 'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/survfit.html'],
     gee: ['statsmodels：GEE', 'https://www.statsmodels.org/stable/gee.html'],
+    survey: ['CDC：NHANES 权重与跨周期合并', 'https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx'],
+    surveyVariance: ['CDC：复杂抽样方差与子人群分析', 'https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx'],
     survival: ['R survival：Cox 模型', 'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/coxph.html'],
     prediction: ['scikit-learn：数据泄漏', 'https://scikit-learn.org/stable/common_pitfalls.html'],
     sampl: ['SAMPL 报告指南', 'https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf']
   };
   function recommend(c) {
-    const required = ['goal', 'design', 'outcome', 'structure', 'missing'];
+    const required = ['goal', 'design', 'sampling', 'outcome', 'structure', 'missing'];
     if (c.goal === 'compare') required.push('groups', 'adjust');
     if (c.goal === 'associate') required.push('predictor', 'adjust');
     if (c.outcome === 'continuous' && c.goal === 'compare') required.push('distribution');
@@ -40,7 +43,7 @@
     if (missingFields.length) return {
       level: 'incomplete', title: '先补齐研究描述',
       reason: '还不能进入方法讨论。请选择相关选项；不知道时可以明确选择“尚不清楚”。',
-      methods: [], checks: missingFields.map(k => '待填写：' + ({goal:'研究目标',design:'研究设计',outcome:'结局类型',structure:'观测结构',missing:'缺失情况',groups:'组/条件数',adjust:'协变量调整',distribution:'分布概况',predictor:'解释变量类型'}[k])),
+      methods: [], checks: missingFields.map(k => '待填写：' + ({goal:'研究目标',design:'研究设计',sampling:'抽样设计',outcome:'结局类型',structure:'观测结构',missing:'缺失情况',groups:'组/条件数',adjust:'协变量调整',distribution:'分布概况',predictor:'解释变量类型'}[k])),
       report: ['研究问题、目标量、样本量及变量字典'], sources: ['sampl']
     };
     const result = { level: 'candidate', title: '', reason: '', methods: [],
@@ -58,6 +61,12 @@
     } else if (c.goal === 'causal') {
       set('先明确因果设计与假设', '一个检验或一个调整后的回归系数不会自动产生因果结论。', ['随机研究的预定效应估计，或有明确识别假设的观察性因果方案'], ['sampl'], true);
       result.checks.push('明确干预、对照、时间零点、随访和目标效应。', '讨论分配机制、混杂、选择偏倚、中介与时间顺序。', '说明可识别性假设及对应的敏感性分析。');
+    } else if (c.sampling === 'survey' && ['compare','associate'].includes(c.goal)) {
+      const models = {continuous:'调查加权线性模型（如 survey::svyglm）', binary:'调查加权 Logistic / 目标量对应的二项模型（如 survey::svyglm）', ordinal:'尊重抽样设计的有序模型', nominal:'尊重抽样设计的多项模型', count:'尊重抽样设计的计数 / 率模型', survival:'调查加权生存分析；核对删失与设计兼容性'};
+      set('先纳入复杂抽样设计', 'NHANES 等调查的权重、分层与 PSU 会影响估计及标准误；普通回归或普通 t 检验不能直接替代调查分析。', [models[c.outcome]], ['survey','surveyVariance'], true);
+      result.checks.push('明确模型公式、参考组与协变量依据；Logistic 的 OR 不等同 RR。');
+      if (['paired','repeated','clustered'].includes(c.structure)) result.checks.push('抽样设计之外还有相关观测：另行讨论同时处理两种结构的专门模型。');
+      if (c.outcome === 'survival') result.checks.push('核对事件、删失、随访起点、比例风险与竞争事件。');
     } else if (c.goal === 'describe') {
       set('先描述分布和数据覆盖', '描述问题不一定需要显著性检验。先把分母、单位和缺失写清楚。', c.outcome === 'survival' ? ['Kaplan–Meier 等适合删失结构的生存描述'] : c.outcome === 'continuous' ? ['点图/直方图、均值与 SD 或中位数与 IQR（依分布与目的）'] : ['频数、比例或计数率等与结局相符的描述'], c.outcome === 'survival' ? ['survival'] : []);
       result.report = ['各组/条件的样本量、分母、缺失与合适的区间估计'];
@@ -128,7 +137,16 @@
       result.level = 'review';
       result.checks.push('存在缺失：记录数量、原因与时间；完整病例分析或插补均需论证。');
     }
-    if (c.missing === 'unknown' || c.structure === 'unknown' || c.design === 'unknown' || c.adjust === 'unknown' || c.predictor === 'unknown') {
+    if (c.sampling === 'survey') {
+      result.checks.push('核对适合组件/子样本的权重、跨周期合并规则、分层与 PSU；不能只把权重当协变量。', '子人群分析保留完整调查设计后定义 domain；核查孤立 PSU 与设计自由度。', '区分未加权样本人数与加权总体估计；缺失的权重不应填 0。');
+      result.report.push('权重来源与合并公式、分层/PSU、方差估计及 domain 定义');
+      result.sources.push('survey','surveyVariance');
+      if (c.goal === 'describe') {
+        result.methods = ['调查加权的均值 / 比例 / 生存描述及设计一致的区间估计'];
+        result.level = 'review';
+      }
+    }
+    if (c.missing === 'unknown' || c.structure === 'unknown' || c.design === 'unknown' || c.sampling === 'unknown' || c.adjust === 'unknown' || c.predictor === 'unknown') {
       result.level = 'incomplete';
       result.checks.unshift('关键设计/缺失信息未确认：下列候选仅供学习，请补充后再讨论。');
     }
@@ -141,7 +159,7 @@
     return result;
   }
   function makePrompt(c, r) {
-    const names = {goal:'目标',design:'研究设计',outcome:'结局类型',structure:'分析单位与相关结构',groups:'组/条件数',adjust:'协变量调整',missing:'缺失',distribution:'分布概况',predictor:'解释变量'};
+    const names = {goal:'目标',design:'研究设计',sampling:'抽样设计',outcome:'结局类型',structure:'分析单位与相关结构',groups:'组/条件数',adjust:'协变量调整',missing:'缺失',distribution:'分布概况',predictor:'解释变量'};
     const rows = Object.keys(names).filter(k => c[k] && (k !== 'groups' || c.goal === 'compare') && (k !== 'predictor' || c.goal === 'associate') && (k !== 'distribution' || c.outcome === 'continuous')).map(k => `- ${names[k]}：${labels[k][c[k]] || '待补充'}`);
     return `请作为医学统计学习助手，先问缺失信息，再比较候选方法。不要编造数据或文献，不要追逐显著性。\n\n已知设计选项（不是完整研究方案）：\n${rows.join('\n')}\n\n待补充：研究问题与人群、目标量与比较方向、各组独立样本量和事件数、时间点、变量字典、混杂依据、缺失/删失原因、主要结局与多重性安排。\n\n离线规则向导列出的讨论起点：${r.methods.length ? r.methods.join('；') : '信息不足，尚无候选'}。请核查它们是否回答我的实际问题。\n\n请输出：\n1. 先列必须补充的信息，不知道的标“待补充”。\n2. 候选方法、目标量、适用条件、局限与诊断的比较表。\n3. 效应量、置信区间、缺失与敏感性分析方案。\n4. 可打开核查的官方文档或方法学原始来源；不确定引用标“待核查”。\n5. 用人为构造模拟数据的教学代码，说明分组方向、双侧/单侧、方差、配对和版本要求。\n6. 可复核数值与另一实现的对照步骤。\n7. 待研究团队审核的分析草案及不能支持的结论。\n\n不要直接分析真实患者数据；不要自动删缺失、填0或仅按单因素P值筛选调整变量。`;
   }

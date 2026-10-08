@@ -1,9 +1,9 @@
 {
   "name": "clinical-stats-languages-guide",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "医学科研统计选择与AI协作的离线教学指南",
   "license": "MIT",
-  "scripts": { "test": "node --test tests/method-engine.test.cjs" },
+  "scripts": { "test": "node --test tests/method-engine.test.cjs tests/published-papers-testv2.1.cjs" },
   "engines": { "node": ">=18" }
 }
