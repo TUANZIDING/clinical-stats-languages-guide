@@ -1,0 +1,125 @@
+{
+  "source": "CDC/NCHS NHANES public-use",
+  "files": [
+    {
+      "year": 1999,
+      "component": "DEMO",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.XPT",
+      "file": "1999-demov2.1.xpt",
+      "bytes": 11500560,
+      "sha256": "a17bd1ebfd6007b8dc93f16259cb090678eb6c467a39363b7e932bba15febf89"
+    },
+    {
+      "year": 1999,
+      "component": "VIX",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/VIX.XPT",
+      "file": "1999-vixv2.1.xpt",
+      "bytes": 3090400,
+      "sha256": "2ce0f725f162d6c6659391cb891261ade785a36d831cfe5c61700ef7fbe0945e"
+    },
+    {
+      "year": 1999,
+      "component": "ECQ",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ECQ.XPT",
+      "file": "1999-ecqv2.1.xpt",
+      "bytes": 473440,
+      "sha256": "4fb44b2d66474f63807df62111b5d1decdf0a33b76eb4826bfbcba50e8be6511"
+    },
+    {
+      "year": 2001,
+      "component": "DEMO",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.XPT",
+      "file": "2001-demov2.1.xpt",
+      "bytes": 3273520,
+      "sha256": "6458dc2307cee244ab6ba26f70ec78c7b842ffc68e668bc43f0ab6b9737937d9"
+    },
+    {
+      "year": 2001,
+      "component": "VIX",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/VIX_B.XPT",
+      "file": "2001-vixv2.1.xpt",
+      "bytes": 3403680,
+      "sha256": "753ac073ce081c5d259b78f37b679ac9cc3ef23107c9e05cce078784d936e7d8"
+    },
+    {
+      "year": 2001,
+      "component": "ECQ",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ECQ_B.XPT",
+      "file": "2001-ecqv2.1.xpt",
+      "bytes": 460720,
+      "sha256": "4d332934cd100a6e935483e4da3085278ef52eb8f7908941689587dae726829c"
+    },
+    {
+      "year": 2003,
+      "component": "DEMO",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.XPT",
+      "file": "2003-demov2.1.xpt",
+      "bytes": 3569840,
+      "sha256": "2a2fdb88263337bfa06f0516bfb419631595f0a0ee88fb96069bed13d1857c6f"
+    },
+    {
+      "year": 2003,
+      "component": "VIX",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/VIX_C.XPT",
+      "file": "2003-vixv2.1.xpt",
+      "bytes": 3196160,
+      "sha256": "a4dd5bf88a3e93a62881312306ffc6a95f7509123394f98a2e08e7bd0f5f9014"
+    },
+    {
+      "year": 2003,
+      "component": "ECQ",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ECQ_C.XPT",
+      "file": "2003-ecqv2.1.xpt",
+      "bytes": 409120,
+      "sha256": "4f179b95d7760964014b5d622a672f47008552818bcd4651a2da6e779741c059"
+    },
+    {
+      "year": 2005,
+      "component": "DEMO",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.XPT",
+      "file": "2005-demov2.1.xpt",
+      "bytes": 3566560,
+      "sha256": "bf9cc79cce501b2fbe5aa8d5b403b618548d02d4aefeb528335cdd9f4c40a3af"
+    },
+    {
+      "year": 2005,
+      "component": "VIX",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/VIX_D.XPT",
+      "file": "2005-vixv2.1.xpt",
+      "bytes": 3191600,
+      "sha256": "2930f0c81380e2319f15ee6902fdecb61d2bb0277805bd4ee1b6e807cdfdbe25"
+    },
+    {
+      "year": 2005,
+      "component": "ECQ",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ECQ_D.XPT",
+      "file": "2005-ecqv2.1.xpt",
+      "bytes": 474160,
+      "sha256": "7b7fd47b01b45e52bebf11d7d662e9737f3b86f3ec4f09175441502ecaefe052"
+    },
+    {
+      "year": 2007,
+      "component": "DEMO",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.XPT",
+      "file": "2007-demov2.1.xpt",
+      "bytes": 3498080,
+      "sha256": "02b8e97703d04bc99769c751881bece51ac9ba68cf18a2992a45d3bdfb856147"
+    },
+    {
+      "year": 2007,
+      "component": "VIX",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/VIX_E.XPT",
+      "file": "2007-vixv2.1.xpt",
+      "bytes": 3162880,
+      "sha256": "7f36aa7606cc4ecb7e7dacb57ceaf362c47ceb4b625d614a4264a491876aef1d"
+    },
+    {
+      "year": 2007,
+      "component": "ECQ",
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ECQ_E.XPT",
+      "file": "2007-ecqv2.1.xpt",
+      "bytes": 406320,
+      "sha256": "a136929c19e23f06c08cdd645448ece0502b5a562e75c2cee73629e6b5c12aca"
+    }
+  ]
+}

@@ -71,3 +71,7 @@
 | [ggstatsplot extract_stats](https://www.indrapatil.com/ggstatsplot/reference/extract_stats.html) | 提取图内统计进行复核，区分绘制成功和数值一致 |
 
 12 个相关仓库的作者/维护机构来源、学习用途及使用边界见 [项目导航](相关项目导航v2.0.md)。没有按 stars 排名，没有复制第三方书籍或课程内容。新案例、数据生成、核心表格与图表均为本项目原创实现；gtsummary / ggstatsplot 只作为可选依赖调用，实际状态见 [v2.0 记录](../验证记录v2.0.md)。
+
+## v2.1 发表论文与复杂抽样
+
+三篇正式文章、全文与代码入口、勘误、数据访问条件及核查状态见 [论文验证](论文验证v2.1.md)。抽样规则依据 [CDC 权重教程](https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx)和 [方差/子人群教程](https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx)。论文作为具体参考案例，不能替代方法学审查或代表所有研究设计。

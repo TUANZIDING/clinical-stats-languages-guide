@@ -1,0 +1,548 @@
+{
+  "verified_on": "2026-10-08",
+  "si_requested": true,
+  "scope": "Verified local article/SI retrieval, not additional numerical replication",
+  "local_archive": "build/论文材料v2.1",
+  "files_in_git": false,
+  "counts": {
+    "full_text_html": 3,
+    "supplement": 18,
+    "main_pdf": 3,
+    "correction_pdf": 1,
+    "full_text_xml": 1
+  },
+  "total_bytes": 92830207,
+  "files": [
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "full_text_html",
+      "file": "近视与教育正文v2.1.html",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211196",
+      "bytes": 231199,
+      "sha256": "2e367deab7875b1e6d4b94fb6af5d8a24a86ab391ab28551a275cdcdd7aa1a62",
+      "verified": true
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表1v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s001",
+      "bytes": 21492,
+      "sha256": "e30b4c26226fab4f187e18a24f7190a65d883d6a422e9fc048b2747c66ad362f",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表2v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s002",
+      "bytes": 24261,
+      "sha256": "6a2a12bd7568396ae196f9ca4211bd33b57ba9874fce6cca3abce193d5a2c18b",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表3v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s003",
+      "bytes": 21543,
+      "sha256": "903b24b5cdd8ae620ca322bdd6f91cddd0d69cb8681efce6dc5b3c4bb3a85ca2",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表4v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s004",
+      "bytes": 21158,
+      "sha256": "f0f1df04ed453a4966c3c5b84c75b1a597feb71e9b4b79b05e5e7750d09b40e7",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表5v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s005",
+      "bytes": 21125,
+      "sha256": "7272007706e5c2250c32d2a9ccccbb680ac76feae786312cd9defb16c325652f",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表6v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s006",
+      "bytes": 20841,
+      "sha256": "bce76164d8be7bb1842a3349a61ed84cf07385a66b14f6a28e9886965d1d2a4e",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表7v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s007",
+      "bytes": 24524,
+      "sha256": "e9975a5eb0d2ea4a1fe84b1946b66ebccfede1af3a67b0ba04d9f3c7ea4683b9",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表8v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s008",
+      "bytes": 34279,
+      "sha256": "5e4890b1199088df21d8268111447522908200a391672f5481cc9c09bb3cb61d",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表9v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s009",
+      "bytes": 31756,
+      "sha256": "cbb80b703b1a39fc00c31e82715f896187ffc250c5332bdb16a84868ab21a655",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表10v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s010",
+      "bytes": 37104,
+      "sha256": "79f2951c141333748d08dc5ac5243636aba286d17a0c1a17971dff100fa70a0b",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表11v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s011",
+      "bytes": 21603,
+      "sha256": "1072760cb5e8a049b81692e8b9a3679d50c46cc7ab1da1f69c671c0aa139b317",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "supplement",
+      "file": "近视与教育补充表12v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0211196.s012",
+      "bytes": 21746,
+      "sha256": "4bc1e85cf957e076511f8560352943a9774123a30d6c1843c9482777c7757bd5",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0211196",
+      "kind": "main_pdf",
+      "file": "近视与教育正文v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0211196&type=printable",
+      "bytes": 819888,
+      "sha256": "cc34064166f8395346f62a42ba3b7e86c2b0cb0ba74b7eddb5cfd78991c80ffc",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 15,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0186723",
+      "kind": "full_text_html",
+      "file": "出生体重与角膜正文v2.1.html",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0186723",
+      "bytes": 181985,
+      "sha256": "9bef89a0121370da373ce72f5ac0839db509681460d971720a01b06ca2906428",
+      "verified": true
+    },
+    {
+      "doi": "10.1371/journal.pone.0186723",
+      "kind": "supplement",
+      "file": "出生体重与角膜补充表1v2.1.docx",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0186723.s001",
+      "bytes": 12987,
+      "sha256": "b4ead72b500ca77ffdfbb5661c0c39e6a00fa6bab9aa526b3620f214122ae4ed",
+      "verified": true,
+      "validation": {
+        "signature": "OOXML",
+        "zip_crc_verified": true,
+        "document_xml_verified": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0186723",
+      "kind": "supplement",
+      "file": "出生体重与角膜补充表2v2.1.docx",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0186723.s002",
+      "bytes": 12662,
+      "sha256": "70270a3e191272acefb5417783348ada55a6bd7726fcab6e3fe8e8afd6b2b93f",
+      "verified": true,
+      "validation": {
+        "signature": "OOXML",
+        "zip_crc_verified": true,
+        "document_xml_verified": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0186723",
+      "kind": "main_pdf",
+      "file": "出生体重与角膜正文v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0186723&type=printable",
+      "bytes": 1888082,
+      "sha256": "97b9c259ec5a8a8499ce9b585c91e3ffa56f0592405552e90f266fc5f8f3c354",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 11,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1371/journal.pone.0213396",
+      "kind": "correction_pdf",
+      "file": "出生体重与角膜勘误正文v2.1.pdf",
+      "source_url": "https://journals.plos.org/plosone/article/file?type=printable&id=10.1371/journal.pone.0213396",
+      "bytes": 243221,
+      "sha256": "7d149f95a0f4b8299a021089bb2c00bc5ccb0c3fb6b83a2c390afac0541aee6b",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 1,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "full_text_html",
+      "file": "暴露组正文v2.1.html",
+      "source_url": "https://www.nature.com/articles/s41591-026-04266-0",
+      "bytes": 466828,
+      "sha256": "c519c02ba94d0f8cfa88d489e5550e138063474b744f093059ac4f6e04691e0e",
+      "verified": true
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "full_text_xml",
+      "file": "暴露组正文v2.1.xml",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13099396/fullTextXML",
+      "bytes": 171936,
+      "sha256": "de0eb4fcf7979026b322dcb718cf90e1d78db69559c1293e47922fc69ed9d1aa",
+      "verified": true
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "main_pdf",
+      "file": "暴露组正文v2.1.pdf",
+      "source_url": "https://www.nature.com/articles/s41591-026-04266-0.pdf",
+      "bytes": 10809648,
+      "sha256": "265ca2b6b68c7fd2536ade43becec7d1c81b6700afcd064e314a624e6946e0b3",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 27,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "supplement",
+      "file": "暴露组补充图v2.1.pdf",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41591-026-04266-0/MediaObjects/41591_2026_4266_MOESM1_ESM.pdf",
+      "bytes": 1562594,
+      "sha256": "198445651b779803ff375859a9c5e8ff22e2a2afca471b2ad29283b439618f39",
+      "verified": true,
+      "validation": {
+        "signature": "PDF",
+        "pages": 7,
+        "text_extractable": true
+      }
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "supplement",
+      "file": "暴露组报告清单v2.1.pdf",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41591-026-04266-0/MediaObjects/41591_2026_4266_MOESM2_ESM.pdf",
+      "verified": true,
+      "bytes": 2070693,
+      "sha256": "a7ad6740a9e1ba96b9b1817f6000dc78c5890342d59f6752684ee1bc30ab6f30",
+      "validation": {
+        "signature": "PDF",
+        "pages": 3,
+        "text_extractable": false,
+        "image_only": true,
+        "all_pages_rendered": true,
+        "visual_check": "Reporting Summary; corresponding author Chirag Patel; software/code and survey/data reporting inspected across three rendered pages"
+      }
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "supplement",
+      "file": "暴露组补充表1至9v2.1.xlsx",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41591-026-04266-0/MediaObjects/41591_2026_4266_MOESM3_ESM.xlsx",
+      "verified": true,
+      "bytes": 43759682,
+      "sha256": "8d2892031d5a944b1c9435ca0f6cdbcb5cda56ab5ef9398859e226037bc0f87a",
+      "validation": {
+        "signature": "OOXML",
+        "zip_crc_verified": true,
+        "workbook_open_verified": true,
+        "sheets": [
+          {
+            "name": "Table S1",
+            "rows": 123775,
+            "columns": 42
+          },
+          {
+            "name": "Table S2",
+            "rows": 620,
+            "columns": 4
+          },
+          {
+            "name": "Table S3",
+            "rows": 306,
+            "columns": 3
+          },
+          {
+            "name": "Table S4",
+            "rows": 1000,
+            "columns": 3
+          },
+          {
+            "name": "Table S5",
+            "rows": 1000,
+            "columns": 3
+          },
+          {
+            "name": "Table S6",
+            "rows": 1000,
+            "columns": 26
+          },
+          {
+            "name": "Table S7",
+            "rows": 1000,
+            "columns": 4
+          },
+          {
+            "name": "Table S8",
+            "rows": 1001,
+            "columns": 5
+          },
+          {
+            "name": "Table S9",
+            "rows": 8,
+            "columns": 3
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1038/s41591-026-04266-0",
+      "kind": "supplement",
+      "file": "暴露组图源数据v2.1.xlsx",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41591-026-04266-0/MediaObjects/41591_2026_4266_MOESM4_ESM.xlsx",
+      "verified": true,
+      "bytes": 30297370,
+      "sha256": "2f5585445edf68bc41fa407d298771bc402f99d7e9f2a743ff2f28333d5579f8",
+      "validation": {
+        "signature": "OOXML",
+        "zip_crc_verified": true,
+        "workbook_open_verified": true,
+        "sheets": [
+          {
+            "name": "Fig2 Panel A Axis Labels",
+            "rows": 17,
+            "columns": 5
+          },
+          {
+            "name": "Fig2 Panel A Data",
+            "rows": 53294,
+            "columns": 8
+          },
+          {
+            "name": "Fig2 Panel B Data",
+            "rows": 20,
+            "columns": 4
+          },
+          {
+            "name": "Fig2 Panel C Data",
+            "rows": 18,
+            "columns": 4
+          },
+          {
+            "name": "Fig 3 Panel A Data",
+            "rows": 53294,
+            "columns": 8
+          },
+          {
+            "name": "Fig 3 Panel B Labels",
+            "rows": 21,
+            "columns": 5
+          },
+          {
+            "name": "Fig 3 Panel B Data",
+            "rows": 123775,
+            "columns": 2
+          },
+          {
+            "name": "Fig 3 Panel C Data",
+            "rows": 18,
+            "columns": 5
+          },
+          {
+            "name": "Fig 3 Panel D-1 Data",
+            "rows": 259,
+            "columns": 4
+          },
+          {
+            "name": "Fig 3 Panel D-2 Data",
+            "rows": 118758,
+            "columns": 4
+          },
+          {
+            "name": "Fig 4 Data",
+            "rows": 584,
+            "columns": 162
+          },
+          {
+            "name": "Fig 5 Panel A Data",
+            "rows": 94,
+            "columns": 35
+          },
+          {
+            "name": "Fig 5 Panel B Data",
+            "rows": 47,
+            "columns": 35
+          },
+          {
+            "name": "Fig 5 Panel C Data",
+            "rows": 68722,
+            "columns": 3
+          },
+          {
+            "name": "ED Fig 2 Data",
+            "rows": 59,
+            "columns": 6
+          },
+          {
+            "name": "ED Fig 3 Panel A Data",
+            "rows": 45393,
+            "columns": 4
+          },
+          {
+            "name": "ED Fig 3 Panel B Data",
+            "rows": 25,
+            "columns": 5
+          },
+          {
+            "name": "ED Fig 4 Panel A Data",
+            "rows": 4279,
+            "columns": 6
+          },
+          {
+            "name": "ED Fig 4 Panel B Data",
+            "rows": 960,
+            "columns": 4
+          },
+          {
+            "name": "ED Fig 4 Panel C Data",
+            "rows": 737,
+            "columns": 5
+          },
+          {
+            "name": "ED Fig 5 Data",
+            "rows": 164,
+            "columns": 35
+          },
+          {
+            "name": "ED Fig 6 PanelAB Data",
+            "rows": 5675,
+            "columns": 4
+          },
+          {
+            "name": "ED Fig 6 Panel C Data",
+            "rows": 123775,
+            "columns": 3
+          },
+          {
+            "name": "ED Fig 7 Panel A Data",
+            "rows": 584,
+            "columns": 584
+          },
+          {
+            "name": "ED Fig 7 Panel B Data",
+            "rows": 584,
+            "columns": 584
+          },
+          {
+            "name": "ED Fig 8 Data",
+            "rows": 30,
+            "columns": 4
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Files saved locally; repository contains this metadata record only.",
+    "Reporting Summary is image-only and was visually verified after rendering all three pages.",
+    "Two XLSX downloads initially timed out; retry/resume followed by ZIP CRC and workbook checks completed."
+  ]
+}

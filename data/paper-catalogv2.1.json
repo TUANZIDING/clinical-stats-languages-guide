@@ -1,0 +1,151 @@
+{
+  "verified_on": "2026-10-08",
+  "purpose": "Selected published reference cases; not a systematic review or a gold standard",
+  "papers": [
+    {
+      "id": "myopia-education",
+      "title": "Myopia is associated with education: Results from NHANES 1999-2008",
+      "authors": "Nickels S, Hopf S, Pfeiffer N, Schuster AK",
+      "year": 2019,
+      "journal": "PLOS ONE",
+      "pmid": "30695049",
+      "pmcid": "PMC6350963",
+      "doi": "10.1371/journal.pone.0211196",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30695049/",
+      "full_text": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211196",
+      "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350963/",
+      "article_license": "CC BY; attribution required",
+      "full_text_status": "Publisher HTML and PDF plus all 12 SI PDFs downloaded locally and verified; source/SHA-256 in paper-materialsv2.1.json",
+      "code": "https://github.com/snickels/nhanes_edu_se",
+      "code_commit": "8beb4014f3a879b72271fe81ee1182c97b2b1adc",
+      "code_status": "Pinned R Markdown inspected; no repository license found; not redistributed or blindly executed",
+      "data": "https://wwwn.cdc.gov/nchs/nhanes/",
+      "data_status": "CDC public-use 1999-2008 DEMO/VIX downloaded and checked; SHA-256 in source manifest",
+      "numerical_validation": "Selected Tables 1-3 targets: 72/72 match with published normal-Wald CI convention; current t intervals differ in 16/32 rounded endpoints",
+      "journal_indexing": "Official Clarivate historical SCIE acceptance plus current publisher Web of Science listing verified; individual WoS accession and current MJL record not independently retrieved",
+      "index_sources": [
+        "https://wokinfo.com/news/plosone/",
+        "https://journals.plos.org/plosone/s/journal-information"
+      ],
+      "caution": "Cross-sectional association; published ethnicity subgroup models omit survey design and are not endorsed by this teaching replay",
+      "material_record": "paper-materialsv2.1.json"
+    },
+    {
+      "id": "birthweight-corneal",
+      "title": "Association of birth weight with corneal power in early adolescence: Results from the National Health and Nutrition Examination Survey (NHANES) 1999-2008",
+      "authors": "Fiess A, Schuster AK, Pfeiffer N, Nickels S",
+      "year": 2017,
+      "journal": "PLOS ONE",
+      "pmid": "29073249",
+      "pmcid": "PMC5658059",
+      "doi": "10.1371/journal.pone.0186723",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29073249/",
+      "full_text": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0186723",
+      "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5658059/",
+      "article_license": "CC BY; attribution required",
+      "full_text_status": "Publisher HTML, PDF, two SI DOCX files and correction PDF downloaded locally and verified",
+      "correction": {
+        "pmid": "30817795",
+        "doi": "10.1371/journal.pone.0213396",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6394913/",
+        "reason": "Production error in Data Availability; article republished 2019-02-21"
+      },
+      "code": "https://github.com/snickels/nhanes_bw_vf",
+      "code_commit": "152e944b03137e029abce00bc27c4b46e447a362",
+      "code_status": "Pinned R Markdown inspected; no repository license found; not redistributed",
+      "data": "https://wwwn.cdc.gov/nchs/nhanes/",
+      "data_status": "CDC public-use DEMO/VIX/ECQ downloaded and checked; secondary case models not executed",
+      "numerical_validation": "NOT_RUN; design-to-method reference case only",
+      "journal_indexing": "Same PLOS ONE journal evidence as primary case; individual WoS accession not retrieved",
+      "caution": "Author code replaces missing birth-weight ounces with 0; do not generalize this to arbitrary missing clinical measurements",
+      "material_record": "paper-materialsv2.1.json"
+    },
+    {
+      "id": "exposome-atlas",
+      "title": "An atlas of exposome-phenome associations in health and disease risk",
+      "authors": "Patel CJ, Ioannidis JPA, Manrai AK",
+      "year": 2026,
+      "journal": "Nature Medicine",
+      "pmid": "41851348",
+      "pmcid": "PMC13099396",
+      "doi": "10.1038/s41591-026-04266-0",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41851348/",
+      "full_text": "https://www.nature.com/articles/s41591-026-04266-0",
+      "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13099396/",
+      "article_license": "CC BY 4.0; verified in publisher article and Europe PMC XML permissions; third-party credits may differ",
+      "full_text_status": "Publisher HTML/PDF, Europe PMC XML, two SI PDFs and two SI XLSX files downloaded locally and verified; Reporting Summary is image-only and visually checked",
+      "code": "https://github.com/chiragjp/nhanespewas",
+      "code_commit": "6a4e82193ac89e139599cb7ddecd3045765cb009",
+      "code_status": "MIT repository and pipeline inventory verified; complete pipeline not executed",
+      "data": "https://doi.org/10.6084/m9.figshare.29182196",
+      "summary_data": "https://doi.org/10.6084/m9.figshare.29186171",
+      "data_status": "Figshare API v2 metadata verified: cohort 1,942,712,320 bytes; summary 11,202,899,968 bytes; both CC BY 4.0, not downloaded",
+      "numerical_validation": "NOT_RUN; complex sampling / multiplicity / association limits reference case",
+      "journal_indexing": "Published PubMed record verified; current official SCIE/MJL entry and article WoS accession pending independent verification",
+      "caution": "Use the published 2026 article, not the 2025 preprint PMID 40661264; atlas-scale replication not claimed",
+      "material_record": "paper-materialsv2.1.json"
+    }
+  ],
+  "method_cases": [
+    {
+      "id": "myopia-linear",
+      "paper": "myopia-education",
+      "source_location": "Methods Statistical analysis; Table 2 adjusted model a",
+      "input": {
+        "goal": "associate",
+        "design": "cross",
+        "sampling": "survey",
+        "outcome": "continuous",
+        "structure": "independent",
+        "predictor": "categorical",
+        "adjust": "yes",
+        "missing": "some"
+      }
+    },
+    {
+      "id": "myopia-logistic",
+      "paper": "myopia-education",
+      "source_location": "Methods Statistical analysis; Table 3 adjusted model a",
+      "input": {
+        "goal": "associate",
+        "design": "cross",
+        "sampling": "survey",
+        "outcome": "binary",
+        "structure": "independent",
+        "predictor": "categorical",
+        "adjust": "yes",
+        "missing": "some"
+      }
+    },
+    {
+      "id": "birthweight-linear",
+      "paper": "birthweight-corneal",
+      "source_location": "Statistical analysis; Table 2",
+      "input": {
+        "goal": "associate",
+        "design": "cross",
+        "sampling": "survey",
+        "outcome": "continuous",
+        "structure": "independent",
+        "predictor": "continuous",
+        "adjust": "yes",
+        "missing": "some"
+      }
+    },
+    {
+      "id": "atlas-linear",
+      "paper": "exposome-atlas",
+      "source_location": "Methods survey-weighted models; multiplicity and replication",
+      "input": {
+        "goal": "associate",
+        "design": "cross",
+        "sampling": "survey",
+        "outcome": "continuous",
+        "structure": "independent",
+        "predictor": "continuous",
+        "adjust": "yes",
+        "missing": "some"
+      }
+    }
+  ]
+}

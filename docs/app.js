@@ -2,6 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const engine = window.StatsGuide;
+  if (window.PaperCheck && $('paper-check-count')) $('paper-check-count').textContent = `${window.PaperCheck.passed}/${window.PaperCheck.total}`;
   let currentConfig = null;
   let currentResult = null;
   const form = $('design-form');
@@ -41,9 +42,9 @@
   form.addEventListener('submit', event => { event.preventDefault(); syncFields(); showResult(); });
   form.addEventListener('reset', () => { window.setTimeout(() => { syncFields(); invalidate(); }, 0); });
   const cases = {
-    means:{goal:'compare',design:'randomized',outcome:'continuous',structure:'independent',groups:'two',adjust:'no',missing:'none',distribution:'approx'},
-    paired:{goal:'compare',design:'cohort',outcome:'binary',structure:'paired',groups:'two',adjust:'no',missing:'none'},
-    survival:{goal:'compare',design:'cohort',outcome:'survival',structure:'independent',groups:'two',adjust:'yes',missing:'unknown'}
+    means:{goal:'compare',design:'randomized',sampling:'simple',outcome:'continuous',structure:'independent',groups:'two',adjust:'no',missing:'none',distribution:'approx'},
+    paired:{goal:'compare',design:'cohort',sampling:'simple',outcome:'binary',structure:'paired',groups:'two',adjust:'no',missing:'none'},
+    survival:{goal:'compare',design:'cohort',sampling:'simple',outcome:'survival',structure:'independent',groups:'two',adjust:'yes',missing:'unknown'}
   };
   document.querySelectorAll('.preset').forEach(button => {
     button.setAttribute('aria-pressed','false');
