@@ -8,7 +8,7 @@
 
 面向没有编程基础的临床科研人员。你不需要先成为程序员，但需要说清楚：研究对象是谁、比较什么、每一行代表什么、希望估计什么。
 
-本项目包含中文图文教程、离线交互式选择向导、AI 提问模板，以及使用同一份**人为构造教学数据**的 R / Python / SAS / C++ 示例。它帮助形成可讨论的统计分析草案；正式研究需要结合完整方案、数据质量与统计专业意见。
+本项目包含中文图文教程、离线交互式选择向导、AI 提问模板，以及使用同一份**人为构造教学数据**的 R / Python / SAS / C++ 示例。v2.0 增加含缺失值的模拟临床案例、Table 1、分布诊断、效应与 CI、可复现报告和第三方工具适配。它帮助形成可讨论的统计分析草案；正式研究需要结合完整方案、数据质量与统计专业意见。
 
 ## 先用起来
 
@@ -27,6 +27,9 @@
 | AI 能替我选统计方法吗？ | [AI 协作流程](docs/ai-workflow.md)和[提问模板](templates/ai-statistics-prompt.md) |
 | 同一个分析在不同语言里是什么样？ | [可运行示例说明](examples/README.md) |
 | 结果怎么看，怎么写进论文？ | [教学案例](docs/worked-example.md)和[分析计划模板](templates/analysis-plan.md) |
+| 如何检查 Table 1、缺失、CI 和图注？ | [v2.0 实操](docs/临床统计实操v2.0.md)及[报告核对](docs/统计报告核对v2.0.md) |
+| 用 AI / Codex 核查分析与报告？ | [v2.0 核查提示词](templates/统计核查提示词v2.0.md) |
+| 有哪些相关 GitHub 项目可以学习？ | [12 个项目导航与使用边界](docs/相关项目导航v2.0.md) |
 | 这些说法有什么依据？ | [来源与适用范围](docs/sources.md) |
 
 ## 选方法的五个步骤
@@ -73,12 +76,31 @@ tests/          向导关键分支与信息不足保护检查
 .github/        自动检查流程、GitHub Pages 手动发布流程
 ```
 
+## v2.0：从模拟数据到统计报告
+
+![96 个独立模拟对象的随访结局与原始单位均值差](docs/assets/clinical-effectv2.0.png)
+
+- **Table 1**：96 个独立模拟对象，A / B 各 48 个；每个变量注明已知 n、缺失 n，类别百分比分母明确。基线与随访分开，默认不加 P 值。[离线基线表](docs/assets/table-onev2.0.html)
+- **分布与方差检查**：Q–Q 图、偏态 CRP 分布、Shapiro–Wilk 与中位数 Levene 输出，用于诊断讨论，不按 P 值自动切换方法。Welch 不要求等方差。[实操说明](docs/临床统计实操v2.0.md)
+- **结果与报告**：主要结局已知 n=45 / 43；实际计算 A−B 均值差 9.03 mmHg，95% CI [2.53, 15.53]。可下载方法、结果、图注和 CSV，附数据 SHA-256 和版本信息。数值只解释模拟计算。[报告草稿](docs/assets/clinical-reportv2.0.md)
+- **工具与 AI**：可选 gtsummary 表格、ggstatsplot 注释图；核对第三方图内统计，不把标准化效应 CI 当成原始单位 CI。提供有信息缺口保护的核查提示词和 12 个资源入口。
+
+在项目根目录运行：
+
+```sh
+python3 -m pip install -r requirements.txt
+python3 scripts/clinical-reportv2.0.py
+python3 tests/clinical-reportv2.0.py
+```
+
+数值核对需要 R；可选包安装与导出命令见 [实操说明](docs/临床统计实操v2.0.md)。原 24 行四语言示例保留。新增文件遵守“名称 + 版本 + 扩展名、无下划线”规则；既有名称保留。
+
 ## 维护与发布
 
-运行 `npm test` 检查向导关键分支；运行 `python3 scripts/check_project.py` 检查本地链接与数据一致性。示例和图表的重建命令见 [examples/README.md](examples/README.md)。
+运行 `npm test` 检查向导关键分支；运行 `python3 scripts/check_project.py` 检查本地链接与数据一致性，`python3 tests/clinical-reportv2.0.py` 检查临床教学输出及 R 数值一致性，`python3 scripts/check-filenamesv2.0.py` 检查新增文件命名。示例和图表的重建命令见 [examples/README.md](examples/README.md)。
 
 项目已按仓库所有者确认的范围上传为公开仓库。GitHub Pages 工作流已准备，只接受手动触发；网页发布仍需要单独启用。具体步骤见 [发布说明](docs/publishing.md)。
 
-内容核查日期：**2026-10-08**。软件文档与授权条款会变化；本指南不声称完成了真实数据分析、软件易用性试验或正式临床研究方法学审查。具体执行验证状态见 [VALIDATION.md](VALIDATION.md)。
+内容核查日期：**2026-10-08**。软件文档与授权条款会变化；本指南不声称完成了真实数据分析、软件易用性试验或正式临床研究方法学审查。执行状态见 [v1 记录](VALIDATION.md)与 [v2.0 记录](验证记录v2.0.md)。
 
 代码与本项目原创文字、图表采用 [MIT 许可证](LICENSE)；链接的第三方材料遵循各自条款。欢迎提出带设计背景和可核查依据的改进建议。

@@ -58,3 +58,16 @@
 - 数据为本项目人为构造，图表为原创代码生成。图示流程是概念示意，不是测量的性能。
 - AI 提问模板与规则向导是教学设计，没有接入 AI 模型，没有真实数据上传，没有测量选法准确率。
 - 实际运行与未运行的项目见 [VALIDATION.md](../VALIDATION.md)。没有远端 CI 或 Pages 成功的证据之前，不声称已发布。
+
+## v2.0 新增依据
+
+| 原始来源 | 新增内容与范围 |
+|---|---|
+| [CONSORT 2025 explanation and elaboration](https://www.bmj.com/content/389/bmj-2024-081124) | 随机试验基线描述及不推荐基线显著性检验；不是所有观察性分析的选法规则 |
+| [SciPy Shapiro](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html) | Shapiro–Wilk 的实现和适用限制；诊断 P 值不构成正态性证明 |
+| [SciPy Levene](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.levene.html) | 中位数中心的方差诊断；Welch 分析不以其 P 值为门槛 |
+| [gtsummary tbl_summary](https://www.danieldsjoberg.com/gtsummary/articles/tbl_summary.html) | 显式设置统计摘要、类型、分母、缺失显示；未默认 add_p |
+| [ggbetweenstats](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html) | 参数设置、Welch 默认与标准化效应展示；没有把包的偏好推广到所有设计 |
+| [ggstatsplot extract_stats](https://www.indrapatil.com/ggstatsplot/reference/extract_stats.html) | 提取图内统计进行复核，区分绘制成功和数值一致 |
+
+12 个相关仓库的作者/维护机构来源、学习用途及使用边界见 [项目导航](相关项目导航v2.0.md)。没有按 stars 排名，没有复制第三方书籍或课程内容。新案例、数据生成、核心表格与图表均为本项目原创实现；gtsummary / ggstatsplot 只作为可选依赖调用，实际状态见 [v2.0 记录](../验证记录v2.0.md)。

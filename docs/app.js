@@ -76,7 +76,7 @@
     const prompt = engine.makePrompt(currentConfig,r);
     const markdown = `# 统计方法讨论草案\n\n状态：离线规则生成，未验证数据，待研究团队审核。\n日期：${new Date().toLocaleDateString('sv-SE')}\n\n## 候选方法\n\n${r.methods.map(s=>'- '+s).join('\n') || '- 信息不足，尚无候选。'}\n\n## 先核查\n\n${r.checks.map(s=>'- '+s).join('\n')}\n\n## 报告内容\n\n${r.report.map(s=>'- '+s).join('\n')}\n\n## 来源\n\n${r.sources.map(k=>'- ['+engine.sources[k][0]+']('+engine.sources[k][1]+')').join('\n')}\n\n## AI 提问模板\n\n${prompt}\n\n正式分析前补齐目标量、样本量、事件数、变量字典、诊断和缺失方案；保留审核记录。\n`;
     const url = URL.createObjectURL(new Blob([markdown],{type:'text/markdown;charset=utf-8'}));
-    const a = document.createElement('a'); a.href = url; a.download = '统计方法讨论草案.md';
+    const a = document.createElement('a'); a.href = url; a.download = '统计方法讨论草案v2.0.md';
     document.body.appendChild(a); a.click(); a.remove(); window.setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   const tools = {
