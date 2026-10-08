@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向医学科研初学者的统计方法、软件与AI协作指南。离线候选方法向导，图文教学与可复现模拟案例。">
+  <meta name="theme-color" content="#123044">
+  <title>医学统计学习实验室 · 从问题到方法</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="method-engine.js"></script>
+  <script defer src="assets/demo-result.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main" aria-label="医学统计学习实验室首页"><span class="mark" aria-hidden="true">Σ</span><span>医学统计<span class="wordmark-sub">学习实验室</span></span></a>
+    <nav aria-label="主导航"><a href="#navigator">方法向导</a><a href="#software">选工具</a><a href="#ai">AI 协作</a><a href="#practice">动手练习</a></nav>
+    <span class="edition">入门版 <span>2026.10</span></span>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> CLINICAL RESEARCH / STATISTICS / AI</p>
+        <h1 id="hero-title">选对统计方法，<br>从<span class="accent">问对问题</span>开始。</h1>
+        <p class="hero-intro">不必先成为程序员。先说清研究问题、数据结构和你想估计的量，再让工具与 AI 帮你把分析做得可理解、可核查。</p>
+        <div class="actions"><a class="button primary" href="#navigator">开始选择方法 <span aria-hidden="true">↗</span></a><a class="text-link" href="#software">零编程，从哪里起步？ <span aria-hidden="true">→</span></a></div>
+        <p class="small muted">中文图文 · 离线使用 · 无需注册</p>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-top"><span>LEARNING NOTE / 001</span><span class="visual-tag">模拟教学数据</span></div>
+        <img src="assets/hero-chart.svg" alt="教学示意：A组与B组的独立模拟观测，及A减B均值差的95%置信区间。没有真实患者数据。" width="640" height="400">
+        <div class="visual-bottom"><span>研究问题 → 设计 → 方法 → 复现</span><span class="visual-label">KEEP IT CHECKABLE</span></div>
+      </div>
+    </section>
+
+    <div class="principle-strip"><div class="wrap strip-inner"><p><span class="strip-number">01</span> 统计方法 ≠ 软件 ≠ 编程语言</p><p><span class="strip-number">02</span> P 值之外，看效应与不确定性</p><p><span class="strip-number">03</span> AI 给建议，证据与验证把关</p></div></div>
+
+    <section class="wrap section" id="foundations" aria-labelledby="foundations-title">
+      <div class="section-heading"><div><p class="eyebrow">THE STARTING POINT</p><h2 id="foundations-title">先分清三个层次。</h2></div><p>“我用 R”说明了工具。<br>“估计两组均值差”才开始说明分析。</p></div>
+      <div class="layer-grid">
+        <article class="layer"><span class="layer-index">01 / QUESTION</span><h3>统计方法</h3><p>用怎样的规则回答问题？</p><div class="examples-text">Welch t 检验 · Logistic 回归<br>生存分析 · 混合模型</div></article>
+        <article class="layer"><span class="layer-index">02 / WORKSPACE</span><h3>统计软件</h3><p>在哪里整理、计算与保存？</p><div class="examples-text">jamovi · SPSS · SAS<br>图形界面或程序工作流</div></article>
+        <article class="layer"><span class="layer-index">03 / INSTRUCTIONS</span><h3>编程语言</h3><p>如何把分析步骤写清楚？</p><div class="examples-text">R · Python · C++<br>R 也是统计计算环境</div></article>
+      </div>
+      <div class="reading-note"><strong>先补齐一句话：</strong>在什么人群和研究设计下，以谁为分析单位，比较或预测什么结局，希望估计什么量？</div>
+    </section>
+
+    <section class="navigator-section section" id="navigator" aria-labelledby="navigator-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">METHOD NAVIGATOR</p><h2 id="navigator-title">把研究描述变成<br>可讨论的候选方案。</h2></div><p>这是透明的规则向导，未接入 AI。<br>它列出讨论起点，不验证数据或假设。</p></div>
+        <div class="preset-row"><span>先看一个情境</span><button type="button" class="preset" data-case="means">两独立组数值</button><button type="button" class="preset" data-case="paired">同一人前后二分类</button><button type="button" class="preset" data-case="survival">带删失的随访</button></div>
+        <div class="wizard">
+          <form id="design-form" class="design-form" novalidate>
+            <div class="form-heading"><h3>01 / 描述你的设计</h3><button type="reset" class="reset-button">重置</button></div>
+            <p class="form-help">只选择设计类别，不需要填写患者信息。不知道的项目请明确选择“尚不清楚”。</p>
+            <div class="form-grid">
+              <label for="goal">研究目标<select id="goal" name="goal"><option value="">请选择</option><option value="describe">描述数据</option><option value="compare">比较组别或条件</option><option value="associate">研究关联</option><option value="predict">建立预测</option><option value="causal">研究因果</option></select></label>
+              <label for="design">研究设计<select id="design" name="design"><option value="">请选择</option><option value="randomized">随机分组研究</option><option value="cohort">队列研究</option><option value="casecontrol">病例对照研究</option><option value="cross">横断面研究</option><option value="other">其他设计</option><option value="unknown">尚不清楚</option></select></label>
+              <label for="outcome">主要结局类型<select id="outcome" name="outcome"><option value="">请选择</option><option value="continuous">连续数值（如血压）</option><option value="binary">二分类（如阳性/阴性）</option><option value="ordinal">有序等级（如轻/中/重）</option><option value="nominal">无序多分类（如血型）</option><option value="count">计数（如发作次数）</option><option value="survival">事件时间（可能删失）</option></select></label>
+              <label for="structure">观测之间的关系<select id="structure" name="structure"><option value="">请选择</option><option value="independent">独立观测</option><option value="paired">同一人/匹配对象两个条件</option><option value="repeated">重复测量：≥3 个时间/条件</option><option value="clustered">中心/病区等聚类</option><option value="unknown">尚不清楚</option></select></label>
+              <label for="groups" id="groups-field" hidden>组 / 条件数<select id="groups" name="groups"><option value="">请选择</option><option value="two">两个</option><option value="multi">三个及以上</option></select></label>
+              <label for="predictor" id="predictor-field" hidden>主要解释变量<select id="predictor" name="predictor"><option value="">请选择</option><option value="continuous">连续数值</option><option value="binary">二分类</option><option value="categorical">多分类/等级</option><option value="unknown">尚未确定</option></select></label>
+              <label for="adjust" id="adjust-field" hidden>协变量调整<select id="adjust" name="adjust"><option value="">请选择</option><option value="no">不调整（需有依据）</option><option value="yes">需要调整</option><option value="unknown">尚未确定</option></select></label>
+              <label for="distribution" id="distribution-field" hidden>分布与异常值概况<select id="distribution" name="distribution"><option value="">请选择</option><option value="approx">图形近似对称，无明显极端值</option><option value="skew">明显偏态或极端值</option><option value="unknown">尚未查看图形</option></select></label>
+              <label for="missing">缺失情况<select id="missing" name="missing"><option value="">请选择</option><option value="none">已核查，无缺失</option><option value="some">存在缺失，处理待讨论</option><option value="unknown">尚未核查</option></select></label>
+            </div>
+            <button class="button primary full" type="submit">查看候选方法与核查事项 <span aria-hidden="true">→</span></button>
+            <p class="small muted">样本量、事件数、目标量、时间点等仍需补充进完整方案。</p>
+          </form>
+          <div class="result-panel" id="result-panel" role="region" aria-label="候选方案" aria-live="polite">
+            <div class="empty-result"><span class="result-index">02 / 开始讨论</span><h3>方法名称，是推理的结果。</h3><img src="assets/question-path.svg" alt="问题经过设计和条件核查，形成候选方法" width="480" height="150"><p>填好左侧设计，或选择一个教学情境。这里会显示候选方法、适用条件、缺口与来源。</p><p class="small muted">复杂设计、缺失未明或信息不足时，向导会提示继续补充或请统计专业人员参与。</p></div>
+          </div>
+        </div>
+        <div class="export-bar"><span>带着草案继续讨论</span><div><button type="button" class="button secondary" id="generate-prompt" disabled>生成 AI 提问</button><button type="button" class="button secondary" id="download-plan" disabled>下载讨论草案 .md</button></div></div>
+        <div id="prompt-panel" class="prompt-panel" hidden><div class="form-heading"><h3>复制给你使用的 AI</h3><button type="button" id="copy-prompt" class="button secondary">复制提问</button></div><p class="small muted">不会自动发送。先补充模板里的未知项，并检查隐私与所在机构的要求。</p><textarea id="prompt-text" readonly rows="15" aria-label="AI 统计选择提问模板"></textarea><p id="copy-status" class="small" role="status"></p></div>
+        <noscript><p class="reading-note">交互向导需要启用 JavaScript。下方教程与图表仍可阅读，完整方法地图也在项目的 docs/method-guide.md。</p></noscript>
+      </div>
+    </section>
+
+    <section class="wrap section" id="method-map" aria-labelledby="map-title">
+      <div class="section-heading"><div><p class="eyebrow">THINK BEFORE TESTING</p><h2 id="map-title">方法地图，先看结构。</h2></div><p>相同的结局类型，<br>不同的观测关系，需要不同方法。</p></div>
+      <div class="table-scroll"><table class="method-table"><caption class="sr-only">常见统计场景的候选方法与关键检查</caption><thead><tr><th scope="col">问题与结构</th><th scope="col">候选方法</th><th scope="col">先核对</th></tr></thead><tbody>
+        <tr><th scope="row">两独立组，连续结局</th><td>Welch t 检验 / 适当的稳健或秩方案</td><td>目标量、独立性、分布、极端值</td></tr>
+        <tr><th scope="row">同一人两次连续测量</th><td>配对 t / 合适的配对秩方法</td><td>一一配对、差值分布、目标量</td></tr>
+        <tr><th scope="row">独立二分类</th><td>卡方 / Fisher；调整时讨论回归</td><td>分母、期望频数、抽样设计</td></tr>
+        <tr><th scope="row">同一人两次二分类</th><td>McNemar / 合适的精确形式</td><td>不一致对、逐对记录</td></tr>
+        <tr><th scope="row">事件时间与删失</th><td>KM 描述 / log-rank / Cox 等</td><td>随访、删失、比例风险、竞争风险</td></tr>
+        <tr><th scope="row">反复测量 / 多中心</th><td>混合模型 / GEE 等</td><td>相关结构、模型含义、缺失</td></tr>
+      </tbody></table></div>
+      <div class="myth-grid"><article><span>常见误区 / A</span><h3>“不正态，就换非参数。”</h3><p>先看目标量、设计、图形和异常值。秩方法也有条件，未必回答均值差的问题。</p></article><article><span>常见误区 / B</span><h3>“不显著，就是没有差异。”</h3><p>看效应估计与 CI 的精度。等效与非劣效需要预定界值和专门设计。</p></article><article><span>常见误区 / C</span><h3>“数据有 100 行，n 就是 100。”</h3><p>同一患者的多次记录有关联。先数独立研究对象，再理解重复信息。</p></article></div>
+      <p class="source-line">方法实现与报告依据：<a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html" target="_blank" rel="noopener noreferrer">R t.test</a> · <a href="https://www.statsmodels.org/stable/gee.html" target="_blank" rel="noopener noreferrer">GEE</a> · <a href="https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf" target="_blank" rel="noopener noreferrer">ASA P 值声明</a>。完整来源见页面末尾。</p>
+    </section>
+
+    <section class="software-section section" id="software" aria-labelledby="software-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR WORKSPACE</p><h2 id="software-title">零编程可以开始。<br>工具按任务来选。</h2></div><p>本页是教学建议，未做易用性试验。<br>团队支持，通常比软件排名更重要。</p></div>
+      <div class="tool-tabs" role="tablist" aria-label="按学习任务选择工具"><button role="tab" id="tab-beginner" aria-controls="tool-panel" aria-selected="true" data-tool="beginner">先学概念</button><button role="tab" id="tab-r" aria-controls="tool-panel" aria-selected="false" tabindex="-1" data-tool="r">长期做统计</button><button role="tab" id="tab-python" aria-controls="tool-panel" aria-selected="false" tabindex="-1" data-tool="python">影像与 AI</button><button role="tab" id="tab-sas" aria-controls="tool-panel" aria-selected="false" tabindex="-1" data-tool="sas">团队用 SAS</button><button role="tab" id="tab-cpp" aria-controls="tool-panel" aria-selected="false" tabindex="-1" data-tool="cpp">算法开发</button></div>
+      <div class="tool-panel" id="tool-panel" role="tabpanel" aria-labelledby="tab-beginner" tabindex="0"><div class="tool-name"><span>ENTRY POINT</span><h3>jamovi / SPSS</h3><p>用图形界面，先把统计概念学明白。</p></div><div class="tool-description"><h4>对完全没有编程基础的人</h4><p>可以先读入教学数据、画图、做指定的分析并保存设置。jamovi 桌面版免费开源；如果所在机构已有 SPSS 许可，也可以使用。</p><p class="tool-condition">仍需理解研究设计、变量与假设。菜单点击不能代替方法判断。</p><a href="https://www.jamovi.org/" target="_blank" rel="noopener noreferrer">查看 jamovi 官方介绍 ↗</a></div></div>
+      <div class="comparison-footnote"><strong>不按代码行数排名。</strong>R、Python、SAS、C++ 都能完成统计计算；默认参数、依赖、复现与团队验证，才是比较同一分析时的重点。</div>
+    </div></section>
+
+    <section class="ai-section section" id="ai" aria-labelledby="ai-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">HUMAN + AI / CHECKABLE BY DESIGN</p><h2 id="ai-title">可以让 AI 指导你。<br>让它先问，再建议。</h2></div><p>流畅的回答不是正确性的证据。<br>用设计、来源与可复核代码约束它。</p></div>
+      <div class="ai-layout"><div class="ai-sequence"><article><span>01</span><div><h3>给设计与变量字典</h3><p>人群、结局、目标量、分析单位、组别、时间点与样本量。先使用去标识化的设计描述。</p></div></article><article><span>02</span><div><h3>让它补缺口、比候选</h3><p>要求解释条件、效应量、局限和诊断，并给出可打开核查的来源。</p></div></article><article><span>03</span><div><h3>模拟运行，核对结果</h3><p>检查参数、方向、配对和缺失；用另一实现或已知结果复核。</p></div></article><article><span>04</span><div><h3>人工确认，保留记录</h3><p>由研究团队确认正式方案，保存提示词、代码、版本、诊断与修改记录。</p></div></article></div>
+      <div class="prompt-example"><div class="prompt-label"><span class="status-dot"></span> A BETTER PROMPT</div><blockquote>“我想估计两组的均值差。每位对象只测一次，分组设计与缺失情况如下……<br><br>请先问必须补充的信息，再比较候选方法、适用条件、效应量和诊断。引用请提供可核查链接，代码请先使用模拟数据。”</blockquote><div class="prompt-note">请勿要求“帮我得到显著结果”。<br>网页只生成提问文本，不会发送数据或调用模型。</div><a class="button light" href="#navigator">用我的设计生成提问 ↑</a></div></div>
+      <p class="source-line">AI 风险与人工监督依据：<a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank" rel="noopener noreferrer">WHO 生成式 AI 指南说明</a>。本流程是教学设计，未做 AI 决策准确性验证。</p>
+    </div></section>
+
+    <section class="wrap section" id="practice" aria-labelledby="practice-title">
+      <div class="section-heading"><div><p class="eyebrow">ONE DATASET / FOUR IMPLEMENTATIONS</p><h2 id="practice-title">用一个小例子，<br>把方法与工具连接起来。</h2></div><p>两组各 12 个模拟观测。<br>双侧 Welch t 检验，方向为 A−B。</p></div>
+      <figure class="demo-figure"><img src="assets/welch-demo.png" alt="左图是人为构造的A、B两组数值观测；右图是实际计算的A减B均值差及95%置信区间。仅用于教学。" width="1800" height="760" loading="lazy"><figcaption>人为构造教学数据，不是患者结果，也不证明疗效。图由项目中的 Python 脚本生成。</figcaption></figure>
+      <div class="result-values" id="demo-values"><div><span>A−B 均值差</span><strong id="demo-diff">—</strong></div><div><span>95% 置信区间</span><strong id="demo-ci">—</strong></div><div><span>双侧 P 值</span><strong id="demo-p">—</strong></div><div><span>独立模拟观测</span><strong>12 + 12</strong></div></div>
+      <p class="demo-reading">这是一份演示性估计。解释时要同时看差异、区间宽度与设计；P 值不说明临床意义。真实研究的样本量、基线调整和缺失处理需要预先设计。</p>
+      <details class="code-detail" open><summary>看看 R 和 Python 的关键指令</summary><div class="code-grid"><div><span>R / 基础 stats</span><pre><code># A−B；双侧；不假设等方差
+t.test(a, b,
+       var.equal = FALSE,
+       alternative = "two.sided",
+       conf.level = 0.95)</code></pre></div><div><span>Python / SciPy</span><pre><code># 明确覆盖等方差的默认参数
+result = stats.ttest_ind(
+    a, b, equal_var=False,
+    alternative="two-sided",
+    nan_policy="raise")
+result.confidence_interval(0.95)</code></pre></div></div><p class="small">这两段是关键指令；完整数据读入、检查和输出脚本位于仓库 examples/。SAS 示例与 C++（需 Boost）也使用同一数据和方向。运行验证状态见仓库 VALIDATION.md。</p></details>
+      <div class="quiz"><div><p class="eyebrow">CHECK YOUR UNDERSTANDING</p><h3>同一患者前后阳性/阴性，<br>可以直接当两个独立组吗？</h3></div><div><button class="button secondary" id="quiz-reveal" type="button" aria-expanded="false" aria-controls="quiz-answer">展开解析</button><p id="quiz-answer" hidden>应该保留配对信息。讨论 McNemar 等配对方案，核对逐对记录和不一致对；前后总阳性人数不够。</p></div></div>
+    </section>
+
+    <section class="sources-section section" id="sources" aria-labelledby="sources-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">READ THE SOURCE</p><h2 id="sources-title">让每一步，有据可查。</h2></div><p>核查日期：2026-10-08<br>来源支持原理与工具角色，不构成软件排名。</p></div><div class="source-grid">
+      <a href="https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf" target="_blank" rel="noopener noreferrer"><span>01 / REPORTING</span><strong>SAMPL 医学统计报告指南 ↗</strong><p>方法、效应量、置信区间与复核信息。</p></a>
+      <a href="https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf" target="_blank" rel="noopener noreferrer"><span>02 / INTERPRETATION</span><strong>ASA 关于 P 值的声明 ↗</strong><p>不能只凭阈值判断意义与证据。</p></a>
+      <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm" target="_blank" rel="noopener noreferrer"><span>03 / METHOD</span><strong>NIST 两样本 t 检验 ↗</strong><p>独立、配对及方差条件。</p></a>
+      <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html" target="_blank" rel="noopener noreferrer"><span>04 / IMPLEMENTATION</span><strong>R t.test 官方手册 ↗</strong><p>配对、方差和返回的区间。</p></a>
+      <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html" target="_blank" rel="noopener noreferrer"><span>05 / REPRODUCTION</span><strong>SciPy ttest_ind 官方文档 ↗</strong><p>显式参数与置信区间输出。</p></a>
+      <a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank" rel="noopener noreferrer"><span>06 / AI GOVERNANCE</span><strong>WHO 生成式 AI 指南说明 ↗</strong><p>错误、不完整信息与自动化偏见。</p></a>
+    </div><p class="small muted">更多模型来源、适用范围与软件入口位于仓库 docs/sources.md。引用仍需结合你的研究问题核对。</p></div></section>
+  </main>
+  <footer class="wrap"><div class="footer-brand"><span class="mark" aria-hidden="true">Σ</span><p>医学统计学习实验室<br><span>先问问题，再选方法；让分析可核查。</span></p></div><p>Haixiang Ding · 原创教学项目 · MIT<br><span>模拟案例 / 候选草案 / 人工确认</span></p></footer>
+</body>
+</html>

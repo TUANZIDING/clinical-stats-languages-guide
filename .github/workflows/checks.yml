@@ -1,0 +1,36 @@
+name: Check teaching project
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install numerical dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Install R and C++ math headers
+        run: sudo apt-get update && sudo apt-get install -y r-base libboost-dev
+      - name: Check method rules
+        run: npm test
+      - name: Check links and offline assets
+        run: python scripts/check_project.py
+      - name: Compile C++ teaching example
+        run: |
+          mkdir -p build
+          g++ -std=c++17 examples/cpp/welch_demo.cpp -o build/welch_demo
+      - name: Compare Python, R and C++ results
+        run: python scripts/verify_results.py --r --cpp build/welch_demo
+      - name: Check JavaScript syntax
+        run: |
+          node --check docs/app.js
+          node --check docs/method-engine.js

@@ -1,0 +1,4 @@
+# Versions used to rebuild the teaching figures; no runtime dependencies for the site.
+numpy==2.2.2
+scipy==1.15.1
+matplotlib==3.10.0
