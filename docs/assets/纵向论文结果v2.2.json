@@ -1,0 +1,1123 @@
+{
+  "schemaVersion": "2.2",
+  "case": "medplot-longitudinal",
+  "execution": {
+    "kind": "recomputed",
+    "startedAt": "2026-10-09 02:59:02 UTC",
+    "completedAt": "2026-10-09 02:59:13 UTC",
+    "scope": "Nausea mixed models and data summary; not full paper"
+  },
+  "frozenTargets": {
+    "sha256": "8864d5d321271b669027d170cae15a2c2d8c14552a7ab4086eae931dc57a5563",
+    "frozenAt": "2026-10-09T00:49:29.676950+00:00"
+  },
+  "authorCommit": "b81c02788e9a223505ac8dc7b52fd9a641669b2d",
+  "authorRuns": {
+    "binaryUnmodified": {
+      "error": null,
+      "warnings": [],
+      "messages": [],
+      "returned": [
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "14",
+          "OR": 1.767288352552725,
+          "ORCILower": 1.0068285660544085,
+          "ORCIUpper": 3.10212505521992,
+          "ORPValue": 0.04729258489533627
+        },
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "180",
+          "OR": 0.7830263378096263,
+          "ORCILower": 0.4221578900288722,
+          "ORCIUpper": 1.4523718736172901,
+          "ORPValue": 0.43776536781152736
+        },
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "365",
+          "OR": 0.4166650939694612,
+          "ORCILower": 0.20500882802511228,
+          "ORCIUpper": 0.8468406078167223,
+          "ORPValue": 0.015547087109499303
+        }
+      ]
+    },
+    "continuousUnmodified": {
+      "error": "'summary' is not an exported object from 'namespace:lmerTest'",
+      "warnings": [],
+      "messages": "Computing profile confidence intervals ...\n",
+      "returned": null
+    },
+    "continuousCompatible": {
+      "error": null,
+      "warnings": [],
+      "messages": "Computing profile confidence intervals ...\n",
+      "returned": [
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "14",
+          "beta": 0.3496256687474684,
+          "betaCILower": 0.11137013751639972,
+          "betaCIUpper": 0.5878894443791013,
+          "betaPValue": 0.004207600317714773
+        },
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "180",
+          "beta": -0.18769379208383274,
+          "betaCILower": -0.4369792544915669,
+          "betaCIUpper": 0.06163174494736415,
+          "betaPValue": 0.14094759719417765
+        },
+        {
+          "Variable": "Nausea",
+          "CovariateLevel": "365",
+          "beta": -0.29383913583041915,
+          "betaCILower": -0.5568415501977109,
+          "betaCIUpper": -0.030818646115317802,
+          "betaPValue": 0.029080883910949245
+        }
+      ]
+    },
+    "adapter": {
+      "kind": "single namespace dispatch compatibility change; GPL-3 derived file kept in ignored build",
+      "from": "lmerTest::summary(model)",
+      "to": "summary(model)",
+      "occurrences": 1,
+      "originalError": "'summary' is not an exported object from 'namespace:lmerTest'",
+      "sha256": "d23f2f4e8b9042c209014d9f3ab6192c37715dd8774a0a49c53265d3edca4b8a",
+      "limitations": "Not unmodified author-code execution; no formula, optimizer, CI or expected-value changes"
+    }
+  },
+  "population": {
+    "description": "Released EM demo: adults with erythema migrans; original source-cohort exclusions not documented here",
+    "unit": "participant; rows are visits",
+    "sampling": "clinical cohort, not survey",
+    "causalClaim": false
+  },
+  "denominators": {
+    "patients": 225,
+    "observedVisits": 812,
+    "plannedGrid": 900,
+    "absentVisits": 88,
+    "perVisit": [
+      {
+        "occasion": "0",
+        "rows": 225
+      },
+      {
+        "occasion": "14",
+        "rows": 224
+      },
+      {
+        "occasion": "180",
+        "rows": 196
+      },
+      {
+        "occasion": "365",
+        "rows": 167
+      }
+    ],
+    "perOutcomeMissing": {
+      "Fatigue": 0,
+      "Malaise": 0,
+      "Arthralgia": 0,
+      "Headache": 0,
+      "Myalgia": 0,
+      "Back.C": 0,
+      "Back.Th": 0,
+      "Back.L": 0,
+      "Paresthesias": 0,
+      "Dizziness": 0,
+      "Nausea": 0,
+      "Insomnia": 1,
+      "Sleepiness": 0,
+      "Forgetfulness": 0,
+      "Concentration": 0,
+      "Irritability": 0
+    },
+    "nauseaObserved": 812,
+    "nauseaPatients": 225
+  },
+  "missing": {
+    "method": "Per-outcome na.omit; no imputation",
+    "missingVisitReason": "UNKNOWN",
+    "sourceCohortExclusions": "UNKNOWN",
+    "itemMissingRows": 1,
+    "assumption": "Likelihood-based inference requires justified missingness assumptions; not established by few item NAs"
+  },
+  "estimands": {
+    "continuous": "Model-based mean nausea VAS difference at day14 minus baseline (0–10 scale); not median or causal treatment effect",
+    "binary": "Subject-specific conditional odds ratio of Nausea>0 at day14 versus baseline; not marginal OR, RR or HR"
+  },
+  "statistics": {
+    "linear14": {
+      "estimate": 0.3496256687474684,
+      "lower": 0.11137013751639972,
+      "upper": 0.5878894443791013,
+      "p": 0.004207600317714773
+    },
+    "logistic14": {
+      "estimate": 1.767288352552725,
+      "lower": 1.0068285660544085,
+      "upper": 3.10212505521992,
+      "p": 0.04729258489533627
+    },
+    "fatigue": {
+      "count": 152,
+      "n": 225,
+      "estimate": 0.6755555555555556,
+      "lower": 0.6101429320404622,
+      "upper": 0.7362691911844172,
+      "algorithm": "Clopper-Pearson exact binomial"
+    }
+  },
+  "intervals": {
+    "linear": "lme4 profile likelihood, 95%, default confint",
+    "binary": "exp(log-odds coefficient ± normal 1.9599639845 × SE), 95% Wald"
+  },
+  "diagnostics": {
+    "linear": {
+      "status": "EXECUTED_NOT_METHOD_APPROVAL",
+      "nobs": 812,
+      "patients": 225,
+      "formula": "Nausea ~ Measurement + (1 | PersonID)",
+      "REML": true,
+      "nAGQ": null,
+      "optimizer": "nloptwrap",
+      "convergenceCode": 0,
+      "convergenceMessages": null,
+      "singular": false,
+      "gradientMax": 4.547473508864641e-08,
+      "randomVariance": [
+        {
+          "grp": "PersonID",
+          "var1": "(Intercept)",
+          "var2": null,
+          "vcov": 1.5313563134269772,
+          "sdcor": 1.2374798234423772
+        },
+        {
+          "grp": "Residual",
+          "var1": null,
+          "var2": null,
+          "vcov": 1.6608303627278524,
+          "sdcor": 1.2887320756184555
+        }
+      ],
+      "fixedEffects": {
+        "(Intercept)": 0.7466666666666693,
+        "Measurement14": 0.3496256687474684,
+        "Measurement180": -0.18769379208383274,
+        "Measurement365": -0.29383913583041915
+      },
+      "warnings": [],
+      "remaining": [
+        "Residual/Q-Q interpretation, random-effect distribution and influence not independently reviewed",
+        "Missing-at-random plausibility and alternative covariance/estimand sensitivity not evaluated"
+      ]
+    },
+    "binary": {
+      "status": "EXECUTED_NOT_METHOD_APPROVAL",
+      "nobs": 812,
+      "patients": 225,
+      "formula": "binaryNausea ~ Measurement + (1 | PersonID)",
+      "REML": null,
+      "nAGQ": 1,
+      "optimizer": "Nelder_Mead",
+      "convergenceCode": 0,
+      "convergenceMessages": null,
+      "singular": false,
+      "gradientMax": 0.00017608215330255916,
+      "randomVariance": [
+        {
+          "grp": "PersonID",
+          "var1": "(Intercept)",
+          "var2": null,
+          "vcov": 5.581733849733501,
+          "sdcor": 2.362569332259585
+        }
+      ],
+      "fixedEffects": {
+        "(Intercept)": -2.3154024589134337,
+        "Measurement14": 0.5694463676598562,
+        "Measurement180": -0.24458894650771562,
+        "Measurement365": -0.8754725118343163
+      },
+      "warnings": [],
+      "remaining": [
+        "Residual/Q-Q interpretation, random-effect distribution and influence not independently reviewed",
+        "Missing-at-random plausibility and alternative covariance/estimand sensitivity not evaluated"
+      ]
+    },
+    "IDAndRangeChecks": "executed",
+    "binaryFrequency": [
+      {
+        "Measurement": "0",
+        "NauseaPresence": "0",
+        "Freq": 174
+      },
+      {
+        "Measurement": "14",
+        "NauseaPresence": "0",
+        "Freq": 159
+      },
+      {
+        "Measurement": "180",
+        "NauseaPresence": "0",
+        "Freq": 156
+      },
+      {
+        "Measurement": "365",
+        "NauseaPresence": "0",
+        "Freq": 142
+      },
+      {
+        "Measurement": "0",
+        "NauseaPresence": "1",
+        "Freq": 51
+      },
+      {
+        "Measurement": "14",
+        "NauseaPresence": "1",
+        "Freq": 65
+      },
+      {
+        "Measurement": "180",
+        "NauseaPresence": "1",
+        "Freq": 40
+      },
+      {
+        "Measurement": "365",
+        "NauseaPresence": "1",
+        "Freq": 25
+      }
+    ],
+    "time": {
+      "origin": "baseline Date per PersonID",
+      "modelTime": "categorical scheduled Measurement, not elapsed days",
+      "actualElapsedDays": {
+        "0": {
+          "min": 0,
+          "median": 0,
+          "max": 0
+        },
+        "14": {
+          "min": 0,
+          "median": 14,
+          "max": 42
+        },
+        "180": {
+          "min": -8,
+          "median": 182,
+          "max": 549
+        },
+        "365": {
+          "min": 331,
+          "median": 363,
+          "max": 433
+        }
+      },
+      "negativeElapsedRows": [
+        {
+          "PersonID": 155,
+          "Measurement": 180,
+          "Date": "03.06.2009",
+          "elapsedDays": -8
+        }
+      ],
+      "status": "SOURCE_DATE_INCONSISTENCY"
+    },
+    "independentUnitVerified": "participant ID; not 812 independent patients"
+  },
+  "observations": {
+    "rows": 812,
+    "patients": 225,
+    "occasions": 4,
+    "patients4": 166,
+    "patients3": 30,
+    "patients2": 29,
+    "males": 100,
+    "itemMissingRows": 1,
+    "fatigueCount": 152,
+    "fatigueDenominator": 225,
+    "fatiguePercent": 67.55555555555556,
+    "fatigueLowerPercent": 61.01429320404622,
+    "fatigueUpperPercent": 73.62691911844172,
+    "linearEstimateText": 0.3496256687474684,
+    "linearLowerText": 0.11137013751639972,
+    "linearUpperText": 0.5878894443791013,
+    "linearEstimateSI": 0.3496256687474684,
+    "linearLowerSI": 0.11137013751639972,
+    "linearUpperSI": 0.5878894443791013,
+    "linearPSI": 0.004207600317714773,
+    "logisticEstimateText": 1.767288352552725,
+    "logisticLowerText": 1.0068285660544085,
+    "logisticUpperText": 3.10212505521992,
+    "logisticEstimateSI": 1.767288352552725,
+    "logisticLowerSI": 1.0068285660544085,
+    "logisticUpperSI": 3.10212505521992,
+    "logisticPSI": 0.04729258489533627
+  },
+  "comparison": [
+    {
+      "id": "rows",
+      "published": 812,
+      "actual": 812,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "MATCH"
+    },
+    {
+      "id": "patients",
+      "published": 225,
+      "actual": 225,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "MATCH"
+    },
+    {
+      "id": "occasions",
+      "published": 4,
+      "actual": 4,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "MATCH"
+    },
+    {
+      "id": "patients4",
+      "published": 166,
+      "actual": 166,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "MATCH"
+    },
+    {
+      "id": "patients3",
+      "published": 29,
+      "actual": 30,
+      "difference": 1,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "DIFFERENCE"
+    },
+    {
+      "id": "patients2",
+      "published": 30,
+      "actual": 29,
+      "difference": -1,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "DIFFERENCE"
+    },
+    {
+      "id": "males",
+      "published": 100,
+      "actual": 100,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "MATCH"
+    },
+    {
+      "id": "itemMissingRows",
+      "published": 2,
+      "actual": 1,
+      "difference": -1,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "status": "DIFFERENCE"
+    },
+    {
+      "id": "fatigueCount",
+      "published": 152,
+      "actual": 152,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "status": "MATCH"
+    },
+    {
+      "id": "fatigueDenominator",
+      "published": 225,
+      "actual": 225,
+      "difference": 0,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "status": "MATCH"
+    },
+    {
+      "id": "fatiguePercent",
+      "published": 68,
+      "actual": 67.55555555555556,
+      "difference": -0.44444444444444287,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "status": "MATCH"
+    },
+    {
+      "id": "fatigueLowerPercent",
+      "published": 61,
+      "actual": 61.01429320404622,
+      "difference": 0.014293204046218477,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "status": "MATCH"
+    },
+    {
+      "id": "fatigueUpperPercent",
+      "published": 74,
+      "actual": 73.62691911844172,
+      "difference": -0.37308088155828045,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearEstimateText",
+      "published": 0.35,
+      "actual": 0.3496256687474684,
+      "difference": -0.00037433125253155675,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearLowerText",
+      "published": 0.11,
+      "actual": 0.11137013751639972,
+      "difference": 0.001370137516399722,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearUpperText",
+      "published": 0.59,
+      "actual": 0.5878894443791013,
+      "difference": -0.0021105556208986798,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearEstimateSI",
+      "published": 0.34963,
+      "actual": 0.3496256687474684,
+      "difference": -4.3312525315752914e-06,
+      "tolerance": 5e-06,
+      "rounding": "nearest displayed decimal (5 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearLowerSI",
+      "published": 0.11,
+      "actual": 0.11137013751639972,
+      "difference": 0.001370137516399722,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearUpperSI",
+      "published": 0.5879,
+      "actual": 0.5878894443791013,
+      "difference": -1.0555620898689e-05,
+      "tolerance": 5e-05,
+      "rounding": "nearest displayed decimal (4 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "status": "MATCH"
+    },
+    {
+      "id": "linearPSI",
+      "published": 0.0042,
+      "actual": 0.004207600317714773,
+      "difference": 7.600317714772861e-06,
+      "tolerance": 5e-05,
+      "rounding": "nearest displayed decimal (4 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "status": "MATCH"
+    },
+    {
+      "id": "logisticEstimateText",
+      "published": 1.77,
+      "actual": 1.767288352552725,
+      "difference": -0.002711647447275034,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "status": "MATCH"
+    },
+    {
+      "id": "logisticLowerText",
+      "published": 1.02,
+      "actual": 1.0068285660544085,
+      "difference": -0.013171433945591504,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "status": "DIFFERENCE"
+    },
+    {
+      "id": "logisticUpperText",
+      "published": 3.07,
+      "actual": 3.10212505521992,
+      "difference": 0.03212505521992037,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "status": "DIFFERENCE"
+    },
+    {
+      "id": "logisticEstimateSI",
+      "published": 1.77,
+      "actual": 1.767288352552725,
+      "difference": -0.002711647447275034,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "status": "MATCH"
+    },
+    {
+      "id": "logisticLowerSI",
+      "published": 1.007,
+      "actual": 1.0068285660544085,
+      "difference": -0.0001714339455913816,
+      "tolerance": 0.0005,
+      "rounding": "nearest displayed decimal (3 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "status": "MATCH"
+    },
+    {
+      "id": "logisticUpperSI",
+      "published": 3.1,
+      "actual": 3.10212505521992,
+      "difference": 0.0021250552199201245,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "status": "MATCH"
+    },
+    {
+      "id": "logisticPSI",
+      "published": 0.047,
+      "actual": 0.04729258489533627,
+      "difference": 0.0002925848953362689,
+      "tolerance": 0.0005,
+      "rounding": "nearest displayed decimal (3 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "status": "MATCH"
+    }
+  ],
+  "summary": {
+    "matched": 22,
+    "differences": 5,
+    "unreproduced": 0,
+    "total": 27
+  },
+  "warnings": [
+    "Main text nausea OR CI 1.02–3.07 versus S14 Fig 1.007–3.10; preserve both, do not choose after fitting.",
+    "Intro p2: 4 visits; Results p10 mentions additional 2-month visit; released example and S13 levels have 0/14/180/365 only.",
+    "Several other S14 rows show very narrow CIs / P=0; those models are outside limited run, cannot certify them.",
+    "1 released rows have a Date before that patient's baseline; source retained, not repaired. Original categorical-time models do not use this date.",
+    "Author running environment/commit not exactly specified by article",
+    "Original continuous author function may fail on a removed namespace export; compatible result is separately labeled",
+    "No full paper reproduction, independent methodology approval, AI evaluation or human usability evaluation"
+  ],
+  "unreproduced": [
+    "Other 15 symptoms and their comparisons",
+    "All original GUI, bootstrap median CIs (no recorded seed), permutation/spline/clustering outputs",
+    "Original study enrollment exclusions and raw source cohort",
+    "Original author executing commit and full 2015 runtime not supplied"
+  ],
+  "environment": {
+    "R": "R version 4.5.2 (2025-10-31)",
+    "system": {
+      "sysname": "Darwin",
+      "release": "25.5.0",
+      "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:06 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6030",
+      "nodename": "dinghaixiangdeMacBook-Pro.local",
+      "machine": "arm64",
+      "login": "root",
+      "user": "dinghaixiang",
+      "effective_user": "dinghaixiang"
+    },
+    "libraryPaths": [
+      "/Users/dinghaixiang/Documents/GitHub项目/clinical-stats-languages-guide/build/纵向首次恢复核查v2.2/分析库v2.2",
+      "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+    ],
+    "packages": [
+      {
+        "package": "MASS",
+        "version": "7.3-65"
+      },
+      {
+        "package": "Matrix",
+        "version": "1.7-4"
+      },
+      {
+        "package": "R6",
+        "version": "2.6.1"
+      },
+      {
+        "package": "RColorBrewer",
+        "version": "1.1-3"
+      },
+      {
+        "package": "Rcpp",
+        "version": "1.1.2"
+      },
+      {
+        "package": "RcppEigen",
+        "version": "0.3.4.0.2"
+      },
+      {
+        "package": "Rdpack",
+        "version": "2.6.6"
+      },
+      {
+        "package": "S7",
+        "version": "0.2.2"
+      },
+      {
+        "package": "boot",
+        "version": "1.3-32"
+      },
+      {
+        "package": "cli",
+        "version": "3.6.6"
+      },
+      {
+        "package": "cpp11",
+        "version": "0.5.5"
+      },
+      {
+        "package": "digest",
+        "version": "0.6.39"
+      },
+      {
+        "package": "farver",
+        "version": "2.1.2"
+      },
+      {
+        "package": "ggplot2",
+        "version": "4.0.3"
+      },
+      {
+        "package": "glue",
+        "version": "1.8.1"
+      },
+      {
+        "package": "gtable",
+        "version": "0.3.6"
+      },
+      {
+        "package": "isoband",
+        "version": "0.3.0"
+      },
+      {
+        "package": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "package": "labeling",
+        "version": "0.4.3"
+      },
+      {
+        "package": "lattice",
+        "version": "0.22-7"
+      },
+      {
+        "package": "lifecycle",
+        "version": "1.0.5"
+      },
+      {
+        "package": "lme4",
+        "version": "2.0-6"
+      },
+      {
+        "package": "lmerTest",
+        "version": "3.2-1"
+      },
+      {
+        "package": "minqa",
+        "version": "1.2.8"
+      },
+      {
+        "package": "nlme",
+        "version": "3.1-168"
+      },
+      {
+        "package": "nloptr",
+        "version": "2.2.1"
+      },
+      {
+        "package": "numDeriv",
+        "version": "2016.8-1.1"
+      },
+      {
+        "package": "rbibutils",
+        "version": "2.4.1"
+      },
+      {
+        "package": "reformulas",
+        "version": "0.4.4"
+      },
+      {
+        "package": "renv",
+        "version": "1.3.1"
+      },
+      {
+        "package": "rlang",
+        "version": "1.3.0"
+      },
+      {
+        "package": "scales",
+        "version": "1.4.0"
+      },
+      {
+        "package": "vctrs",
+        "version": "0.7.3"
+      },
+      {
+        "package": "viridisLite",
+        "version": "0.4.3"
+      },
+      {
+        "package": "withr",
+        "version": "3.0.3"
+      }
+    ],
+    "BLAS": "/opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib",
+    "session": [
+      "R version 4.5.2 (2025-10-31)",
+      "Platform: aarch64-apple-darwin23.6.0",
+      "Running under: macOS Tahoe 26.5.1",
+      "",
+      "Matrix products: default",
+      "BLAS:   /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib ",
+      "LAPACK: /opt/homebrew/Cellar/r/4.5.2_1/lib/R/lib/libRlapack.dylib;  LAPACK version 3.12.1",
+      "",
+      "locale:",
+      "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8",
+      "",
+      "time zone: Asia/Shanghai",
+      "tzcode source: internal",
+      "",
+      "attached base packages:",
+      "[1] stats     graphics  grDevices utils     datasets  methods   base     ",
+      "",
+      "other attached packages:",
+      "[1] lme4_2.0-6   Matrix_1.7-4",
+      "",
+      "loaded via a namespace (and not attached):",
+      " [1] vctrs_0.7.3         nlme_3.1-168        cli_3.6.6          ",
+      " [4] rlang_1.3.0         reformulas_0.4.4    S7_0.2.2           ",
+      " [7] jsonlite_2.0.0      minqa_1.2.8         glue_1.8.1         ",
+      "[10] scales_1.4.0        grid_4.5.2          lmerTest_3.2-1     ",
+      "[13] MASS_7.3-65         numDeriv_2016.8-1.1 lifecycle_1.0.5    ",
+      "[16] compiler_4.5.2      RColorBrewer_1.1-3  Rcpp_1.1.2         ",
+      "[19] farver_2.1.2        lattice_0.22-7      digest_0.6.39      ",
+      "[22] nloptr_2.2.1        R6_2.6.1            Rdpack_2.6.6       ",
+      "[25] splines_4.5.2       rbibutils_2.4.1     tools_4.5.2        ",
+      "[28] gtable_0.3.6        boot_1.3-32         ggplot2_4.0.3      "
+    ],
+    "isolation": "fresh locked library on same host; not 2015 runtime"
+  },
+  "code": {
+    "path": "scripts/纵向论文复算v2.2.R",
+    "sha256": "ec7edc7c89b00f99a036db5b8fc173aca078d6e7e9166e215568616fed5a0ee6"
+  },
+  "lock": {
+    "path": "config/纵向R环境锁v2.2.json",
+    "sha256": "ab2ac211b7c36ba527c4f812750a33774f9d47217aafd69c054ea4ecdc8c78f4"
+  },
+  "recordBuilder": {
+    "path": "scripts/纵向结果v2.2.py",
+    "sha256": "bb683c5b48db3bd8611d534e8f29d009022629f9c108218a0cd46cb6ed6c8d61",
+    "kind": "imports actual R computation, derives views; no additional statistical fitting"
+  },
+  "data": [
+    {
+      "file": "作者包说明v2.2.txt",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/DESCRIPTION",
+      "sourcePath": "DESCRIPTION",
+      "bytes": 985,
+      "sha256": "694ccbb9a3b53267433cf948f21e90f52db9e269c06d93ccc9772db221184e5f",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者公共数据v2.2.tsv",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/inst/extdata/DataEM.txt",
+      "sourcePath": "inst/extdata/DataEM.txt",
+      "bytes": 80535,
+      "sha256": "c286e06d8e40d767a7bc90dc4c0aaf24c6b2898afa2b50c5f8f37271a9c4328e",
+      "license": "GPL-3 package distribution; no separate data license found",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者混合模型v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsMixedModel.R",
+      "sourcePath": "R/PlotSymptomsMixedModel.R",
+      "bytes": 33000,
+      "sha256": "0ffc2cbcc651439ff00ba1629d055f2bc88a6f48805025c8237dd1f1e3be09cd",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者变量类型v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsDetermineTypeofVariable.R",
+      "sourcePath": "R/PlotSymptomsDetermineTypeofVariable.R",
+      "bytes": 460,
+      "sha256": "b0271aedc5bf410175d92bd846cb1ece490b0554caa5f06fe5776bd3cbc3d572",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者数据概况v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsTabDataSummary.R",
+      "sourcePath": "R/PlotSymptomsTabDataSummary.R",
+      "bytes": 3263,
+      "sha256": "2de7b38b2d09e3ea2b749c2c4a8dbb7c706bc3239781e38c086f6fac5192180d",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者许可v2.2.txt",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/inst/doc/gpl-3.0.txt",
+      "sourcePath": "inst/doc/gpl-3.0.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "论文网页v2.2.html",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0121760",
+      "sourcePath": "publisher main text",
+      "bytes": 209547,
+      "sha256": "d1adbd0381ec1141398e9c2b14afc3d1f7cff722c015466dfc5f5c83a4df8235",
+      "license": "CC-BY-4.0 article",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "论文正文v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0121760&type=printable",
+      "sourcePath": "publisher printable",
+      "bytes": 1590995,
+      "sha256": "5851046a23eb940f4a8ee184aab05ed779d7ec830edf37fb28428c30e0838a68",
+      "license": "CC-BY-4.0 article",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充文本1v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s001",
+      "sourcePath": "10.1371/journal.pone.0121760.s001",
+      "bytes": 73617,
+      "sha256": "c25da9a0dcfb83ae786879da25708a9673125bf85c32fffe7530288cb7e99fbb",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充表1v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s002",
+      "sourcePath": "10.1371/journal.pone.0121760.s002",
+      "bytes": 53361,
+      "sha256": "82352ea65688c6e40d0a34ee2031451a811e9da24b8112146cface3fefb10e9f",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充表2v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s003",
+      "sourcePath": "10.1371/journal.pone.0121760.s003",
+      "bytes": 42929,
+      "sha256": "eae00192978bbb234651004a27c16a8a9dc0e25d2d7458fcd7ef456388b5df5a",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图1v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s004",
+      "sourcePath": "10.1371/journal.pone.0121760.s004",
+      "bytes": 90136,
+      "sha256": "77106ee487ce1acfd1c76fc11c0ae6459ee8b6eb19adb4d94d3cac647efee367",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图2v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s005",
+      "sourcePath": "10.1371/journal.pone.0121760.s005",
+      "bytes": 116506,
+      "sha256": "c8e78ff1774c870f7ddc38086ed82052055c6acdf5279e10d8f2fad56d5acce8",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图3v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s006",
+      "sourcePath": "10.1371/journal.pone.0121760.s006",
+      "bytes": 79576,
+      "sha256": "dd771bf1faabd1e4fbf6ebec5c0737d6ca95727cd9e440630527cc17e901a5f6",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图4v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s007",
+      "sourcePath": "10.1371/journal.pone.0121760.s007",
+      "bytes": 479722,
+      "sha256": "1e900fa9e67b83ffcb747e91d99cb7b58236154074c8591a62cc095a71705080",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图5v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s008",
+      "sourcePath": "10.1371/journal.pone.0121760.s008",
+      "bytes": 384240,
+      "sha256": "f290f1f7ccd10390291ef6d6f9b63c3ee5fa69a391ae004565cfe4256db8df85",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图6v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s009",
+      "sourcePath": "10.1371/journal.pone.0121760.s009",
+      "bytes": 116848,
+      "sha256": "a5c8637a304274016da93427f4f7c5f33a5afce46bd65c58ed514f2d1e7b6b6c",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图7v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s010",
+      "sourcePath": "10.1371/journal.pone.0121760.s010",
+      "bytes": 350318,
+      "sha256": "54091ebb527e538eb572f32443c9b1113869f243535f487bfa6c464c3e4e142a",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图8v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s011",
+      "sourcePath": "10.1371/journal.pone.0121760.s011",
+      "bytes": 47020,
+      "sha256": "bd952b87976be13157fc6e28e857cf5839e42b38280c05004e6a2a9c2ca59943",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图9v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s012",
+      "sourcePath": "10.1371/journal.pone.0121760.s012",
+      "bytes": 172624,
+      "sha256": "2bce62a027043656ae7a3bcede5d37a169433f980b0b9fe4db631ecb4fa7e263",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图10v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s013",
+      "sourcePath": "10.1371/journal.pone.0121760.s013",
+      "bytes": 168552,
+      "sha256": "6dd0367e7667023a42dca6aeb9d94da0a715f94921f3f1a9ce958c764d5ca378",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图11v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s014",
+      "sourcePath": "10.1371/journal.pone.0121760.s014",
+      "bytes": 173526,
+      "sha256": "bda9594fb8c274876339ce77c754cc0c23c2b2a7b12f0c392b2a76e610797588",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图12v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s015",
+      "sourcePath": "10.1371/journal.pone.0121760.s015",
+      "bytes": 317702,
+      "sha256": "fe20949addb08c313e6e20a9c745b8247789c3d6ea37c59431526d053a8beaa5",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图13v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s016",
+      "sourcePath": "10.1371/journal.pone.0121760.s016",
+      "bytes": 159868,
+      "sha256": "16c895a50510684249b2981d3db945b51018de5eeb19a77ee6b0477f31842c5c",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图14v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s017",
+      "sourcePath": "10.1371/journal.pone.0121760.s017",
+      "bytes": 151224,
+      "sha256": "db3d5ab148c606f96da84b3aa3f81e1e710b7188f73b7754208f1e4e001960ab",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图15v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s018",
+      "sourcePath": "10.1371/journal.pone.0121760.s018",
+      "bytes": 59180,
+      "sha256": "bddbe6ef8be5b9a4ff262c1887b438aa91af88df69b6bc375c0b0c8ac3800fa6",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图16v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s019",
+      "sourcePath": "10.1371/journal.pone.0121760.s019",
+      "bytes": 181146,
+      "sha256": "926f57e271dc3f241f8b81bfee3f9fdfae7bcb904e115a9bf2692ed0651a915f",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者提交v2.2.json",
+      "url": "https://api.github.com/repos/crtahlin/medplot/commits/b81c02788e9a223505ac8dc7b52fd9a641669b2d",
+      "bytes": 11166,
+      "sha256": "31d012bd5a309af8a0dd429cb789ff18a679616eeb40039a199ce9fc3009ce79",
+      "license": "GitHub repository metadata"
+    },
+    {
+      "file": "作者文件树v2.2.json",
+      "url": "https://api.github.com/repos/crtahlin/medplot/git/trees/b81c02788e9a223505ac8dc7b52fd9a641669b2d?recursive=1",
+      "bytes": 34790,
+      "sha256": "c54105c29ba73c5f021e25d57d3d1132be15cfb07b1ab4cd3e3cb216a4f3eda8",
+      "license": "GitHub repository metadata"
+    }
+  ]
+}

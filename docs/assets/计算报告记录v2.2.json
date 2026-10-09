@@ -1,0 +1,55 @@
+{
+  "version": "2.2",
+  "case": "small",
+  "kind": "actual-r-computation",
+  "executedAt": "2026-10-09T03:03:16.413887+00:00",
+  "direction": "A-B",
+  "missing": "none; fail on NA",
+  "interval": "two-sided Welch t; Satterthwaite df; 95%",
+  "result": {
+    "n_a": 12.0,
+    "n_b": 12.0,
+    "mean_a": 128.75,
+    "mean_b": 120.666666667,
+    "difference": 8.08333333333,
+    "statistic": 3.18371320502,
+    "df": 21.3405263018,
+    "p_value": 0.00440712844155,
+    "ci_low": 2.80839401038,
+    "ci_high": 13.3582726563
+  },
+  "sourceHashes": {
+    "data/synthetic-independent.csv": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079",
+    "examples/r/welch_demo.R": "5f0384d1d98a3d1607154383a386b25e2cb5b30c63cd04cd214cf7346a9bfaf2",
+    "data/expected-results.json": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+    "docs/assets/统一结果视图v2.2.js": "c35260cf8405d70e96e458997cdbc0a7e22c792d94805e6a810cd521c3f4f2ca",
+    "scripts/计算报告v2.2.py": "0ca154fdfef02e1636841e64c891a48ec4dcd8bac816ae71ee674cfb7ab91d79"
+  },
+  "environment": {
+    "R": "R version 4.5.2 (2025-10-31)",
+    "RPlatform": "aarch64-apple-darwin23.6.0",
+    "stats": "4.5.2",
+    "BLAS": "/opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib",
+    "Python": "3.12.4",
+    "system": "macOS-26.5.1-arm64-arm-64bit",
+    "invocation": "Rscript --vanilla examples/r/welch_demo.R",
+    "packages": "base R only; no restoration or external package installation"
+  },
+  "diagnostics": {
+    "executed": [
+      "unique IDs",
+      "two groups",
+      "no missing/nonfinite values"
+    ],
+    "pending": [
+      "distribution/outliers",
+      "independence of a real research design"
+    ]
+  },
+  "limitations": [
+    "Only the existing 24-row simulation was recalculated.",
+    "Same-host run; no new OS/container restoration.",
+    "Not paper reproduction, AI evaluation, or a human learning trial."
+  ],
+  "stderr": ""
+}

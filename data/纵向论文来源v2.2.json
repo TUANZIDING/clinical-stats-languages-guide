@@ -1,0 +1,305 @@
+{
+  "retrievedAt": "2026-10-09T00:45:58.992228+00:00",
+  "authorCommit": "b81c02788e9a223505ac8dc7b52fd9a641669b2d",
+  "attribution": "Ahlin Č, Stupica D, Strle F, Lusa L (2015), DOI 10.1371/journal.pone.0121760; medplot package author Črt Ahlin with Lara Lusa",
+  "files": [
+    {
+      "file": "作者包说明v2.2.txt",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/DESCRIPTION",
+      "sourcePath": "DESCRIPTION",
+      "bytes": 985,
+      "sha256": "694ccbb9a3b53267433cf948f21e90f52db9e269c06d93ccc9772db221184e5f",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者公共数据v2.2.tsv",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/inst/extdata/DataEM.txt",
+      "sourcePath": "inst/extdata/DataEM.txt",
+      "bytes": 80535,
+      "sha256": "c286e06d8e40d767a7bc90dc4c0aaf24c6b2898afa2b50c5f8f37271a9c4328e",
+      "license": "GPL-3 package distribution; no separate data license found",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者混合模型v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsMixedModel.R",
+      "sourcePath": "R/PlotSymptomsMixedModel.R",
+      "bytes": 33000,
+      "sha256": "0ffc2cbcc651439ff00ba1629d055f2bc88a6f48805025c8237dd1f1e3be09cd",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者变量类型v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsDetermineTypeofVariable.R",
+      "sourcePath": "R/PlotSymptomsDetermineTypeofVariable.R",
+      "bytes": 460,
+      "sha256": "b0271aedc5bf410175d92bd846cb1ece490b0554caa5f06fe5776bd3cbc3d572",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者数据概况v2.2.R",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/R/PlotSymptomsTabDataSummary.R",
+      "sourcePath": "R/PlotSymptomsTabDataSummary.R",
+      "bytes": 3263,
+      "sha256": "2de7b38b2d09e3ea2b749c2c4a8dbb7c706bc3239781e38c086f6fac5192180d",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者许可v2.2.txt",
+      "url": "https://raw.githubusercontent.com/crtahlin/medplot/b81c02788e9a223505ac8dc7b52fd9a641669b2d/inst/doc/gpl-3.0.txt",
+      "sourcePath": "inst/doc/gpl-3.0.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "license": "GPL-3",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "论文网页v2.2.html",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0121760",
+      "sourcePath": "publisher main text",
+      "bytes": 209547,
+      "sha256": "d1adbd0381ec1141398e9c2b14afc3d1f7cff722c015466dfc5f5c83a4df8235",
+      "license": "CC-BY-4.0 article",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "论文正文v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0121760&type=printable",
+      "sourcePath": "publisher printable",
+      "bytes": 1590995,
+      "sha256": "5851046a23eb940f4a8ee184aab05ed779d7ec830edf37fb28428c30e0838a68",
+      "license": "CC-BY-4.0 article",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充文本1v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s001",
+      "sourcePath": "10.1371/journal.pone.0121760.s001",
+      "bytes": 73617,
+      "sha256": "c25da9a0dcfb83ae786879da25708a9673125bf85c32fffe7530288cb7e99fbb",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充表1v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s002",
+      "sourcePath": "10.1371/journal.pone.0121760.s002",
+      "bytes": 53361,
+      "sha256": "82352ea65688c6e40d0a34ee2031451a811e9da24b8112146cface3fefb10e9f",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充表2v2.2.pdf",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s003",
+      "sourcePath": "10.1371/journal.pone.0121760.s003",
+      "bytes": 42929,
+      "sha256": "eae00192978bbb234651004a27c16a8a9dc0e25d2d7458fcd7ef456388b5df5a",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图1v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s004",
+      "sourcePath": "10.1371/journal.pone.0121760.s004",
+      "bytes": 90136,
+      "sha256": "77106ee487ce1acfd1c76fc11c0ae6459ee8b6eb19adb4d94d3cac647efee367",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图2v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s005",
+      "sourcePath": "10.1371/journal.pone.0121760.s005",
+      "bytes": 116506,
+      "sha256": "c8e78ff1774c870f7ddc38086ed82052055c6acdf5279e10d8f2fad56d5acce8",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图3v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s006",
+      "sourcePath": "10.1371/journal.pone.0121760.s006",
+      "bytes": 79576,
+      "sha256": "dd771bf1faabd1e4fbf6ebec5c0737d6ca95727cd9e440630527cc17e901a5f6",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图4v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s007",
+      "sourcePath": "10.1371/journal.pone.0121760.s007",
+      "bytes": 479722,
+      "sha256": "1e900fa9e67b83ffcb747e91d99cb7b58236154074c8591a62cc095a71705080",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图5v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s008",
+      "sourcePath": "10.1371/journal.pone.0121760.s008",
+      "bytes": 384240,
+      "sha256": "f290f1f7ccd10390291ef6d6f9b63c3ee5fa69a391ae004565cfe4256db8df85",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图6v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s009",
+      "sourcePath": "10.1371/journal.pone.0121760.s009",
+      "bytes": 116848,
+      "sha256": "a5c8637a304274016da93427f4f7c5f33a5afce46bd65c58ed514f2d1e7b6b6c",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图7v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s010",
+      "sourcePath": "10.1371/journal.pone.0121760.s010",
+      "bytes": 350318,
+      "sha256": "54091ebb527e538eb572f32443c9b1113869f243535f487bfa6c464c3e4e142a",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图8v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s011",
+      "sourcePath": "10.1371/journal.pone.0121760.s011",
+      "bytes": 47020,
+      "sha256": "bd952b87976be13157fc6e28e857cf5839e42b38280c05004e6a2a9c2ca59943",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图9v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s012",
+      "sourcePath": "10.1371/journal.pone.0121760.s012",
+      "bytes": 172624,
+      "sha256": "2bce62a027043656ae7a3bcede5d37a169433f980b0b9fe4db631ecb4fa7e263",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图10v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s013",
+      "sourcePath": "10.1371/journal.pone.0121760.s013",
+      "bytes": 168552,
+      "sha256": "6dd0367e7667023a42dca6aeb9d94da0a715f94921f3f1a9ce958c764d5ca378",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图11v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s014",
+      "sourcePath": "10.1371/journal.pone.0121760.s014",
+      "bytes": 173526,
+      "sha256": "bda9594fb8c274876339ce77c754cc0c23c2b2a7b12f0c392b2a76e610797588",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图12v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s015",
+      "sourcePath": "10.1371/journal.pone.0121760.s015",
+      "bytes": 317702,
+      "sha256": "fe20949addb08c313e6e20a9c745b8247789c3d6ea37c59431526d053a8beaa5",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图13v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s016",
+      "sourcePath": "10.1371/journal.pone.0121760.s016",
+      "bytes": 159868,
+      "sha256": "16c895a50510684249b2981d3db945b51018de5eeb19a77ee6b0477f31842c5c",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图14v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s017",
+      "sourcePath": "10.1371/journal.pone.0121760.s017",
+      "bytes": 151224,
+      "sha256": "db3d5ab148c606f96da84b3aa3f81e1e710b7188f73b7754208f1e4e001960ab",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图15v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s018",
+      "sourcePath": "10.1371/journal.pone.0121760.s018",
+      "bytes": 59180,
+      "sha256": "bddbe6ef8be5b9a4ff262c1887b438aa91af88df69b6bc375c0b0c8ac3800fa6",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "补充图16v2.2.tif",
+      "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0121760.s019",
+      "sourcePath": "10.1371/journal.pone.0121760.s019",
+      "bytes": 181146,
+      "sha256": "926f57e271dc3f241f8b81bfee3f9fdfae7bcb904e115a9bf2692ed0651a915f",
+      "license": "CC-BY-4.0 article supplementary material; attribution required",
+      "publicRedistribution": "not performed; original materials remain in ignored build/"
+    },
+    {
+      "file": "作者提交v2.2.json",
+      "url": "https://api.github.com/repos/crtahlin/medplot/commits/b81c02788e9a223505ac8dc7b52fd9a641669b2d",
+      "bytes": 11166,
+      "sha256": "31d012bd5a309af8a0dd429cb789ff18a679616eeb40039a199ce9fc3009ce79",
+      "license": "GitHub repository metadata"
+    },
+    {
+      "file": "作者文件树v2.2.json",
+      "url": "https://api.github.com/repos/crtahlin/medplot/git/trees/b81c02788e9a223505ac8dc7b52fd9a641669b2d?recursive=1",
+      "bytes": 34790,
+      "sha256": "c54105c29ba73c5f021e25d57d3d1132be15cfb07b1ab4cd3e3cb216a4f3eda8",
+      "license": "GitHub repository metadata"
+    }
+  ],
+  "limitation": "Retrieval and file hashes do not establish numerical reproduction or methodological adequacy. Data license is package GPL-3, not an independently stated dataset CC license.",
+  "schemaVersion": "2.2",
+  "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25837352/",
+  "frozenTargets": {
+    "path": "data/纵向论文目标v2.2.json",
+    "sha256": "8864d5d321271b669027d170cae15a2c2d8c14552a7ab4086eae931dc57a5563",
+    "frozenAt": "2026-10-09T00:49:29.676950+00:00"
+  },
+  "journalIndex": {
+    "historicalSCIE": "Clarivate official announcement explicitly SCIE; from 2010 with retrospective early-year coverage",
+    "historicalSource": "https://wokinfo.com/news/plosone/",
+    "currentMJL": "NOT_INDEPENDENTLY_VERIFIED: JS page and browser timeout",
+    "articleWoSAccession": "NOT_VERIFIED",
+    "pubmedIsSCIEProof": false
+  },
+  "codeVersionQualification": "Latest reachable master before 2015-04-02 publication; no article-linked executing SHA. API metadata license null is superseded by DESCRIPTION GPL-3 and included license text.",
+  "publicOriginalsIncluded": false,
+  "postRunDataVersionInvestigation": {
+    "purpose": "post-run version-drift investigation only; selected author input and frozen expectations are unchanged",
+    "commit": "1c8365ca0c79459170b2108ac12fe2db982303ba",
+    "url": "https://raw.githubusercontent.com/crtahlin/medplot/1c8365ca0c79459170b2108ac12fe2db982303ba/inst/extdata/DataEM.txt",
+    "sha256": "c286e06d8e40d767a7bc90dc4c0aaf24c6b2898afa2b50c5f8f37271a9c4328e",
+    "sameBytesAsSelected": true
+  },
+  "indexBrowserAttempt": "Current MJL direct read timed out; no sign-in, article UT or current collection certification obtained",
+  "authorAPICommitDate": "2015-01-22T09:48:42Z",
+  "pubmedRetrieval": {
+    "query": "medplot[Title] OR 10.1371/journal.pone.0284904[Article Identifier] OR 10.1371/journal.pcbi.1008473[Article Identifier]",
+    "endpoint": "NCBI Entrez esearch / efetch via skill ncbi_entrez.py",
+    "count": 3,
+    "files": [
+      {
+        "path": "build/PubMed候选定位v2.2.json",
+        "sha256": "cc75251ffb01e2c6b97ecaea378d20b4d6aa319072b3e0d1527be5f688f05f4d"
+      },
+      {
+        "path": "build/PubMed候选记录v2.2.xml",
+        "sha256": "93b1548a705c4436af4012a2b10769208e2213d1ba23045b855316fde917e947"
+      }
+    ]
+  }
+}

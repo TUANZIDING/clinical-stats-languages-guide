@@ -1,9 +1,11 @@
 /* Offline teaching outputs only. No fetch, model API, storage or upload. */
 (() => {
   'use strict';
-  const result = window.CLINICAL_RESULT;
+  const result = window.RESULT_VIEW && window.RESULT_VIEW.clinical;
   if (!result || result.simulation !== true) return;
   const $ = id => document.getElementById(id);
+  $('clinical-result-legend').textContent = result.report.legend;
+  $('diagnostic-legend').textContent = result.diagnosticLegend;
   const body = $('clinical-table-body');
   body.replaceChildren();
   function row(label, values, missing = false) {

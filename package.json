@@ -1,9 +1,16 @@
 {
   "name": "clinical-stats-languages-guide",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "医学科研统计选择与AI协作的离线教学指南",
   "license": "MIT",
-  "scripts": { "test": "node --test tests/method-engine.test.cjs tests/published-papers-testv2.1.cjs" },
-  "engines": { "node": ">=18" }
+  "scripts": {
+    "test": "node -e \"require('node:fs').mkdirSync('build',{recursive:true})\" && node --test tests/method-engine.test.cjs tests/published-papers-testv2.1.cjs tests/研究卡片测试v2.2.cjs tests/纵向论文测试v2.2.cjs tests/教学判断测试v2.2.cjs && python3 tests/统一结果测试v2.2.py && python3 tests/纵向结果测试v2.2.py && python3 tests/计算报告测试v2.2.py && python3 tests/案例状态测试v2.2.py",
+    "check:offline": "npm test && python3 scripts/统一结果v2.2.py check && python3 scripts/纵向结果v2.2.py check && python3 scripts/计算报告v2.2.py check && node scripts/教学文档v2.2.cjs --check && python3 scripts/verify-paperv2.1.py && python3 scripts/check_project.py && python3 scripts/check-filenamesv2.0.py && python3 scripts/案例状态v2.2.py check && python3 scripts/综合核查v2.2.py",
+    "replay:longitudinal": "sh scripts/纵向重跑v2.2.sh",
+    "replay:teaching-report": "python3 scripts/计算报告v2.2.py run"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }

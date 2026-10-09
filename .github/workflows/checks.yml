@@ -28,6 +28,16 @@ jobs:
         run: python tests/clinical-reportv2.0.py
       - name: Check published-paper aggregate snapshot against frozen targets
         run: python scripts/verify-paperv2.1.py
+      - name: Check unified saved results and generated artifacts (offline snapshot only)
+        run: python scripts/统一结果v2.2.py check
+      - name: Check longitudinal saved replay and retained differences (no R model rerun)
+        run: python scripts/纵向结果v2.2.py check
+      - name: Check saved teaching report and course companion (no R calculation)
+        run: |
+          python scripts/计算报告v2.2.py check
+          node scripts/教学文档v2.2.cjs --check
+          python scripts/案例状态v2.2.py check
+          python scripts/综合核查v2.2.py
       - name: Check versioned new filenames
         run: python scripts/check-filenamesv2.0.py
       - name: Check links and offline assets
@@ -35,13 +45,20 @@ jobs:
       - name: Compile C++ teaching example
         run: |
           mkdir -p build
-          g++ -std=c++17 examples/cpp/welch_demo.cpp -o build/welch_demo
+          g++ -std=c++17 examples/cpp/welch_demo.cpp -o build/综合Welchv2.2
       - name: Compare Python, R and C++ results
-        run: python scripts/verify_results.py --r --cpp build/welch_demo
+        run: python scripts/verify_results.py --r --cpp build/综合Welchv2.2
       - name: Check JavaScript syntax
         run: |
           node --check docs/app.js
           node --check docs/method-engine.js
+          node --check docs/研究卡片v2.2.js
+          node --check docs/教学课程v2.2.js
+          node --check docs/教学交互v2.2.js
+          node --check docs/案例状态交互v2.2.js
+          node --check docs/assets/案例验证状态v2.2.js
           node --check docs/report-labv2.0.js
+          node --check docs/assets/统一结果视图v2.2.js
+          node --check docs/assets/纵向论文视图v2.2.js
           node --check docs/assets/clinical-resultsv2.0.js
           node --check docs/assets/paper-checkv2.1.js
