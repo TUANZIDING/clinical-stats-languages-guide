@@ -1,0 +1,137 @@
+{
+  "version": "2.2.0-rc.1",
+  "observedAt": "2026-10-09T03:15:45.203Z",
+  "browser": "Codex in-app browser, actual localhost UI actions",
+  "checks": [
+    {
+      "flow": "空卡片提交",
+      "passed": true
+    },
+    {
+      "flow": "配对多条件矛盾输入",
+      "passed": true
+    },
+    {
+      "flow": "复杂抽样×重复二分类条件OR",
+      "passed": true
+    },
+    {
+      "flow": "AI草案沿用同一卡片、保留条件目标与缺口",
+      "passed": true
+    },
+    {
+      "flow": "研究目标更改后清除旧提问",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 pairing 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 odds 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 equivalence 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "教学标签左右方向键",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 normality 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 denominator 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 adjustment 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 weights 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "判断练习 visits 错误及正确反馈",
+      "passed": true
+    },
+    {
+      "flow": "四个教学案例读取共同结果",
+      "passed": true
+    },
+    {
+      "flow": "报告标签键盘切换及9.03结果",
+      "passed": true
+    },
+    {
+      "flow": "工具标签键盘切换",
+      "passed": true
+    },
+    {
+      "flow": "六案例六列状态及专家真人待核查",
+      "passed": true
+    },
+    {
+      "flow": "390像素中文状态表无全页横溢、键盘横滚",
+      "passed": true,
+      "observed": {
+        "body": 390,
+        "document": 390,
+        "focused": "案例六列验证状态，可左右滚动",
+        "tableLeft": 40,
+        "width": 390
+      }
+    },
+    {
+      "flow": "320像素全页无横向溢出",
+      "passed": true,
+      "observed": {
+        "body": 320,
+        "document": 320,
+        "region": 242,
+        "width": 320
+      }
+    },
+    {
+      "flow": "独立计算HTML实际来源显示及320窄屏",
+      "passed": true,
+      "observed": {
+        "rows": 10,
+        "width": 320,
+        "body": 320
+      }
+    },
+    {
+      "flow": "改选后清除旧反馈及原生单选方向键",
+      "passed": true,
+      "observed": "判断已更改，请再次核对；上一次反馈不用于当前选择。"
+    },
+    {
+      "flow": "1280桌面中文及状态来源显示",
+      "passed": true,
+      "observed": {
+        "body": 1280,
+        "rows": 6,
+        "width": 1280
+      }
+    },
+    {
+      "flow": "当前浏览器日志无错误或警告",
+      "passed": true
+    }
+  ],
+  "download": {
+    "state": "待核查",
+    "observed": "备份 Markdown 文本可见；未观察到下载事件，未确认文件落盘"
+  },
+  "fileProtocol": {
+    "state": "待核查",
+    "observed": "本轮真实操作基于本地 HTTP；静态离线依赖检查通过，不冒称实际 file:// 全流程"
+  },
+  "humanTrial": "待核查；浏览器功能操作不等于初学者学习效果",
+  "aiEvaluation": "待核查；未调用或评分模型"
+}

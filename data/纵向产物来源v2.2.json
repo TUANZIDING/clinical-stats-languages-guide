@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "2.2",
+  "kind": "derived artifact hashes; not a new recomputation",
+  "files": [
+    {
+      "path": "docs/assets/纵向论文结果v2.2.json",
+      "sha256": "4eaf984540255e5ec16d37c4e36c884fbf9737bd8a56e44c87e89172d23b9d7b"
+    },
+    {
+      "path": "docs/assets/纵向论文视图v2.2.js",
+      "sha256": "2b9cdb62880f22d9a4360b48ee2f62ea2b53830934208126b1817518086fcd3a"
+    },
+    {
+      "path": "docs/纵向论文对照v2.2.md",
+      "sha256": "aba92731913b172da633cc8e30527b59cb9c6e3d2b4baf40d4e98c45ea2511ee"
+    },
+    {
+      "path": "docs/assets/纵向论文效应图v2.2.png",
+      "sha256": "7f58ec18783213e74c3d8da09cdf66378855e0d1de23f02b0d1590505388161e"
+    },
+    {
+      "path": "data/纵向论文来源v2.2.json",
+      "sha256": "691e2d9f6b58df35c994700fc1c44240db0cc84b3806730f126964861a8479f8"
+    },
+    {
+      "path": "config/文献检索环境锁v2.2.txt",
+      "sha256": "c08aed0185da4e4e343b2c6e55d0a2469a1d130bc949b4baa46026261d767e7a"
+    },
+    {
+      "path": "scripts/获取纵向论文v2.2.py",
+      "sha256": "1fb477836141514181a987a2bfe19c502ac8966aaaf5cf16191b41bbaef41fb5"
+    },
+    {
+      "path": "scripts/纵向环境恢复v2.2.R",
+      "sha256": "ba454011391d5b23a34034640f1a19fc9bf9b81214c1aa74b6d42cbd801ccddb"
+    },
+    {
+      "path": "scripts/纵向重跑v2.2.sh",
+      "sha256": "a72beee66f643659f5ea44ab186a75357add3d628a26811f5d039771f0f32c4b"
+    }
+  ]
+}

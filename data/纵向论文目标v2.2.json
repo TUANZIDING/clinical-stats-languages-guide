@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "2.2",
+  "frozenAt": "2026-10-09T00:49:29.676950+00:00",
+  "status": "FROZEN_BEFORE_RECOMPUTATION",
+  "paperDOI": "10.1371/journal.pone.0121760",
+  "selection": "Nausea 14 days vs baseline: continuous LMM and binary GLMM, plus published data overview and baseline fatigue exact CI. Chosen from stated clinical example before calculations, not after examining match.",
+  "plannedMethods": {
+    "continuous": "author mixedModel MMsimple, lmerTest::lmer REML; default profile confint; Satterthwaite P. If namespace summary no longer exported, preserve original error and use exactly one documented namespace-dispatch adapter.",
+    "binary": "author mixedModel MMsimple; Nausea > 0; lme4 glmer binomial logit, random patient intercept, Laplace nAGQ=1; log Wald CI",
+    "population": "all released EM data; na.omit per model, no imputation; no invented original cohort exclusion rules"
+  },
+  "targets": [
+    {
+      "id": "rows",
+      "value": 812,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "patients",
+      "value": 225,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "occasions",
+      "value": 4,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "patients4",
+      "value": 166,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "patients3",
+      "value": 29,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "patients2",
+      "value": 30,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "males",
+      "value": 100,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "itemMissingRows",
+      "value": 2,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Results > Demo data > Summary tabs paragraph 1; S1 Fig",
+      "scale": "number"
+    },
+    {
+      "id": "fatigueCount",
+      "value": 152,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "scale": "count"
+    },
+    {
+      "id": "fatigueDenominator",
+      "value": 225,
+      "digits": null,
+      "tolerance": 0,
+      "rounding": "exact integer",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "scale": "count"
+    },
+    {
+      "id": "fatiguePercent",
+      "value": 68,
+      "digits": 0,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "scale": "percentage points"
+    },
+    {
+      "id": "fatigueLowerPercent",
+      "value": 61,
+      "digits": 0,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "scale": "percentage points"
+    },
+    {
+      "id": "fatigueUpperPercent",
+      "value": 74,
+      "digits": 0,
+      "tolerance": 0.5,
+      "rounding": "nearest displayed decimal (0 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p11, Summary tabs, fatigue paragraph; Fig 3",
+      "scale": "percentage points"
+    },
+    {
+      "id": "linearEstimateText",
+      "value": 0.35,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "scale": "number"
+    },
+    {
+      "id": "linearLowerText",
+      "value": 0.11,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "scale": "number"
+    },
+    {
+      "id": "linearUpperText",
+      "value": 0.59,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, Analysis tabs, longitudinal nausea paragraph",
+      "scale": "number"
+    },
+    {
+      "id": "linearEstimateSI",
+      "value": 0.34963,
+      "digits": 5,
+      "tolerance": 5e-06,
+      "rounding": "nearest displayed decimal (5 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "scale": "number"
+    },
+    {
+      "id": "linearLowerSI",
+      "value": 0.11,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "scale": "number"
+    },
+    {
+      "id": "linearUpperSI",
+      "value": 0.5879,
+      "digits": 4,
+      "tolerance": 5e-05,
+      "rounding": "nearest displayed decimal (4 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "scale": "number"
+    },
+    {
+      "id": "linearPSI",
+      "value": 0.0042,
+      "digits": 4,
+      "tolerance": 5e-05,
+      "rounding": "nearest displayed decimal (4 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S13 Fig (s016), Nausea / Level 14 row; manually read original TIFF before any model run",
+      "scale": "number"
+    },
+    {
+      "id": "logisticEstimateText",
+      "value": 1.77,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "scale": "number"
+    },
+    {
+      "id": "logisticLowerText",
+      "value": 1.02,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "scale": "number"
+    },
+    {
+      "id": "logisticUpperText",
+      "value": 3.07,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "Main PDF p13, final paragraph: presence of nausea after 14 days",
+      "scale": "number"
+    },
+    {
+      "id": "logisticEstimateSI",
+      "value": 1.77,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "scale": "number"
+    },
+    {
+      "id": "logisticLowerSI",
+      "value": 1.007,
+      "digits": 3,
+      "tolerance": 0.0005,
+      "rounding": "nearest displayed decimal (3 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "scale": "number"
+    },
+    {
+      "id": "logisticUpperSI",
+      "value": 3.1,
+      "digits": 2,
+      "tolerance": 0.005,
+      "rounding": "nearest displayed decimal (2 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "scale": "number"
+    },
+    {
+      "id": "logisticPSI",
+      "value": 0.047,
+      "digits": 3,
+      "tolerance": 0.0005,
+      "rounding": "nearest displayed decimal (3 places); half-unit tolerance + 1e-12 float slack",
+      "location": "S14 Fig (s017), Nausea / Level 14 row; source CI differs from main text",
+      "scale": "number"
+    }
+  ],
+  "unreproduced": [
+    "Other 15 symptoms and their comparisons",
+    "All original GUI, bootstrap median CIs (no recorded seed), permutation/spline/clustering outputs",
+    "Original study enrollment exclusions and raw source cohort",
+    "Original author executing commit and full 2015 runtime not supplied"
+  ],
+  "sourceConflicts": [
+    "Main text nausea OR CI 1.02–3.07 versus S14 Fig 1.007–3.10; preserve both, do not choose after fitting.",
+    "Intro p2: 4 visits; Results p10 mentions additional 2-month visit; released example and S13 levels have 0/14/180/365 only.",
+    "Several other S14 rows show very narrow CIs / P=0; those models are outside limited run, cannot certify them."
+  ]
+}

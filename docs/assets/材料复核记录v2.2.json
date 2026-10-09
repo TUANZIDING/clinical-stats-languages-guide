@@ -1,0 +1,404 @@
+{
+  "version": "2.2",
+  "checkedAt": "2026-10-09T03:16:27.200997+00:00",
+  "kind": "Actual read-only SHA-256 and byte-size check of closed project material lists",
+  "count": 55,
+  "files": [
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育正文v2.1.html",
+      "sha256": "2e367deab7875b1e6d4b94fb6af5d8a24a86ab391ab28551a275cdcdd7aa1a62",
+      "bytes": 231199,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表1v2.1.pdf",
+      "sha256": "e30b4c26226fab4f187e18a24f7190a65d883d6a422e9fc048b2747c66ad362f",
+      "bytes": 21492,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表2v2.1.pdf",
+      "sha256": "6a2a12bd7568396ae196f9ca4211bd33b57ba9874fce6cca3abce193d5a2c18b",
+      "bytes": 24261,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表3v2.1.pdf",
+      "sha256": "903b24b5cdd8ae620ca322bdd6f91cddd0d69cb8681efce6dc5b3c4bb3a85ca2",
+      "bytes": 21543,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表4v2.1.pdf",
+      "sha256": "f0f1df04ed453a4966c3c5b84c75b1a597feb71e9b4b79b05e5e7750d09b40e7",
+      "bytes": 21158,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表5v2.1.pdf",
+      "sha256": "7272007706e5c2250c32d2a9ccccbb680ac76feae786312cd9defb16c325652f",
+      "bytes": 21125,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表6v2.1.pdf",
+      "sha256": "bce76164d8be7bb1842a3349a61ed84cf07385a66b14f6a28e9886965d1d2a4e",
+      "bytes": 20841,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表7v2.1.pdf",
+      "sha256": "e9975a5eb0d2ea4a1fe84b1946b66ebccfede1af3a67b0ba04d9f3c7ea4683b9",
+      "bytes": 24524,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表8v2.1.pdf",
+      "sha256": "5e4890b1199088df21d8268111447522908200a391672f5481cc9c09bb3cb61d",
+      "bytes": 34279,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表9v2.1.pdf",
+      "sha256": "cbb80b703b1a39fc00c31e82715f896187ffc250c5332bdb16a84868ab21a655",
+      "bytes": 31756,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表10v2.1.pdf",
+      "sha256": "79f2951c141333748d08dc5ac5243636aba286d17a0c1a17971dff100fa70a0b",
+      "bytes": 37104,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表11v2.1.pdf",
+      "sha256": "1072760cb5e8a049b81692e8b9a3679d50c46cc7ab1da1f69c671c0aa139b317",
+      "bytes": 21603,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育补充表12v2.1.pdf",
+      "sha256": "4bc1e85cf957e076511f8560352943a9774123a30d6c1843c9482777c7757bd5",
+      "bytes": 21746,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "近视与教育正文v2.1.pdf",
+      "sha256": "cc34064166f8395346f62a42ba3b7e86c2b0cb0ba74b7eddb5cfd78991c80ffc",
+      "bytes": 819888,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "出生体重与角膜正文v2.1.html",
+      "sha256": "9bef89a0121370da373ce72f5ac0839db509681460d971720a01b06ca2906428",
+      "bytes": 181985,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "出生体重与角膜补充表1v2.1.docx",
+      "sha256": "b4ead72b500ca77ffdfbb5661c0c39e6a00fa6bab9aa526b3620f214122ae4ed",
+      "bytes": 12987,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "出生体重与角膜补充表2v2.1.docx",
+      "sha256": "70270a3e191272acefb5417783348ada55a6bd7726fcab6e3fe8e8afd6b2b93f",
+      "bytes": 12662,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "出生体重与角膜正文v2.1.pdf",
+      "sha256": "97b9c259ec5a8a8499ce9b585c91e3ffa56f0592405552e90f266fc5f8f3c354",
+      "bytes": 1888082,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "出生体重与角膜勘误正文v2.1.pdf",
+      "sha256": "7d149f95a0f4b8299a021089bb2c00bc5ccb0c3fb6b83a2c390afac0541aee6b",
+      "bytes": 243221,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组正文v2.1.html",
+      "sha256": "c519c02ba94d0f8cfa88d489e5550e138063474b744f093059ac4f6e04691e0e",
+      "bytes": 466828,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组正文v2.1.xml",
+      "sha256": "de0eb4fcf7979026b322dcb718cf90e1d78db69559c1293e47922fc69ed9d1aa",
+      "bytes": 171936,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组正文v2.1.pdf",
+      "sha256": "265ca2b6b68c7fd2536ade43becec7d1c81b6700afcd064e314a624e6946e0b3",
+      "bytes": 10809648,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组补充图v2.1.pdf",
+      "sha256": "198445651b779803ff375859a9c5e8ff22e2a2afca471b2ad29283b439618f39",
+      "bytes": 1562594,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组报告清单v2.1.pdf",
+      "sha256": "a7ad6740a9e1ba96b9b1817f6000dc78c5890342d59f6752684ee1bc30ab6f30",
+      "bytes": 2070693,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组补充表1至9v2.1.xlsx",
+      "sha256": "8d2892031d5a944b1c9435ca0f6cdbcb5cda56ab5ef9398859e226037bc0f87a",
+      "bytes": 43759682,
+      "matched": true
+    },
+    {
+      "manifest": "data/paper-materialsv2.1.json",
+      "file": "暴露组图源数据v2.1.xlsx",
+      "sha256": "2f5585445edf68bc41fa407d298771bc402f99d7e9f2a743ff2f28333d5579f8",
+      "bytes": 30297370,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者包说明v2.2.txt",
+      "sha256": "694ccbb9a3b53267433cf948f21e90f52db9e269c06d93ccc9772db221184e5f",
+      "bytes": 985,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者公共数据v2.2.tsv",
+      "sha256": "c286e06d8e40d767a7bc90dc4c0aaf24c6b2898afa2b50c5f8f37271a9c4328e",
+      "bytes": 80535,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者混合模型v2.2.R",
+      "sha256": "0ffc2cbcc651439ff00ba1629d055f2bc88a6f48805025c8237dd1f1e3be09cd",
+      "bytes": 33000,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者变量类型v2.2.R",
+      "sha256": "b0271aedc5bf410175d92bd846cb1ece490b0554caa5f06fe5776bd3cbc3d572",
+      "bytes": 460,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者数据概况v2.2.R",
+      "sha256": "2de7b38b2d09e3ea2b749c2c4a8dbb7c706bc3239781e38c086f6fac5192180d",
+      "bytes": 3263,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者许可v2.2.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "论文网页v2.2.html",
+      "sha256": "d1adbd0381ec1141398e9c2b14afc3d1f7cff722c015466dfc5f5c83a4df8235",
+      "bytes": 209547,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "论文正文v2.2.pdf",
+      "sha256": "5851046a23eb940f4a8ee184aab05ed779d7ec830edf37fb28428c30e0838a68",
+      "bytes": 1590995,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充文本1v2.2.pdf",
+      "sha256": "c25da9a0dcfb83ae786879da25708a9673125bf85c32fffe7530288cb7e99fbb",
+      "bytes": 73617,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充表1v2.2.pdf",
+      "sha256": "82352ea65688c6e40d0a34ee2031451a811e9da24b8112146cface3fefb10e9f",
+      "bytes": 53361,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充表2v2.2.pdf",
+      "sha256": "eae00192978bbb234651004a27c16a8a9dc0e25d2d7458fcd7ef456388b5df5a",
+      "bytes": 42929,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图1v2.2.tif",
+      "sha256": "77106ee487ce1acfd1c76fc11c0ae6459ee8b6eb19adb4d94d3cac647efee367",
+      "bytes": 90136,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图2v2.2.tif",
+      "sha256": "c8e78ff1774c870f7ddc38086ed82052055c6acdf5279e10d8f2fad56d5acce8",
+      "bytes": 116506,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图3v2.2.tif",
+      "sha256": "dd771bf1faabd1e4fbf6ebec5c0737d6ca95727cd9e440630527cc17e901a5f6",
+      "bytes": 79576,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图4v2.2.tif",
+      "sha256": "1e900fa9e67b83ffcb747e91d99cb7b58236154074c8591a62cc095a71705080",
+      "bytes": 479722,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图5v2.2.tif",
+      "sha256": "f290f1f7ccd10390291ef6d6f9b63c3ee5fa69a391ae004565cfe4256db8df85",
+      "bytes": 384240,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图6v2.2.tif",
+      "sha256": "a5c8637a304274016da93427f4f7c5f33a5afce46bd65c58ed514f2d1e7b6b6c",
+      "bytes": 116848,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图7v2.2.tif",
+      "sha256": "54091ebb527e538eb572f32443c9b1113869f243535f487bfa6c464c3e4e142a",
+      "bytes": 350318,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图8v2.2.tif",
+      "sha256": "bd952b87976be13157fc6e28e857cf5839e42b38280c05004e6a2a9c2ca59943",
+      "bytes": 47020,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图9v2.2.tif",
+      "sha256": "2bce62a027043656ae7a3bcede5d37a169433f980b0b9fe4db631ecb4fa7e263",
+      "bytes": 172624,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图10v2.2.tif",
+      "sha256": "6dd0367e7667023a42dca6aeb9d94da0a715f94921f3f1a9ce958c764d5ca378",
+      "bytes": 168552,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图11v2.2.tif",
+      "sha256": "bda9594fb8c274876339ce77c754cc0c23c2b2a7b12f0c392b2a76e610797588",
+      "bytes": 173526,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图12v2.2.tif",
+      "sha256": "fe20949addb08c313e6e20a9c745b8247789c3d6ea37c59431526d053a8beaa5",
+      "bytes": 317702,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图13v2.2.tif",
+      "sha256": "16c895a50510684249b2981d3db945b51018de5eeb19a77ee6b0477f31842c5c",
+      "bytes": 159868,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图14v2.2.tif",
+      "sha256": "db3d5ab148c606f96da84b3aa3f81e1e710b7188f73b7754208f1e4e001960ab",
+      "bytes": 151224,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图15v2.2.tif",
+      "sha256": "bddbe6ef8be5b9a4ff262c1887b438aa91af88df69b6bc375c0b0c8ac3800fa6",
+      "bytes": 59180,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "补充图16v2.2.tif",
+      "sha256": "926f57e271dc3f241f8b81bfee3f9fdfae7bcb904e115a9bf2692ed0651a915f",
+      "bytes": 181146,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者提交v2.2.json",
+      "sha256": "31d012bd5a309af8a0dd429cb789ff18a679616eeb40039a199ce9fc3009ce79",
+      "bytes": 11166,
+      "matched": true
+    },
+    {
+      "manifest": "data/纵向论文来源v2.2.json",
+      "file": "作者文件树v2.2.json",
+      "sha256": "c54105c29ba73c5f021e25d57d3d1132be15cfb07b1ab4cd3e3cb216a4f3eda8",
+      "bytes": 34790,
+      "matched": true
+    }
+  ],
+  "manifests": [
+    {
+      "path": "data/paper-materialsv2.1.json",
+      "sha256": "6142afd7ab158b06950e43d9de609faf9ddbfb171419ef8dd6c52ec8868eb67b"
+    },
+    {
+      "path": "data/纵向论文来源v2.2.json",
+      "sha256": "691e2d9f6b58df35c994700fc1c44240db0cc84b3806730f126964861a8479f8"
+    }
+  ],
+  "limitation": "File identity / material availability only; not rereading all contents, new license approval, all supplement analyses, numerical replication or expert review. No original article, SI or author package newly added to Git."
+}

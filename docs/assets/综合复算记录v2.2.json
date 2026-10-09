@@ -1,0 +1,7299 @@
+{
+  "schemaVersion": "2.2",
+  "checkedAt": "2026-10-09T03:07:15.058295+00:00",
+  "kind": "Actual local recomputation followed by comparison to pre-repair saved runs",
+  "scope": "two teaching fixtures, four NHANES survey models, two medplot symptom models; not whole papers",
+  "numericComparison": {
+    "fields": 557,
+    "relativeTolerance": 1e-09,
+    "absoluteTolerance": 1e-10,
+    "checks": [
+      {
+        "field": "small.denominators.eligible",
+        "path": [
+          "small",
+          "denominators",
+          "eligible"
+        ],
+        "previous": 24,
+        "actual": 24
+      },
+      {
+        "field": "small.denominators.A",
+        "path": [
+          "small",
+          "denominators",
+          "A"
+        ],
+        "previous": 12,
+        "actual": 12
+      },
+      {
+        "field": "small.denominators.B",
+        "path": [
+          "small",
+          "denominators",
+          "B"
+        ],
+        "previous": 12,
+        "actual": 12
+      },
+      {
+        "field": "small.denominators.analyzed",
+        "path": [
+          "small",
+          "denominators",
+          "analyzed"
+        ],
+        "previous": 24,
+        "actual": 24
+      },
+      {
+        "field": "small.missing.A",
+        "path": [
+          "small",
+          "missing",
+          "A"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "small.missing.B",
+        "path": [
+          "small",
+          "missing",
+          "B"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "small.estimates.0.value",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "value"
+        ],
+        "previous": 8.083333333333329,
+        "actual": 8.083333333333329
+      },
+      {
+        "field": "small.estimates.0.ci.level",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "small.estimates.0.ci.lower",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "ci",
+          "lower"
+        ],
+        "previous": 2.8083940103801677,
+        "actual": 2.8083940103801677
+      },
+      {
+        "field": "small.estimates.0.ci.upper",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "ci",
+          "upper"
+        ],
+        "previous": 13.35827265628649,
+        "actual": 13.35827265628649
+      },
+      {
+        "field": "small.estimates.0.metrics.t",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "metrics",
+          "t"
+        ],
+        "previous": 3.1837132050193677,
+        "actual": 3.1837132050193677
+      },
+      {
+        "field": "small.estimates.0.metrics.df",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "metrics",
+          "df"
+        ],
+        "previous": 21.34052630177548,
+        "actual": 21.34052630177548
+      },
+      {
+        "field": "small.estimates.0.metrics.p",
+        "path": [
+          "small",
+          "estimates",
+          0,
+          "metrics",
+          "p"
+        ],
+        "previous": 0.004407128441550018,
+        "actual": 0.004407128441550018
+      },
+      {
+        "field": "small.statistics.0.value",
+        "path": [
+          "small",
+          "statistics",
+          0,
+          "value"
+        ],
+        "previous": 128.75,
+        "actual": 128.75
+      },
+      {
+        "field": "small.statistics.0.denominator",
+        "path": [
+          "small",
+          "statistics",
+          0,
+          "denominator"
+        ],
+        "previous": 12,
+        "actual": 12
+      },
+      {
+        "field": "small.statistics.1.value",
+        "path": [
+          "small",
+          "statistics",
+          1,
+          "value"
+        ],
+        "previous": 120.66666666666667,
+        "actual": 120.66666666666667
+      },
+      {
+        "field": "small.statistics.1.denominator",
+        "path": [
+          "small",
+          "statistics",
+          1,
+          "denominator"
+        ],
+        "previous": 12,
+        "actual": 12
+      },
+      {
+        "field": "clinical.denominators.eligible",
+        "path": [
+          "clinical",
+          "denominators",
+          "eligible"
+        ],
+        "previous": 96,
+        "actual": 96
+      },
+      {
+        "field": "clinical.denominators.groupTotal.A",
+        "path": [
+          "clinical",
+          "denominators",
+          "groupTotal",
+          "A"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.denominators.groupTotal.B",
+        "path": [
+          "clinical",
+          "denominators",
+          "groupTotal",
+          "B"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.denominators.A",
+        "path": [
+          "clinical",
+          "denominators",
+          "A"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.denominators.B",
+        "path": [
+          "clinical",
+          "denominators",
+          "B"
+        ],
+        "previous": 43,
+        "actual": 43
+      },
+      {
+        "field": "clinical.denominators.analyzed",
+        "path": [
+          "clinical",
+          "denominators",
+          "analyzed"
+        ],
+        "previous": 88,
+        "actual": 88
+      },
+      {
+        "field": "clinical.missing.A",
+        "path": [
+          "clinical",
+          "missing",
+          "A"
+        ],
+        "previous": 3,
+        "actual": 3
+      },
+      {
+        "field": "clinical.missing.B",
+        "path": [
+          "clinical",
+          "missing",
+          "B"
+        ],
+        "previous": 5,
+        "actual": 5
+      },
+      {
+        "field": "clinical.estimates.0.value",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "value"
+        ],
+        "previous": 9.028992248061996,
+        "actual": 9.028992248061996
+      },
+      {
+        "field": "clinical.estimates.0.ci.level",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "clinical.estimates.0.ci.lower",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "ci",
+          "lower"
+        ],
+        "previous": 2.525722225949939,
+        "actual": 2.525722225949939
+      },
+      {
+        "field": "clinical.estimates.0.ci.upper",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "ci",
+          "upper"
+        ],
+        "previous": 15.532262270174055,
+        "actual": 15.532262270174055
+      },
+      {
+        "field": "clinical.estimates.0.metrics.t",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "metrics",
+          "t"
+        ],
+        "previous": 2.7641945436833995,
+        "actual": 2.7641945436833995
+      },
+      {
+        "field": "clinical.estimates.0.metrics.df",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "metrics",
+          "df"
+        ],
+        "previous": 77.73622758302501,
+        "actual": 77.73622758302501
+      },
+      {
+        "field": "clinical.estimates.0.metrics.p",
+        "path": [
+          "clinical",
+          "estimates",
+          0,
+          "metrics",
+          "p"
+        ],
+        "previous": 0.007122449826520556,
+        "actual": 0.007122449826520556
+      },
+      {
+        "field": "clinical.statistics.0.value",
+        "path": [
+          "clinical",
+          "statistics",
+          0,
+          "value"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.0.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          0,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.1.value",
+        "path": [
+          "clinical",
+          "statistics",
+          1,
+          "value"
+        ],
+        "previous": 2,
+        "actual": 2
+      },
+      {
+        "field": "clinical.statistics.1.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          1,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.2.value",
+        "path": [
+          "clinical",
+          "statistics",
+          2,
+          "value"
+        ],
+        "previous": 62.14782608695653,
+        "actual": 62.14782608695653
+      },
+      {
+        "field": "clinical.statistics.2.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          2,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.3.value",
+        "path": [
+          "clinical",
+          "statistics",
+          3,
+          "value"
+        ],
+        "previous": 12.043951716395243,
+        "actual": 12.043951716395243
+      },
+      {
+        "field": "clinical.statistics.3.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          3,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.4.value",
+        "path": [
+          "clinical",
+          "statistics",
+          4,
+          "value"
+        ],
+        "previous": 61.849999999999994,
+        "actual": 61.849999999999994
+      },
+      {
+        "field": "clinical.statistics.4.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          4,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.5.value",
+        "path": [
+          "clinical",
+          "statistics",
+          5,
+          "value"
+        ],
+        "previous": 53.95,
+        "actual": 53.95
+      },
+      {
+        "field": "clinical.statistics.5.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          5,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.6.value",
+        "path": [
+          "clinical",
+          "statistics",
+          6,
+          "value"
+        ],
+        "previous": 69.875,
+        "actual": 69.875
+      },
+      {
+        "field": "clinical.statistics.6.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          6,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.7.value",
+        "path": [
+          "clinical",
+          "statistics",
+          7,
+          "value"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.7.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          7,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.8.value",
+        "path": [
+          "clinical",
+          "statistics",
+          8,
+          "value"
+        ],
+        "previous": 3,
+        "actual": 3
+      },
+      {
+        "field": "clinical.statistics.8.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          8,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.9.value",
+        "path": [
+          "clinical",
+          "statistics",
+          9,
+          "value"
+        ],
+        "previous": 60.715555555555554,
+        "actual": 60.715555555555554
+      },
+      {
+        "field": "clinical.statistics.9.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          9,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.10.value",
+        "path": [
+          "clinical",
+          "statistics",
+          10,
+          "value"
+        ],
+        "previous": 11.399181700207407,
+        "actual": 11.399181700207407
+      },
+      {
+        "field": "clinical.statistics.10.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          10,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.11.value",
+        "path": [
+          "clinical",
+          "statistics",
+          11,
+          "value"
+        ],
+        "previous": 61.1,
+        "actual": 61.1
+      },
+      {
+        "field": "clinical.statistics.11.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          11,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.12.value",
+        "path": [
+          "clinical",
+          "statistics",
+          12,
+          "value"
+        ],
+        "previous": 52.1,
+        "actual": 52.1
+      },
+      {
+        "field": "clinical.statistics.12.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          12,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.13.value",
+        "path": [
+          "clinical",
+          "statistics",
+          13,
+          "value"
+        ],
+        "previous": 69.5,
+        "actual": 69.5
+      },
+      {
+        "field": "clinical.statistics.13.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          13,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.14.value",
+        "path": [
+          "clinical",
+          "statistics",
+          14,
+          "value"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.14.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          14,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.15.value",
+        "path": [
+          "clinical",
+          "statistics",
+          15,
+          "value"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "clinical.statistics.15.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          15,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.16.value",
+        "path": [
+          "clinical",
+          "statistics",
+          16,
+          "value"
+        ],
+        "previous": 28,
+        "actual": 28
+      },
+      {
+        "field": "clinical.statistics.16.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          16,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.17.value",
+        "path": [
+          "clinical",
+          "statistics",
+          17,
+          "value"
+        ],
+        "previous": 59.57446808510638,
+        "actual": 59.57446808510638
+      },
+      {
+        "field": "clinical.statistics.17.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          17,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.18.value",
+        "path": [
+          "clinical",
+          "statistics",
+          18,
+          "value"
+        ],
+        "previous": 19,
+        "actual": 19
+      },
+      {
+        "field": "clinical.statistics.18.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          18,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.19.value",
+        "path": [
+          "clinical",
+          "statistics",
+          19,
+          "value"
+        ],
+        "previous": 40.42553191489362,
+        "actual": 40.42553191489362
+      },
+      {
+        "field": "clinical.statistics.19.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          19,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.20.value",
+        "path": [
+          "clinical",
+          "statistics",
+          20,
+          "value"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.20.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          20,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.21.value",
+        "path": [
+          "clinical",
+          "statistics",
+          21,
+          "value"
+        ],
+        "previous": 2,
+        "actual": 2
+      },
+      {
+        "field": "clinical.statistics.21.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          21,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.22.value",
+        "path": [
+          "clinical",
+          "statistics",
+          22,
+          "value"
+        ],
+        "previous": 21,
+        "actual": 21
+      },
+      {
+        "field": "clinical.statistics.22.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          22,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.23.value",
+        "path": [
+          "clinical",
+          "statistics",
+          23,
+          "value"
+        ],
+        "previous": 45.65217391304348,
+        "actual": 45.65217391304348
+      },
+      {
+        "field": "clinical.statistics.23.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          23,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.24.value",
+        "path": [
+          "clinical",
+          "statistics",
+          24,
+          "value"
+        ],
+        "previous": 25,
+        "actual": 25
+      },
+      {
+        "field": "clinical.statistics.24.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          24,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.25.value",
+        "path": [
+          "clinical",
+          "statistics",
+          25,
+          "value"
+        ],
+        "previous": 54.34782608695652,
+        "actual": 54.34782608695652
+      },
+      {
+        "field": "clinical.statistics.25.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          25,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.26.value",
+        "path": [
+          "clinical",
+          "statistics",
+          26,
+          "value"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.26.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          26,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.27.value",
+        "path": [
+          "clinical",
+          "statistics",
+          27,
+          "value"
+        ],
+        "previous": 2,
+        "actual": 2
+      },
+      {
+        "field": "clinical.statistics.27.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          27,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.28.value",
+        "path": [
+          "clinical",
+          "statistics",
+          28,
+          "value"
+        ],
+        "previous": 141.6217391304348,
+        "actual": 141.6217391304348
+      },
+      {
+        "field": "clinical.statistics.28.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          28,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.29.value",
+        "path": [
+          "clinical",
+          "statistics",
+          29,
+          "value"
+        ],
+        "previous": 10.861285232798766,
+        "actual": 10.861285232798766
+      },
+      {
+        "field": "clinical.statistics.29.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          29,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.30.value",
+        "path": [
+          "clinical",
+          "statistics",
+          30,
+          "value"
+        ],
+        "previous": 140.95,
+        "actual": 140.95
+      },
+      {
+        "field": "clinical.statistics.30.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          30,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.31.value",
+        "path": [
+          "clinical",
+          "statistics",
+          31,
+          "value"
+        ],
+        "previous": 135.05,
+        "actual": 135.05
+      },
+      {
+        "field": "clinical.statistics.31.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          31,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.32.value",
+        "path": [
+          "clinical",
+          "statistics",
+          32,
+          "value"
+        ],
+        "previous": 149.075,
+        "actual": 149.075
+      },
+      {
+        "field": "clinical.statistics.32.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          32,
+          "denominator"
+        ],
+        "previous": 46,
+        "actual": 46
+      },
+      {
+        "field": "clinical.statistics.33.value",
+        "path": [
+          "clinical",
+          "statistics",
+          33,
+          "value"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.33.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          33,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.34.value",
+        "path": [
+          "clinical",
+          "statistics",
+          34,
+          "value"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "clinical.statistics.34.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          34,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.35.value",
+        "path": [
+          "clinical",
+          "statistics",
+          35,
+          "value"
+        ],
+        "previous": 137.8276595744681,
+        "actual": 137.8276595744681
+      },
+      {
+        "field": "clinical.statistics.35.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          35,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.36.value",
+        "path": [
+          "clinical",
+          "statistics",
+          36,
+          "value"
+        ],
+        "previous": 15.092320277540232,
+        "actual": 15.092320277540232
+      },
+      {
+        "field": "clinical.statistics.36.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          36,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.37.value",
+        "path": [
+          "clinical",
+          "statistics",
+          37,
+          "value"
+        ],
+        "previous": 135.6,
+        "actual": 135.6
+      },
+      {
+        "field": "clinical.statistics.37.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          37,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.38.value",
+        "path": [
+          "clinical",
+          "statistics",
+          38,
+          "value"
+        ],
+        "previous": 128.64999999999998,
+        "actual": 128.64999999999998
+      },
+      {
+        "field": "clinical.statistics.38.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          38,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.39.value",
+        "path": [
+          "clinical",
+          "statistics",
+          39,
+          "value"
+        ],
+        "previous": 147.89999999999998,
+        "actual": 147.89999999999998
+      },
+      {
+        "field": "clinical.statistics.39.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          39,
+          "denominator"
+        ],
+        "previous": 47,
+        "actual": 47
+      },
+      {
+        "field": "clinical.statistics.40.value",
+        "path": [
+          "clinical",
+          "statistics",
+          40,
+          "value"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.40.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          40,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.41.value",
+        "path": [
+          "clinical",
+          "statistics",
+          41,
+          "value"
+        ],
+        "previous": 4,
+        "actual": 4
+      },
+      {
+        "field": "clinical.statistics.41.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          41,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.42.value",
+        "path": [
+          "clinical",
+          "statistics",
+          42,
+          "value"
+        ],
+        "previous": 6.846363636363637,
+        "actual": 6.846363636363637
+      },
+      {
+        "field": "clinical.statistics.42.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          42,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.43.value",
+        "path": [
+          "clinical",
+          "statistics",
+          43,
+          "value"
+        ],
+        "previous": 9.399127889011607,
+        "actual": 9.399127889011607
+      },
+      {
+        "field": "clinical.statistics.43.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          43,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.44.value",
+        "path": [
+          "clinical",
+          "statistics",
+          44,
+          "value"
+        ],
+        "previous": 3.54,
+        "actual": 3.54
+      },
+      {
+        "field": "clinical.statistics.44.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          44,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.45.value",
+        "path": [
+          "clinical",
+          "statistics",
+          45,
+          "value"
+        ],
+        "previous": 2.2125,
+        "actual": 2.2125
+      },
+      {
+        "field": "clinical.statistics.45.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          45,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.46.value",
+        "path": [
+          "clinical",
+          "statistics",
+          46,
+          "value"
+        ],
+        "previous": 6.85,
+        "actual": 6.85
+      },
+      {
+        "field": "clinical.statistics.46.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          46,
+          "denominator"
+        ],
+        "previous": 44,
+        "actual": 44
+      },
+      {
+        "field": "clinical.statistics.47.value",
+        "path": [
+          "clinical",
+          "statistics",
+          47,
+          "value"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.47.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          47,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.48.value",
+        "path": [
+          "clinical",
+          "statistics",
+          48,
+          "value"
+        ],
+        "previous": 3,
+        "actual": 3
+      },
+      {
+        "field": "clinical.statistics.48.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          48,
+          "denominator"
+        ],
+        "previous": 48,
+        "actual": 48
+      },
+      {
+        "field": "clinical.statistics.49.value",
+        "path": [
+          "clinical",
+          "statistics",
+          49,
+          "value"
+        ],
+        "previous": 5.5024444444444445,
+        "actual": 5.5024444444444445
+      },
+      {
+        "field": "clinical.statistics.49.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          49,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.50.value",
+        "path": [
+          "clinical",
+          "statistics",
+          50,
+          "value"
+        ],
+        "previous": 6.0227387893924575,
+        "actual": 6.0227387893924575
+      },
+      {
+        "field": "clinical.statistics.50.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          50,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.51.value",
+        "path": [
+          "clinical",
+          "statistics",
+          51,
+          "value"
+        ],
+        "previous": 3.28,
+        "actual": 3.28
+      },
+      {
+        "field": "clinical.statistics.51.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          51,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.52.value",
+        "path": [
+          "clinical",
+          "statistics",
+          52,
+          "value"
+        ],
+        "previous": 1.85,
+        "actual": 1.85
+      },
+      {
+        "field": "clinical.statistics.52.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          52,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.53.value",
+        "path": [
+          "clinical",
+          "statistics",
+          53,
+          "value"
+        ],
+        "previous": 6.46,
+        "actual": 6.46
+      },
+      {
+        "field": "clinical.statistics.53.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          53,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.54.value",
+        "path": [
+          "clinical",
+          "statistics",
+          54,
+          "value"
+        ],
+        "previous": 137.32666666666665,
+        "actual": 137.32666666666665
+      },
+      {
+        "field": "clinical.statistics.54.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          54,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.55.value",
+        "path": [
+          "clinical",
+          "statistics",
+          55,
+          "value"
+        ],
+        "previous": 12.93812899217587,
+        "actual": 12.93812899217587
+      },
+      {
+        "field": "clinical.statistics.55.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          55,
+          "denominator"
+        ],
+        "previous": 45,
+        "actual": 45
+      },
+      {
+        "field": "clinical.statistics.56.value",
+        "path": [
+          "clinical",
+          "statistics",
+          56,
+          "value"
+        ],
+        "previous": 128.29767441860466,
+        "actual": 128.29767441860466
+      },
+      {
+        "field": "clinical.statistics.56.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          56,
+          "denominator"
+        ],
+        "previous": 43,
+        "actual": 43
+      },
+      {
+        "field": "clinical.statistics.57.value",
+        "path": [
+          "clinical",
+          "statistics",
+          57,
+          "value"
+        ],
+        "previous": 17.286706816456963,
+        "actual": 17.286706816456963
+      },
+      {
+        "field": "clinical.statistics.57.denominator",
+        "path": [
+          "clinical",
+          "statistics",
+          57,
+          "denominator"
+        ],
+        "previous": 43,
+        "actual": 43
+      },
+      {
+        "field": "nhanes.denominators.eligible",
+        "path": [
+          "nhanes",
+          "denominators",
+          "eligible"
+        ],
+        "previous": 51623,
+        "actual": 51623
+      },
+      {
+        "field": "nhanes.denominators.analyzed",
+        "path": [
+          "nhanes",
+          "denominators",
+          "analyzed"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.denominators.flow.downloaded_demographics",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "downloaded_demographics"
+        ],
+        "previous": 51623,
+        "actual": 51623
+      },
+      {
+        "field": "nhanes.denominators.flow.complete_core",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "complete_core"
+        ],
+        "previous": 21330,
+        "actual": 21330
+      },
+      {
+        "field": "nhanes.denominators.flow.refractive_surgery_yes",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "refractive_surgery_yes"
+        ],
+        "previous": 350,
+        "actual": 350
+      },
+      {
+        "field": "nhanes.denominators.flow.refractive_surgery_missing",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "refractive_surgery_missing"
+        ],
+        "previous": 24,
+        "actual": 24
+      },
+      {
+        "field": "nhanes.denominators.flow.cataract_surgery_yes",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "cataract_surgery_yes"
+        ],
+        "previous": 1194,
+        "actual": 1194
+      },
+      {
+        "field": "nhanes.denominators.flow.cataract_surgery_missing",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "cataract_surgery_missing"
+        ],
+        "previous": 6,
+        "actual": 6
+      },
+      {
+        "field": "nhanes.denominators.flow.analysis",
+        "path": [
+          "nhanes",
+          "denominators",
+          "flow",
+          "analysis"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.missing.flow.downloaded_demographics",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "downloaded_demographics"
+        ],
+        "previous": 51623,
+        "actual": 51623
+      },
+      {
+        "field": "nhanes.missing.flow.complete_core",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "complete_core"
+        ],
+        "previous": 21330,
+        "actual": 21330
+      },
+      {
+        "field": "nhanes.missing.flow.refractive_surgery_yes",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "refractive_surgery_yes"
+        ],
+        "previous": 350,
+        "actual": 350
+      },
+      {
+        "field": "nhanes.missing.flow.refractive_surgery_missing",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "refractive_surgery_missing"
+        ],
+        "previous": 24,
+        "actual": 24
+      },
+      {
+        "field": "nhanes.missing.flow.cataract_surgery_yes",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "cataract_surgery_yes"
+        ],
+        "previous": 1194,
+        "actual": 1194
+      },
+      {
+        "field": "nhanes.missing.flow.cataract_surgery_missing",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "cataract_surgery_missing"
+        ],
+        "previous": 6,
+        "actual": 6
+      },
+      {
+        "field": "nhanes.missing.flow.analysis",
+        "path": [
+          "nhanes",
+          "missing",
+          "flow",
+          "analysis"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.0.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "value"
+        ],
+        "previous": -0.453832466792126,
+        "actual": -0.453832466792126
+      },
+      {
+        "field": "nhanes.estimates.0.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.0.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ci",
+          "lower"
+        ],
+        "previous": -0.603944486414463,
+        "actual": -0.603944486414463
+      },
+      {
+        "field": "nhanes.estimates.0.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.30372044716979,
+        "actual": -0.30372044716979
+      },
+      {
+        "field": "nhanes.estimates.0.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "metrics",
+          "p"
+        ],
+        "previous": 1.02010816220466e-07,
+        "actual": 1.02010816220466e-07
+      },
+      {
+        "field": "nhanes.estimates.0.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.0.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.0.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -0.606546939262451,
+        "actual": -0.606546939262451
+      },
+      {
+        "field": "nhanes.estimates.0.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.301117994321802,
+        "actual": -0.301117994321802
+      },
+      {
+        "field": "nhanes.estimates.0.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          0,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.1.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "value"
+        ],
+        "previous": -0.677209040333662,
+        "actual": -0.677209040333662
+      },
+      {
+        "field": "nhanes.estimates.1.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.1.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ci",
+          "lower"
+        ],
+        "previous": -0.833117570510222,
+        "actual": -0.833117570510222
+      },
+      {
+        "field": "nhanes.estimates.1.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.521300510157101,
+        "actual": -0.521300510157101
+      },
+      {
+        "field": "nhanes.estimates.1.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "metrics",
+          "p"
+        ],
+        "previous": 1.86763593384016e-12,
+        "actual": 1.86763593384016e-12
+      },
+      {
+        "field": "nhanes.estimates.1.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.1.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.1.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -0.8358205159466,
+        "actual": -0.8358205159466
+      },
+      {
+        "field": "nhanes.estimates.1.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.518597564720723,
+        "actual": -0.518597564720723
+      },
+      {
+        "field": "nhanes.estimates.1.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          1,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.2.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "value"
+        ],
+        "previous": -1.07016011679262,
+        "actual": -1.07016011679262
+      },
+      {
+        "field": "nhanes.estimates.2.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.2.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ci",
+          "lower"
+        ],
+        "previous": -1.21821360206443,
+        "actual": -1.21821360206443
+      },
+      {
+        "field": "nhanes.estimates.2.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.922106631520815,
+        "actual": -0.922106631520815
+      },
+      {
+        "field": "nhanes.estimates.2.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "metrics",
+          "p"
+        ],
+        "previous": 2.22701345898021e-22,
+        "actual": 2.22701345898021e-22
+      },
+      {
+        "field": "nhanes.estimates.2.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.2.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.2.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -1.22078036664044,
+        "actual": -1.22078036664044
+      },
+      {
+        "field": "nhanes.estimates.2.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.919539866944803,
+        "actual": -0.919539866944803
+      },
+      {
+        "field": "nhanes.estimates.2.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          2,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.3.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "value"
+        ],
+        "previous": -1.65426330138584,
+        "actual": -1.65426330138584
+      },
+      {
+        "field": "nhanes.estimates.3.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.3.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ci",
+          "lower"
+        ],
+        "previous": -1.82952509056562,
+        "actual": -1.82952509056562
+      },
+      {
+        "field": "nhanes.estimates.3.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ci",
+          "upper"
+        ],
+        "previous": -1.47900151220606,
+        "actual": -1.47900151220606
+      },
+      {
+        "field": "nhanes.estimates.3.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "metrics",
+          "p"
+        ],
+        "previous": 7.22725769889669e-29,
+        "actual": 7.22725769889669e-29
+      },
+      {
+        "field": "nhanes.estimates.3.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.3.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.3.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -1.83256355839479,
+        "actual": -1.83256355839479
+      },
+      {
+        "field": "nhanes.estimates.3.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -1.47596304437688,
+        "actual": -1.47596304437688
+      },
+      {
+        "field": "nhanes.estimates.3.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          3,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.4.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "value"
+        ],
+        "previous": -0.231267962494611,
+        "actual": -0.231267962494611
+      },
+      {
+        "field": "nhanes.estimates.4.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.4.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ci",
+          "lower"
+        ],
+        "previous": -0.363815649482001,
+        "actual": -0.363815649482001
+      },
+      {
+        "field": "nhanes.estimates.4.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.0987202755072222,
+        "actual": -0.0987202755072222
+      },
+      {
+        "field": "nhanes.estimates.4.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "metrics",
+          "p"
+        ],
+        "previous": 0.00108737533505244,
+        "actual": 0.00108737533505244
+      },
+      {
+        "field": "nhanes.estimates.4.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.4.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.4.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -0.366329633239706,
+        "actual": -0.366329633239706
+      },
+      {
+        "field": "nhanes.estimates.4.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.0962062917495168,
+        "actual": -0.0962062917495168
+      },
+      {
+        "field": "nhanes.estimates.4.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          4,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.5.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "value"
+        ],
+        "previous": -0.49201432844038,
+        "actual": -0.49201432844038
+      },
+      {
+        "field": "nhanes.estimates.5.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.5.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ci",
+          "lower"
+        ],
+        "previous": -0.63098130504374,
+        "actual": -0.63098130504374
+      },
+      {
+        "field": "nhanes.estimates.5.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.353047351837021,
+        "actual": -0.353047351837021
+      },
+      {
+        "field": "nhanes.estimates.5.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "metrics",
+          "p"
+        ],
+        "previous": 2.22044204848326e-09,
+        "actual": 2.22044204848326e-09
+      },
+      {
+        "field": "nhanes.estimates.5.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.5.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.5.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -0.633617041132228,
+        "actual": -0.633617041132228
+      },
+      {
+        "field": "nhanes.estimates.5.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.350411615748533,
+        "actual": -0.350411615748533
+      },
+      {
+        "field": "nhanes.estimates.5.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          5,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.6.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "value"
+        ],
+        "previous": -0.79551782705678,
+        "actual": -0.79551782705678
+      },
+      {
+        "field": "nhanes.estimates.6.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.6.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ci",
+          "lower"
+        ],
+        "previous": -0.927229201896041,
+        "actual": -0.927229201896041
+      },
+      {
+        "field": "nhanes.estimates.6.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ci",
+          "upper"
+        ],
+        "previous": -0.663806452217519,
+        "actual": -0.663806452217519
+      },
+      {
+        "field": "nhanes.estimates.6.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "metrics",
+          "p"
+        ],
+        "previous": 7.11099164591299e-18,
+        "actual": 7.11099164591299e-18
+      },
+      {
+        "field": "nhanes.estimates.6.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.6.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.6.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -0.929727323625486,
+        "actual": -0.929727323625486
+      },
+      {
+        "field": "nhanes.estimates.6.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -0.661308330488073,
+        "actual": -0.661308330488073
+      },
+      {
+        "field": "nhanes.estimates.6.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          6,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.7.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "value"
+        ],
+        "previous": -1.46572486368854,
+        "actual": -1.46572486368854
+      },
+      {
+        "field": "nhanes.estimates.7.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.7.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ci",
+          "lower"
+        ],
+        "previous": -1.62680912601207,
+        "actual": -1.62680912601207
+      },
+      {
+        "field": "nhanes.estimates.7.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ci",
+          "upper"
+        ],
+        "previous": -1.30464060136501,
+        "actual": -1.30464060136501
+      },
+      {
+        "field": "nhanes.estimates.7.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "metrics",
+          "p"
+        ],
+        "previous": 9.92599052076597e-27,
+        "actual": 9.92599052076597e-27
+      },
+      {
+        "field": "nhanes.estimates.7.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.7.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.7.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": -1.62986435261246,
+        "actual": -1.62986435261246
+      },
+      {
+        "field": "nhanes.estimates.7.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": -1.30158537476462,
+        "actual": -1.30158537476462
+      },
+      {
+        "field": "nhanes.estimates.7.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          7,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.8.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "value"
+        ],
+        "previous": 1.41763095659421,
+        "actual": 1.41763095659421
+      },
+      {
+        "field": "nhanes.estimates.8.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.8.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ci",
+          "lower"
+        ],
+        "previous": 1.15169742758317,
+        "actual": 1.15169742758317
+      },
+      {
+        "field": "nhanes.estimates.8.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ci",
+          "upper"
+        ],
+        "previous": 1.7449700598112,
+        "actual": 1.7449700598112
+      },
+      {
+        "field": "nhanes.estimates.8.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "metrics",
+          "p"
+        ],
+        "previous": 0.00154998457822733,
+        "actual": 0.00154998457822733
+      },
+      {
+        "field": "nhanes.estimates.8.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.8.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.8.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 1.14755680633026,
+        "actual": 1.14755680633026
+      },
+      {
+        "field": "nhanes.estimates.8.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 1.75126627109719,
+        "actual": 1.75126627109719
+      },
+      {
+        "field": "nhanes.estimates.8.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          8,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.9.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "value"
+        ],
+        "previous": 1.86867963055536,
+        "actual": 1.86867963055536
+      },
+      {
+        "field": "nhanes.estimates.9.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.9.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ci",
+          "lower"
+        ],
+        "previous": 1.56541142492217,
+        "actual": 1.56541142492217
+      },
+      {
+        "field": "nhanes.estimates.9.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ci",
+          "upper"
+        ],
+        "previous": 2.23070018913791,
+        "actual": 2.23070018913791
+      },
+      {
+        "field": "nhanes.estimates.9.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "metrics",
+          "p"
+        ],
+        "previous": 1.6449057353306e-09,
+        "actual": 1.6449057353306e-09
+      },
+      {
+        "field": "nhanes.estimates.9.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.9.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.9.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 1.5606129047882,
+        "actual": 1.5606129047882
+      },
+      {
+        "field": "nhanes.estimates.9.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 2.23755907114356,
+        "actual": 2.23755907114356
+      },
+      {
+        "field": "nhanes.estimates.9.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          9,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.10.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "value"
+        ],
+        "previous": 2.66150206446253,
+        "actual": 2.66150206446253
+      },
+      {
+        "field": "nhanes.estimates.10.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.10.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ci",
+          "lower"
+        ],
+        "previous": 2.21772377296398,
+        "actual": 2.21772377296398
+      },
+      {
+        "field": "nhanes.estimates.10.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ci",
+          "upper"
+        ],
+        "previous": 3.19408274623449,
+        "actual": 3.19408274623449
+      },
+      {
+        "field": "nhanes.estimates.10.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "metrics",
+          "p"
+        ],
+        "previous": 3.95605796580222e-16,
+        "actual": 3.95605796580222e-16
+      },
+      {
+        "field": "nhanes.estimates.10.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.10.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.10.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 2.21072155984116,
+        "actual": 2.21072155984116
+      },
+      {
+        "field": "nhanes.estimates.10.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 3.2041996458601,
+        "actual": 3.2041996458601
+      },
+      {
+        "field": "nhanes.estimates.10.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          10,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.11.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "value"
+        ],
+        "previous": 4.0467089588283,
+        "actual": 4.0467089588283
+      },
+      {
+        "field": "nhanes.estimates.11.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.11.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ci",
+          "lower"
+        ],
+        "previous": 3.37141072310966,
+        "actual": 3.37141072310966
+      },
+      {
+        "field": "nhanes.estimates.11.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ci",
+          "upper"
+        ],
+        "previous": 4.85727036614416,
+        "actual": 4.85727036614416
+      },
+      {
+        "field": "nhanes.estimates.11.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "metrics",
+          "p"
+        ],
+        "previous": 1.02456761642478e-23,
+        "actual": 1.02456761642478e-23
+      },
+      {
+        "field": "nhanes.estimates.11.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.11.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.11.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 3.36075635451607,
+        "actual": 3.36075635451607
+      },
+      {
+        "field": "nhanes.estimates.11.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 4.87266902745148,
+        "actual": 4.87266902745148
+      },
+      {
+        "field": "nhanes.estimates.11.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          11,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 71,
+        "actual": 71
+      },
+      {
+        "field": "nhanes.estimates.12.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "value"
+        ],
+        "previous": 1.2742672561996,
+        "actual": 1.2742672561996
+      },
+      {
+        "field": "nhanes.estimates.12.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.12.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ci",
+          "lower"
+        ],
+        "previous": 1.03733010868231,
+        "actual": 1.03733010868231
+      },
+      {
+        "field": "nhanes.estimates.12.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ci",
+          "upper"
+        ],
+        "previous": 1.56532334946401,
+        "actual": 1.56532334946401
+      },
+      {
+        "field": "nhanes.estimates.12.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "metrics",
+          "p"
+        ],
+        "previous": 0.0241240974500569,
+        "actual": 0.0241240974500569
+      },
+      {
+        "field": "nhanes.estimates.12.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.12.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.12.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 1.03329050141626,
+        "actual": 1.03329050141626
+      },
+      {
+        "field": "nhanes.estimates.12.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 1.57144291755018,
+        "actual": 1.57144291755018
+      },
+      {
+        "field": "nhanes.estimates.12.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          12,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.13.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "value"
+        ],
+        "previous": 1.70732686713611,
+        "actual": 1.70732686713611
+      },
+      {
+        "field": "nhanes.estimates.13.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.13.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ci",
+          "lower"
+        ],
+        "previous": 1.43374967366956,
+        "actual": 1.43374967366956
+      },
+      {
+        "field": "nhanes.estimates.13.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ci",
+          "upper"
+        ],
+        "previous": 2.03310597712932,
+        "actual": 2.03310597712932
+      },
+      {
+        "field": "nhanes.estimates.13.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "metrics",
+          "p"
+        ],
+        "previous": 9.54691608992589e-08,
+        "actual": 9.54691608992589e-08
+      },
+      {
+        "field": "nhanes.estimates.13.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.13.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.13.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 1.42900858856096,
+        "actual": 1.42900858856096
+      },
+      {
+        "field": "nhanes.estimates.13.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 2.0398513029094,
+        "actual": 2.0398513029094
+      },
+      {
+        "field": "nhanes.estimates.13.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          13,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.14.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "value"
+        ],
+        "previous": 2.32190124365885,
+        "actual": 2.32190124365885
+      },
+      {
+        "field": "nhanes.estimates.14.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.14.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ci",
+          "lower"
+        ],
+        "previous": 1.93591758789937,
+        "actual": 1.93591758789937
+      },
+      {
+        "field": "nhanes.estimates.14.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ci",
+          "upper"
+        ],
+        "previous": 2.78484240186818,
+        "actual": 2.78484240186818
+      },
+      {
+        "field": "nhanes.estimates.14.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "metrics",
+          "p"
+        ],
+        "previous": 3.56162828671617e-13,
+        "actual": 3.56162828671617e-13
+      },
+      {
+        "field": "nhanes.estimates.14.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.14.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.14.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 1.92925359874212,
+        "actual": 1.92925359874212
+      },
+      {
+        "field": "nhanes.estimates.14.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 2.79446174874037,
+        "actual": 2.79446174874037
+      },
+      {
+        "field": "nhanes.estimates.14.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          14,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.estimates.15.value",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "value"
+        ],
+        "previous": 3.73992960658033,
+        "actual": 3.73992960658033
+      },
+      {
+        "field": "nhanes.estimates.15.ci.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ci",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.15.ci.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ci",
+          "lower"
+        ],
+        "previous": 3.12260257341309,
+        "actual": 3.12260257341309
+      },
+      {
+        "field": "nhanes.estimates.15.ci.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ci",
+          "upper"
+        ],
+        "previous": 4.47929992156761,
+        "actual": 4.47929992156761
+      },
+      {
+        "field": "nhanes.estimates.15.metrics.p",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "metrics",
+          "p"
+        ],
+        "previous": 8.55139595943344e-22,
+        "actual": 8.55139595943344e-22
+      },
+      {
+        "field": "nhanes.estimates.15.metrics.n",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "metrics",
+          "n"
+        ],
+        "previous": 19756,
+        "actual": 19756
+      },
+      {
+        "field": "nhanes.estimates.15.ciVariants.currentDefault.level",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ciVariants",
+          "currentDefault",
+          "level"
+        ],
+        "previous": 0.95,
+        "actual": 0.95
+      },
+      {
+        "field": "nhanes.estimates.15.ciVariants.currentDefault.lower",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ciVariants",
+          "currentDefault",
+          "lower"
+        ],
+        "previous": 3.11193659425605,
+        "actual": 3.11193659425605
+      },
+      {
+        "field": "nhanes.estimates.15.ciVariants.currentDefault.upper",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ciVariants",
+          "currentDefault",
+          "upper"
+        ],
+        "previous": 4.49465245789171,
+        "actual": 4.49465245789171
+      },
+      {
+        "field": "nhanes.estimates.15.ciVariants.currentDefault.dfResidual",
+        "path": [
+          "nhanes",
+          "estimates",
+          15,
+          "ciVariants",
+          "currentDefault",
+          "dfResidual"
+        ],
+        "previous": 65,
+        "actual": 65
+      },
+      {
+        "field": "nhanes.statistics.0.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          0,
+          "value"
+        ],
+        "previous": 2457,
+        "actual": 2457
+      },
+      {
+        "field": "nhanes.statistics.0.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          0,
+          "denominator"
+        ],
+        "previous": 2457,
+        "actual": 2457
+      },
+      {
+        "field": "nhanes.statistics.1.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          1,
+          "value"
+        ],
+        "previous": 0.337543752543753,
+        "actual": 0.337543752543753
+      },
+      {
+        "field": "nhanes.statistics.1.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          1,
+          "denominator"
+        ],
+        "previous": 2457,
+        "actual": 2457
+      },
+      {
+        "field": "nhanes.statistics.2.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          2,
+          "value"
+        ],
+        "previous": 16.8091168091168,
+        "actual": 16.8091168091168
+      },
+      {
+        "field": "nhanes.statistics.2.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          2,
+          "denominator"
+        ],
+        "previous": 2457,
+        "actual": 2457
+      },
+      {
+        "field": "nhanes.statistics.3.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          3,
+          "value"
+        ],
+        "previous": 3275,
+        "actual": 3275
+      },
+      {
+        "field": "nhanes.statistics.3.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          3,
+          "denominator"
+        ],
+        "previous": 3275,
+        "actual": 3275
+      },
+      {
+        "field": "nhanes.statistics.4.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          4,
+          "value"
+        ],
+        "previous": -0.143978625954199,
+        "actual": -0.143978625954199
+      },
+      {
+        "field": "nhanes.statistics.4.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          4,
+          "denominator"
+        ],
+        "previous": 3275,
+        "actual": 3275
+      },
+      {
+        "field": "nhanes.statistics.5.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          5,
+          "value"
+        ],
+        "previous": 23.5419847328244,
+        "actual": 23.5419847328244
+      },
+      {
+        "field": "nhanes.statistics.5.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          5,
+          "denominator"
+        ],
+        "previous": 3275,
+        "actual": 3275
+      },
+      {
+        "field": "nhanes.statistics.6.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          6,
+          "value"
+        ],
+        "previous": 4805,
+        "actual": 4805
+      },
+      {
+        "field": "nhanes.statistics.6.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          6,
+          "denominator"
+        ],
+        "previous": 4805,
+        "actual": 4805
+      },
+      {
+        "field": "nhanes.statistics.7.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          7,
+          "value"
+        ],
+        "previous": -0.331833506763789,
+        "actual": -0.331833506763789
+      },
+      {
+        "field": "nhanes.statistics.7.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          7,
+          "denominator"
+        ],
+        "previous": 4805,
+        "actual": 4805
+      },
+      {
+        "field": "nhanes.statistics.8.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          8,
+          "value"
+        ],
+        "previous": 28.5535900104058,
+        "actual": 28.5535900104058
+      },
+      {
+        "field": "nhanes.statistics.8.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          8,
+          "denominator"
+        ],
+        "previous": 4805,
+        "actual": 4805
+      },
+      {
+        "field": "nhanes.statistics.9.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          9,
+          "value"
+        ],
+        "previous": 5397,
+        "actual": 5397
+      },
+      {
+        "field": "nhanes.statistics.9.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          9,
+          "denominator"
+        ],
+        "previous": 5397,
+        "actual": 5397
+      },
+      {
+        "field": "nhanes.statistics.10.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          10,
+          "value"
+        ],
+        "previous": -0.700665184361683,
+        "actual": -0.700665184361683
+      },
+      {
+        "field": "nhanes.statistics.10.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          10,
+          "denominator"
+        ],
+        "previous": 5397,
+        "actual": 5397
+      },
+      {
+        "field": "nhanes.statistics.11.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          11,
+          "value"
+        ],
+        "previous": 35.4270891235872,
+        "actual": 35.4270891235872
+      },
+      {
+        "field": "nhanes.statistics.11.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          11,
+          "denominator"
+        ],
+        "previous": 5397,
+        "actual": 5397
+      },
+      {
+        "field": "nhanes.statistics.12.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          12,
+          "value"
+        ],
+        "previous": 3822,
+        "actual": 3822
+      },
+      {
+        "field": "nhanes.statistics.12.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          12,
+          "denominator"
+        ],
+        "previous": 3822,
+        "actual": 3822
+      },
+      {
+        "field": "nhanes.statistics.13.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          13,
+          "value"
+        ],
+        "previous": -1.21705520669806,
+        "actual": -1.21705520669806
+      },
+      {
+        "field": "nhanes.statistics.13.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          13,
+          "denominator"
+        ],
+        "previous": 3822,
+        "actual": 3822
+      },
+      {
+        "field": "nhanes.statistics.14.value",
+        "path": [
+          "nhanes",
+          "statistics",
+          14,
+          "value"
+        ],
+        "previous": 45.0287807430665,
+        "actual": 45.0287807430665
+      },
+      {
+        "field": "nhanes.statistics.14.denominator",
+        "path": [
+          "nhanes",
+          "statistics",
+          14,
+          "denominator"
+        ],
+        "previous": 3822,
+        "actual": 3822
+      },
+      {
+        "field": "medplot.denominators.patients",
+        "path": [
+          "medplot",
+          "denominators",
+          "patients"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.denominators.observedVisits",
+        "path": [
+          "medplot",
+          "denominators",
+          "observedVisits"
+        ],
+        "previous": 812,
+        "actual": 812
+      },
+      {
+        "field": "medplot.denominators.plannedGrid",
+        "path": [
+          "medplot",
+          "denominators",
+          "plannedGrid"
+        ],
+        "previous": 900,
+        "actual": 900
+      },
+      {
+        "field": "medplot.denominators.absentVisits",
+        "path": [
+          "medplot",
+          "denominators",
+          "absentVisits"
+        ],
+        "previous": 88,
+        "actual": 88
+      },
+      {
+        "field": "medplot.denominators.perVisit.0.rows",
+        "path": [
+          "medplot",
+          "denominators",
+          "perVisit",
+          0,
+          "rows"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.denominators.perVisit.1.rows",
+        "path": [
+          "medplot",
+          "denominators",
+          "perVisit",
+          1,
+          "rows"
+        ],
+        "previous": 224,
+        "actual": 224
+      },
+      {
+        "field": "medplot.denominators.perVisit.2.rows",
+        "path": [
+          "medplot",
+          "denominators",
+          "perVisit",
+          2,
+          "rows"
+        ],
+        "previous": 196,
+        "actual": 196
+      },
+      {
+        "field": "medplot.denominators.perVisit.3.rows",
+        "path": [
+          "medplot",
+          "denominators",
+          "perVisit",
+          3,
+          "rows"
+        ],
+        "previous": 167,
+        "actual": 167
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Fatigue",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Fatigue"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Malaise",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Malaise"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Arthralgia",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Arthralgia"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Headache",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Headache"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Myalgia",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Myalgia"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Back.C",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Back.C"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Back.Th",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Back.Th"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Back.L",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Back.L"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Paresthesias",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Paresthesias"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Dizziness",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Dizziness"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Nausea",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Nausea"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Insomnia",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Insomnia"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Sleepiness",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Sleepiness"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Forgetfulness",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Forgetfulness"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Concentration",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Concentration"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.perOutcomeMissing.Irritability",
+        "path": [
+          "medplot",
+          "denominators",
+          "perOutcomeMissing",
+          "Irritability"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.denominators.nauseaObserved",
+        "path": [
+          "medplot",
+          "denominators",
+          "nauseaObserved"
+        ],
+        "previous": 812,
+        "actual": 812
+      },
+      {
+        "field": "medplot.denominators.nauseaPatients",
+        "path": [
+          "medplot",
+          "denominators",
+          "nauseaPatients"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.observations.rows",
+        "path": [
+          "medplot",
+          "observations",
+          "rows"
+        ],
+        "previous": 812,
+        "actual": 812
+      },
+      {
+        "field": "medplot.observations.patients",
+        "path": [
+          "medplot",
+          "observations",
+          "patients"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.observations.occasions",
+        "path": [
+          "medplot",
+          "observations",
+          "occasions"
+        ],
+        "previous": 4,
+        "actual": 4
+      },
+      {
+        "field": "medplot.observations.patients4",
+        "path": [
+          "medplot",
+          "observations",
+          "patients4"
+        ],
+        "previous": 166,
+        "actual": 166
+      },
+      {
+        "field": "medplot.observations.patients3",
+        "path": [
+          "medplot",
+          "observations",
+          "patients3"
+        ],
+        "previous": 30,
+        "actual": 30
+      },
+      {
+        "field": "medplot.observations.patients2",
+        "path": [
+          "medplot",
+          "observations",
+          "patients2"
+        ],
+        "previous": 29,
+        "actual": 29
+      },
+      {
+        "field": "medplot.observations.males",
+        "path": [
+          "medplot",
+          "observations",
+          "males"
+        ],
+        "previous": 100,
+        "actual": 100
+      },
+      {
+        "field": "medplot.observations.itemMissingRows",
+        "path": [
+          "medplot",
+          "observations",
+          "itemMissingRows"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "medplot.observations.fatigueCount",
+        "path": [
+          "medplot",
+          "observations",
+          "fatigueCount"
+        ],
+        "previous": 152,
+        "actual": 152
+      },
+      {
+        "field": "medplot.observations.fatigueDenominator",
+        "path": [
+          "medplot",
+          "observations",
+          "fatigueDenominator"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.observations.fatiguePercent",
+        "path": [
+          "medplot",
+          "observations",
+          "fatiguePercent"
+        ],
+        "previous": 67.55555555555556,
+        "actual": 67.55555555555556
+      },
+      {
+        "field": "medplot.observations.fatigueLowerPercent",
+        "path": [
+          "medplot",
+          "observations",
+          "fatigueLowerPercent"
+        ],
+        "previous": 61.01429320404622,
+        "actual": 61.01429320404622
+      },
+      {
+        "field": "medplot.observations.fatigueUpperPercent",
+        "path": [
+          "medplot",
+          "observations",
+          "fatigueUpperPercent"
+        ],
+        "previous": 73.62691911844172,
+        "actual": 73.62691911844172
+      },
+      {
+        "field": "medplot.observations.linearEstimateText",
+        "path": [
+          "medplot",
+          "observations",
+          "linearEstimateText"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.observations.linearLowerText",
+        "path": [
+          "medplot",
+          "observations",
+          "linearLowerText"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.observations.linearUpperText",
+        "path": [
+          "medplot",
+          "observations",
+          "linearUpperText"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.observations.linearEstimateSI",
+        "path": [
+          "medplot",
+          "observations",
+          "linearEstimateSI"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.observations.linearLowerSI",
+        "path": [
+          "medplot",
+          "observations",
+          "linearLowerSI"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.observations.linearUpperSI",
+        "path": [
+          "medplot",
+          "observations",
+          "linearUpperSI"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.observations.linearPSI",
+        "path": [
+          "medplot",
+          "observations",
+          "linearPSI"
+        ],
+        "previous": 0.004207600317714773,
+        "actual": 0.004207600317714773
+      },
+      {
+        "field": "medplot.observations.logisticEstimateText",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticEstimateText"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.observations.logisticLowerText",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticLowerText"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.observations.logisticUpperText",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticUpperText"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.observations.logisticEstimateSI",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticEstimateSI"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.observations.logisticLowerSI",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticLowerSI"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.observations.logisticUpperSI",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticUpperSI"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.observations.logisticPSI",
+        "path": [
+          "medplot",
+          "observations",
+          "logisticPSI"
+        ],
+        "previous": 0.04729258489533627,
+        "actual": 0.04729258489533627
+      },
+      {
+        "field": "medplot.statistics.linear14.estimate",
+        "path": [
+          "medplot",
+          "statistics",
+          "linear14",
+          "estimate"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.statistics.linear14.lower",
+        "path": [
+          "medplot",
+          "statistics",
+          "linear14",
+          "lower"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.statistics.linear14.upper",
+        "path": [
+          "medplot",
+          "statistics",
+          "linear14",
+          "upper"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.statistics.linear14.p",
+        "path": [
+          "medplot",
+          "statistics",
+          "linear14",
+          "p"
+        ],
+        "previous": 0.004207600317714773,
+        "actual": 0.004207600317714773
+      },
+      {
+        "field": "medplot.statistics.logistic14.estimate",
+        "path": [
+          "medplot",
+          "statistics",
+          "logistic14",
+          "estimate"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.statistics.logistic14.lower",
+        "path": [
+          "medplot",
+          "statistics",
+          "logistic14",
+          "lower"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.statistics.logistic14.upper",
+        "path": [
+          "medplot",
+          "statistics",
+          "logistic14",
+          "upper"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.statistics.logistic14.p",
+        "path": [
+          "medplot",
+          "statistics",
+          "logistic14",
+          "p"
+        ],
+        "previous": 0.04729258489533627,
+        "actual": 0.04729258489533627
+      },
+      {
+        "field": "medplot.statistics.fatigue.count",
+        "path": [
+          "medplot",
+          "statistics",
+          "fatigue",
+          "count"
+        ],
+        "previous": 152,
+        "actual": 152
+      },
+      {
+        "field": "medplot.statistics.fatigue.n",
+        "path": [
+          "medplot",
+          "statistics",
+          "fatigue",
+          "n"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.statistics.fatigue.estimate",
+        "path": [
+          "medplot",
+          "statistics",
+          "fatigue",
+          "estimate"
+        ],
+        "previous": 0.6755555555555556,
+        "actual": 0.6755555555555556
+      },
+      {
+        "field": "medplot.statistics.fatigue.lower",
+        "path": [
+          "medplot",
+          "statistics",
+          "fatigue",
+          "lower"
+        ],
+        "previous": 0.6101429320404622,
+        "actual": 0.6101429320404622
+      },
+      {
+        "field": "medplot.statistics.fatigue.upper",
+        "path": [
+          "medplot",
+          "statistics",
+          "fatigue",
+          "upper"
+        ],
+        "previous": 0.7362691911844172,
+        "actual": 0.7362691911844172
+      },
+      {
+        "field": "medplot.comparison.0.published",
+        "path": [
+          "medplot",
+          "comparison",
+          0,
+          "published"
+        ],
+        "previous": 812,
+        "actual": 812
+      },
+      {
+        "field": "medplot.comparison.0.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          0,
+          "actual"
+        ],
+        "previous": 812,
+        "actual": 812
+      },
+      {
+        "field": "medplot.comparison.0.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          0,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.0.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          0,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.1.published",
+        "path": [
+          "medplot",
+          "comparison",
+          1,
+          "published"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.comparison.1.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          1,
+          "actual"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.comparison.1.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          1,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.1.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          1,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.2.published",
+        "path": [
+          "medplot",
+          "comparison",
+          2,
+          "published"
+        ],
+        "previous": 4,
+        "actual": 4
+      },
+      {
+        "field": "medplot.comparison.2.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          2,
+          "actual"
+        ],
+        "previous": 4,
+        "actual": 4
+      },
+      {
+        "field": "medplot.comparison.2.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          2,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.2.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          2,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.3.published",
+        "path": [
+          "medplot",
+          "comparison",
+          3,
+          "published"
+        ],
+        "previous": 166,
+        "actual": 166
+      },
+      {
+        "field": "medplot.comparison.3.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          3,
+          "actual"
+        ],
+        "previous": 166,
+        "actual": 166
+      },
+      {
+        "field": "medplot.comparison.3.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          3,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.3.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          3,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.4.published",
+        "path": [
+          "medplot",
+          "comparison",
+          4,
+          "published"
+        ],
+        "previous": 29,
+        "actual": 29
+      },
+      {
+        "field": "medplot.comparison.4.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          4,
+          "actual"
+        ],
+        "previous": 30,
+        "actual": 30
+      },
+      {
+        "field": "medplot.comparison.4.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          4,
+          "difference"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "medplot.comparison.4.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          4,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.5.published",
+        "path": [
+          "medplot",
+          "comparison",
+          5,
+          "published"
+        ],
+        "previous": 30,
+        "actual": 30
+      },
+      {
+        "field": "medplot.comparison.5.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          5,
+          "actual"
+        ],
+        "previous": 29,
+        "actual": 29
+      },
+      {
+        "field": "medplot.comparison.5.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          5,
+          "difference"
+        ],
+        "previous": -1,
+        "actual": -1
+      },
+      {
+        "field": "medplot.comparison.5.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          5,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.6.published",
+        "path": [
+          "medplot",
+          "comparison",
+          6,
+          "published"
+        ],
+        "previous": 100,
+        "actual": 100
+      },
+      {
+        "field": "medplot.comparison.6.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          6,
+          "actual"
+        ],
+        "previous": 100,
+        "actual": 100
+      },
+      {
+        "field": "medplot.comparison.6.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          6,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.6.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          6,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.7.published",
+        "path": [
+          "medplot",
+          "comparison",
+          7,
+          "published"
+        ],
+        "previous": 2,
+        "actual": 2
+      },
+      {
+        "field": "medplot.comparison.7.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          7,
+          "actual"
+        ],
+        "previous": 1,
+        "actual": 1
+      },
+      {
+        "field": "medplot.comparison.7.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          7,
+          "difference"
+        ],
+        "previous": -1,
+        "actual": -1
+      },
+      {
+        "field": "medplot.comparison.7.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          7,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.8.published",
+        "path": [
+          "medplot",
+          "comparison",
+          8,
+          "published"
+        ],
+        "previous": 152,
+        "actual": 152
+      },
+      {
+        "field": "medplot.comparison.8.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          8,
+          "actual"
+        ],
+        "previous": 152,
+        "actual": 152
+      },
+      {
+        "field": "medplot.comparison.8.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          8,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.8.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          8,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.9.published",
+        "path": [
+          "medplot",
+          "comparison",
+          9,
+          "published"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.comparison.9.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          9,
+          "actual"
+        ],
+        "previous": 225,
+        "actual": 225
+      },
+      {
+        "field": "medplot.comparison.9.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          9,
+          "difference"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.9.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          9,
+          "tolerance"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.comparison.10.published",
+        "path": [
+          "medplot",
+          "comparison",
+          10,
+          "published"
+        ],
+        "previous": 68,
+        "actual": 68
+      },
+      {
+        "field": "medplot.comparison.10.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          10,
+          "actual"
+        ],
+        "previous": 67.55555555555556,
+        "actual": 67.55555555555556
+      },
+      {
+        "field": "medplot.comparison.10.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          10,
+          "difference"
+        ],
+        "previous": -0.44444444444444287,
+        "actual": -0.44444444444444287
+      },
+      {
+        "field": "medplot.comparison.10.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          10,
+          "tolerance"
+        ],
+        "previous": 0.5,
+        "actual": 0.5
+      },
+      {
+        "field": "medplot.comparison.11.published",
+        "path": [
+          "medplot",
+          "comparison",
+          11,
+          "published"
+        ],
+        "previous": 61,
+        "actual": 61
+      },
+      {
+        "field": "medplot.comparison.11.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          11,
+          "actual"
+        ],
+        "previous": 61.01429320404622,
+        "actual": 61.01429320404622
+      },
+      {
+        "field": "medplot.comparison.11.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          11,
+          "difference"
+        ],
+        "previous": 0.014293204046218477,
+        "actual": 0.014293204046218477
+      },
+      {
+        "field": "medplot.comparison.11.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          11,
+          "tolerance"
+        ],
+        "previous": 0.5,
+        "actual": 0.5
+      },
+      {
+        "field": "medplot.comparison.12.published",
+        "path": [
+          "medplot",
+          "comparison",
+          12,
+          "published"
+        ],
+        "previous": 74,
+        "actual": 74
+      },
+      {
+        "field": "medplot.comparison.12.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          12,
+          "actual"
+        ],
+        "previous": 73.62691911844172,
+        "actual": 73.62691911844172
+      },
+      {
+        "field": "medplot.comparison.12.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          12,
+          "difference"
+        ],
+        "previous": -0.37308088155828045,
+        "actual": -0.37308088155828045
+      },
+      {
+        "field": "medplot.comparison.12.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          12,
+          "tolerance"
+        ],
+        "previous": 0.5,
+        "actual": 0.5
+      },
+      {
+        "field": "medplot.comparison.13.published",
+        "path": [
+          "medplot",
+          "comparison",
+          13,
+          "published"
+        ],
+        "previous": 0.35,
+        "actual": 0.35
+      },
+      {
+        "field": "medplot.comparison.13.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          13,
+          "actual"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.comparison.13.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          13,
+          "difference"
+        ],
+        "previous": -0.00037433125253155675,
+        "actual": -0.00037433125253155675
+      },
+      {
+        "field": "medplot.comparison.13.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          13,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.14.published",
+        "path": [
+          "medplot",
+          "comparison",
+          14,
+          "published"
+        ],
+        "previous": 0.11,
+        "actual": 0.11
+      },
+      {
+        "field": "medplot.comparison.14.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          14,
+          "actual"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.comparison.14.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          14,
+          "difference"
+        ],
+        "previous": 0.001370137516399722,
+        "actual": 0.001370137516399722
+      },
+      {
+        "field": "medplot.comparison.14.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          14,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.15.published",
+        "path": [
+          "medplot",
+          "comparison",
+          15,
+          "published"
+        ],
+        "previous": 0.59,
+        "actual": 0.59
+      },
+      {
+        "field": "medplot.comparison.15.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          15,
+          "actual"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.comparison.15.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          15,
+          "difference"
+        ],
+        "previous": -0.0021105556208986798,
+        "actual": -0.0021105556208986798
+      },
+      {
+        "field": "medplot.comparison.15.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          15,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.16.published",
+        "path": [
+          "medplot",
+          "comparison",
+          16,
+          "published"
+        ],
+        "previous": 0.34963,
+        "actual": 0.34963
+      },
+      {
+        "field": "medplot.comparison.16.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          16,
+          "actual"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.comparison.16.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          16,
+          "difference"
+        ],
+        "previous": -4.3312525315752914e-06,
+        "actual": -4.3312525315752914e-06
+      },
+      {
+        "field": "medplot.comparison.16.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          16,
+          "tolerance"
+        ],
+        "previous": 5e-06,
+        "actual": 5e-06
+      },
+      {
+        "field": "medplot.comparison.17.published",
+        "path": [
+          "medplot",
+          "comparison",
+          17,
+          "published"
+        ],
+        "previous": 0.11,
+        "actual": 0.11
+      },
+      {
+        "field": "medplot.comparison.17.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          17,
+          "actual"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.comparison.17.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          17,
+          "difference"
+        ],
+        "previous": 0.001370137516399722,
+        "actual": 0.001370137516399722
+      },
+      {
+        "field": "medplot.comparison.17.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          17,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.18.published",
+        "path": [
+          "medplot",
+          "comparison",
+          18,
+          "published"
+        ],
+        "previous": 0.5879,
+        "actual": 0.5879
+      },
+      {
+        "field": "medplot.comparison.18.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          18,
+          "actual"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.comparison.18.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          18,
+          "difference"
+        ],
+        "previous": -1.0555620898689e-05,
+        "actual": -1.0555620898689e-05
+      },
+      {
+        "field": "medplot.comparison.18.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          18,
+          "tolerance"
+        ],
+        "previous": 5e-05,
+        "actual": 5e-05
+      },
+      {
+        "field": "medplot.comparison.19.published",
+        "path": [
+          "medplot",
+          "comparison",
+          19,
+          "published"
+        ],
+        "previous": 0.0042,
+        "actual": 0.0042
+      },
+      {
+        "field": "medplot.comparison.19.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          19,
+          "actual"
+        ],
+        "previous": 0.004207600317714773,
+        "actual": 0.004207600317714773
+      },
+      {
+        "field": "medplot.comparison.19.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          19,
+          "difference"
+        ],
+        "previous": 7.600317714772861e-06,
+        "actual": 7.600317714772861e-06
+      },
+      {
+        "field": "medplot.comparison.19.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          19,
+          "tolerance"
+        ],
+        "previous": 5e-05,
+        "actual": 5e-05
+      },
+      {
+        "field": "medplot.comparison.20.published",
+        "path": [
+          "medplot",
+          "comparison",
+          20,
+          "published"
+        ],
+        "previous": 1.77,
+        "actual": 1.77
+      },
+      {
+        "field": "medplot.comparison.20.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          20,
+          "actual"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.comparison.20.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          20,
+          "difference"
+        ],
+        "previous": -0.002711647447275034,
+        "actual": -0.002711647447275034
+      },
+      {
+        "field": "medplot.comparison.20.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          20,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.21.published",
+        "path": [
+          "medplot",
+          "comparison",
+          21,
+          "published"
+        ],
+        "previous": 1.02,
+        "actual": 1.02
+      },
+      {
+        "field": "medplot.comparison.21.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          21,
+          "actual"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.comparison.21.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          21,
+          "difference"
+        ],
+        "previous": -0.013171433945591504,
+        "actual": -0.013171433945591504
+      },
+      {
+        "field": "medplot.comparison.21.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          21,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.22.published",
+        "path": [
+          "medplot",
+          "comparison",
+          22,
+          "published"
+        ],
+        "previous": 3.07,
+        "actual": 3.07
+      },
+      {
+        "field": "medplot.comparison.22.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          22,
+          "actual"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.comparison.22.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          22,
+          "difference"
+        ],
+        "previous": 0.03212505521992037,
+        "actual": 0.03212505521992037
+      },
+      {
+        "field": "medplot.comparison.22.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          22,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.23.published",
+        "path": [
+          "medplot",
+          "comparison",
+          23,
+          "published"
+        ],
+        "previous": 1.77,
+        "actual": 1.77
+      },
+      {
+        "field": "medplot.comparison.23.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          23,
+          "actual"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.comparison.23.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          23,
+          "difference"
+        ],
+        "previous": -0.002711647447275034,
+        "actual": -0.002711647447275034
+      },
+      {
+        "field": "medplot.comparison.23.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          23,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.24.published",
+        "path": [
+          "medplot",
+          "comparison",
+          24,
+          "published"
+        ],
+        "previous": 1.007,
+        "actual": 1.007
+      },
+      {
+        "field": "medplot.comparison.24.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          24,
+          "actual"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.comparison.24.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          24,
+          "difference"
+        ],
+        "previous": -0.0001714339455913816,
+        "actual": -0.0001714339455913816
+      },
+      {
+        "field": "medplot.comparison.24.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          24,
+          "tolerance"
+        ],
+        "previous": 0.0005,
+        "actual": 0.0005
+      },
+      {
+        "field": "medplot.comparison.25.published",
+        "path": [
+          "medplot",
+          "comparison",
+          25,
+          "published"
+        ],
+        "previous": 3.1,
+        "actual": 3.1
+      },
+      {
+        "field": "medplot.comparison.25.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          25,
+          "actual"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.comparison.25.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          25,
+          "difference"
+        ],
+        "previous": 0.0021250552199201245,
+        "actual": 0.0021250552199201245
+      },
+      {
+        "field": "medplot.comparison.25.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          25,
+          "tolerance"
+        ],
+        "previous": 0.005,
+        "actual": 0.005
+      },
+      {
+        "field": "medplot.comparison.26.published",
+        "path": [
+          "medplot",
+          "comparison",
+          26,
+          "published"
+        ],
+        "previous": 0.047,
+        "actual": 0.047
+      },
+      {
+        "field": "medplot.comparison.26.actual",
+        "path": [
+          "medplot",
+          "comparison",
+          26,
+          "actual"
+        ],
+        "previous": 0.04729258489533627,
+        "actual": 0.04729258489533627
+      },
+      {
+        "field": "medplot.comparison.26.difference",
+        "path": [
+          "medplot",
+          "comparison",
+          26,
+          "difference"
+        ],
+        "previous": 0.0002925848953362689,
+        "actual": 0.0002925848953362689
+      },
+      {
+        "field": "medplot.comparison.26.tolerance",
+        "path": [
+          "medplot",
+          "comparison",
+          26,
+          "tolerance"
+        ],
+        "previous": 0.0005,
+        "actual": 0.0005
+      },
+      {
+        "field": "medplot.summary.matched",
+        "path": [
+          "medplot",
+          "summary",
+          "matched"
+        ],
+        "previous": 22,
+        "actual": 22
+      },
+      {
+        "field": "medplot.summary.differences",
+        "path": [
+          "medplot",
+          "summary",
+          "differences"
+        ],
+        "previous": 5,
+        "actual": 5
+      },
+      {
+        "field": "medplot.summary.unreproduced",
+        "path": [
+          "medplot",
+          "summary",
+          "unreproduced"
+        ],
+        "previous": 0,
+        "actual": 0
+      },
+      {
+        "field": "medplot.summary.total",
+        "path": [
+          "medplot",
+          "summary",
+          "total"
+        ],
+        "previous": 27,
+        "actual": 27
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.0.OR",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          0,
+          "OR"
+        ],
+        "previous": 1.767288352552725,
+        "actual": 1.767288352552725
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.0.ORCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          0,
+          "ORCILower"
+        ],
+        "previous": 1.0068285660544085,
+        "actual": 1.0068285660544085
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.0.ORCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          0,
+          "ORCIUpper"
+        ],
+        "previous": 3.10212505521992,
+        "actual": 3.10212505521992
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.0.ORPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          0,
+          "ORPValue"
+        ],
+        "previous": 0.04729258489533627,
+        "actual": 0.04729258489533627
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.1.OR",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          1,
+          "OR"
+        ],
+        "previous": 0.7830263378096263,
+        "actual": 0.7830263378096263
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.1.ORCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          1,
+          "ORCILower"
+        ],
+        "previous": 0.4221578900288722,
+        "actual": 0.4221578900288722
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.1.ORCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          1,
+          "ORCIUpper"
+        ],
+        "previous": 1.4523718736172901,
+        "actual": 1.4523718736172901
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.1.ORPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          1,
+          "ORPValue"
+        ],
+        "previous": 0.43776536781152736,
+        "actual": 0.43776536781152736
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.2.OR",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          2,
+          "OR"
+        ],
+        "previous": 0.4166650939694612,
+        "actual": 0.4166650939694612
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.2.ORCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          2,
+          "ORCILower"
+        ],
+        "previous": 0.20500882802511228,
+        "actual": 0.20500882802511228
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.2.ORCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          2,
+          "ORCIUpper"
+        ],
+        "previous": 0.8468406078167223,
+        "actual": 0.8468406078167223
+      },
+      {
+        "field": "medplot.authorRuns.binaryUnmodified.returned.2.ORPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "binaryUnmodified",
+          "returned",
+          2,
+          "ORPValue"
+        ],
+        "previous": 0.015547087109499303,
+        "actual": 0.015547087109499303
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.0.beta",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          0,
+          "beta"
+        ],
+        "previous": 0.3496256687474684,
+        "actual": 0.3496256687474684
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.0.betaCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          0,
+          "betaCILower"
+        ],
+        "previous": 0.11137013751639972,
+        "actual": 0.11137013751639972
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.0.betaCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          0,
+          "betaCIUpper"
+        ],
+        "previous": 0.5878894443791013,
+        "actual": 0.5878894443791013
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.0.betaPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          0,
+          "betaPValue"
+        ],
+        "previous": 0.004207600317714773,
+        "actual": 0.004207600317714773
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.1.beta",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          1,
+          "beta"
+        ],
+        "previous": -0.18769379208383274,
+        "actual": -0.18769379208383274
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.1.betaCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          1,
+          "betaCILower"
+        ],
+        "previous": -0.4369792544915669,
+        "actual": -0.4369792544915669
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.1.betaCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          1,
+          "betaCIUpper"
+        ],
+        "previous": 0.06163174494736415,
+        "actual": 0.06163174494736415
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.1.betaPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          1,
+          "betaPValue"
+        ],
+        "previous": 0.14094759719417765,
+        "actual": 0.14094759719417765
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.2.beta",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          2,
+          "beta"
+        ],
+        "previous": -0.29383913583041915,
+        "actual": -0.29383913583041915
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.2.betaCILower",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          2,
+          "betaCILower"
+        ],
+        "previous": -0.5568415501977109,
+        "actual": -0.5568415501977109
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.2.betaCIUpper",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          2,
+          "betaCIUpper"
+        ],
+        "previous": -0.030818646115317802,
+        "actual": -0.030818646115317802
+      },
+      {
+        "field": "medplot.authorRuns.continuousCompatible.returned.2.betaPValue",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "continuousCompatible",
+          "returned",
+          2,
+          "betaPValue"
+        ],
+        "previous": 0.029080883910949245,
+        "actual": 0.029080883910949245
+      },
+      {
+        "field": "medplot.authorRuns.adapter.occurrences",
+        "path": [
+          "medplot",
+          "authorRuns",
+          "adapter",
+          "occurrences"
+        ],
+        "previous": 1,
+        "actual": 1
+      }
+    ]
+  },
+  "frozenProtection": [
+    {
+      "path": "data/expected-results.json",
+      "sha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+      "unchanged": true
+    },
+    {
+      "path": "data/synthetic-independent.csv",
+      "sha256": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079",
+      "unchanged": true
+    },
+    {
+      "path": "data/synthetic-clinicalv2.0.csv",
+      "sha256": "30d4b726e955a285e6231fe43d4909f5c30d0ea1caaadcae2c57826fd440b88b",
+      "unchanged": true
+    },
+    {
+      "path": "data/clinical-resultsv2.0.json",
+      "sha256": "264254c981fc381063bc8f783f9b6092708089234ff296bca42cdd018e6d84f9",
+      "unchanged": true
+    },
+    {
+      "path": "data/paper-targetsv2.1.json",
+      "sha256": "4b769f15674c96a7f9b0fed79732209a97ea91a515a06ed41c6bf46fa65ffeca",
+      "unchanged": true
+    },
+    {
+      "path": "data/nhanes-source-manifestv2.1.json",
+      "sha256": "dee8702dc2f5ddc19a0bb6b5b5f7b35c422b7191c788e059305bf0a184066ceb",
+      "unchanged": true
+    },
+    {
+      "path": "data/paper-replayv2.1.json",
+      "sha256": "e0546eb57623a53643bd37aba82361f08b5bf9859546b7c71092eb98887bb38c",
+      "unchanged": true
+    },
+    {
+      "path": "data/paper-checkv2.1.json",
+      "sha256": "bdb741e53f64d86e5aa7a695191b8f8d620107aeaa37107a720ed55b7090abb5",
+      "unchanged": true
+    },
+    {
+      "path": "data/paper-catalogv2.1.json",
+      "sha256": "d7e17bc396a74225854e72328871c3dcaaf2c9262d10fffd16a0fb4a3bbb04ba",
+      "unchanged": true
+    },
+    {
+      "path": "data/paper-materialsv2.1.json",
+      "sha256": "6142afd7ab158b06950e43d9de609faf9ddbfb171419ef8dd6c52ec8868eb67b",
+      "unchanged": true
+    },
+    {
+      "path": "data/纵向论文目标v2.2.json",
+      "sha256": "8864d5d321271b669027d170cae15a2c2d8c14552a7ab4086eae931dc57a5563",
+      "unchanged": true
+    }
+  ],
+  "restores": [
+    {
+      "record": "build/首次恢复核查v2.2/环境恢复记录v2.2.json",
+      "status": "RESTORED_PACKAGE_VERSIONS_MATCH",
+      "R": "R version 4.5.2 (2025-10-31)",
+      "packageCount": 45,
+      "packages": [
+        {
+          "package": "DBI",
+          "expected": "1.3.0",
+          "actual": "1.3.0",
+          "matched": true
+        },
+        {
+          "package": "Matrix",
+          "expected": "1.7-4",
+          "actual": "1.7-4",
+          "matched": true
+        },
+        {
+          "package": "R6",
+          "expected": "2.6.1",
+          "actual": "2.6.1",
+          "matched": true
+        },
+        {
+          "package": "Rcpp",
+          "expected": "1.1.2",
+          "actual": "1.1.2",
+          "matched": true
+        },
+        {
+          "package": "RcppArmadillo",
+          "expected": "15.6.0-1",
+          "actual": "15.6.0-1",
+          "matched": true
+        },
+        {
+          "package": "backports",
+          "expected": "1.5.1",
+          "actual": "1.5.1",
+          "matched": true
+        },
+        {
+          "package": "base64url",
+          "expected": "1.4",
+          "actual": "1.4",
+          "matched": true
+        },
+        {
+          "package": "callr",
+          "expected": "3.8.0",
+          "actual": "3.8.0",
+          "matched": true
+        },
+        {
+          "package": "cli",
+          "expected": "3.6.6",
+          "actual": "3.6.6",
+          "matched": true
+        },
+        {
+          "package": "codetools",
+          "expected": "0.2-20",
+          "actual": "0.2-20",
+          "matched": true
+        },
+        {
+          "package": "cpp11",
+          "expected": "0.5.5",
+          "actual": "0.5.5",
+          "matched": true
+        },
+        {
+          "package": "data.table",
+          "expected": "1.18.6.1",
+          "actual": "1.18.6.1",
+          "matched": true
+        },
+        {
+          "package": "digest",
+          "expected": "0.6.39",
+          "actual": "0.6.39",
+          "matched": true
+        },
+        {
+          "package": "evaluate",
+          "expected": "1.0.5",
+          "actual": "1.0.5",
+          "matched": true
+        },
+        {
+          "package": "foreign",
+          "expected": "0.8-90",
+          "actual": "0.8-90",
+          "matched": true
+        },
+        {
+          "package": "glue",
+          "expected": "1.8.1",
+          "actual": "1.8.1",
+          "matched": true
+        },
+        {
+          "package": "highr",
+          "expected": "0.12",
+          "actual": "0.12",
+          "matched": true
+        },
+        {
+          "package": "igraph",
+          "expected": "2.3.4",
+          "actual": "2.3.4",
+          "matched": true
+        },
+        {
+          "package": "jsonlite",
+          "expected": "2.0.0",
+          "actual": "2.0.0",
+          "matched": true
+        },
+        {
+          "package": "knitr",
+          "expected": "1.52",
+          "actual": "1.52",
+          "matched": true
+        },
+        {
+          "package": "lattice",
+          "expected": "0.22-7",
+          "actual": "0.22-7",
+          "matched": true
+        },
+        {
+          "package": "lifecycle",
+          "expected": "1.0.5",
+          "actual": "1.0.5",
+          "matched": true
+        },
+        {
+          "package": "magrittr",
+          "expected": "2.0.5",
+          "actual": "2.0.5",
+          "matched": true
+        },
+        {
+          "package": "minqa",
+          "expected": "1.2.8",
+          "actual": "1.2.8",
+          "matched": true
+        },
+        {
+          "package": "mitools",
+          "expected": "2.7",
+          "actual": "2.7",
+          "matched": true
+        },
+        {
+          "package": "numDeriv",
+          "expected": "2016.8-1.1",
+          "actual": "2016.8-1.1",
+          "matched": true
+        },
+        {
+          "package": "otel",
+          "expected": "0.2.0",
+          "actual": "0.2.0",
+          "matched": true
+        },
+        {
+          "package": "pillar",
+          "expected": "1.11.1",
+          "actual": "1.11.1",
+          "matched": true
+        },
+        {
+          "package": "pkgconfig",
+          "expected": "2.0.3",
+          "actual": "2.0.3",
+          "matched": true
+        },
+        {
+          "package": "prettyunits",
+          "expected": "1.2.0",
+          "actual": "1.2.0",
+          "matched": true
+        },
+        {
+          "package": "processx",
+          "expected": "3.9.0",
+          "actual": "3.9.0",
+          "matched": true
+        },
+        {
+          "package": "ps",
+          "expected": "1.9.3",
+          "actual": "1.9.3",
+          "matched": true
+        },
+        {
+          "package": "renv",
+          "expected": "1.3.1",
+          "actual": "1.3.1",
+          "matched": true
+        },
+        {
+          "package": "rlang",
+          "expected": "1.3.0",
+          "actual": "1.3.0",
+          "matched": true
+        },
+        {
+          "package": "secretbase",
+          "expected": "1.3.1",
+          "actual": "1.3.1",
+          "matched": true
+        },
+        {
+          "package": "survey",
+          "expected": "4.5",
+          "actual": "4.5",
+          "matched": true
+        },
+        {
+          "package": "survival",
+          "expected": "3.8-3",
+          "actual": "3.8-3",
+          "matched": true
+        },
+        {
+          "package": "targets",
+          "expected": "1.12.0",
+          "actual": "1.12.0",
+          "matched": true
+        },
+        {
+          "package": "tibble",
+          "expected": "3.3.1",
+          "actual": "3.3.1",
+          "matched": true
+        },
+        {
+          "package": "tidyselect",
+          "expected": "1.2.1",
+          "actual": "1.2.1",
+          "matched": true
+        },
+        {
+          "package": "utf8",
+          "expected": "1.2.6",
+          "actual": "1.2.6",
+          "matched": true
+        },
+        {
+          "package": "vctrs",
+          "expected": "0.7.3",
+          "actual": "0.7.3",
+          "matched": true
+        },
+        {
+          "package": "withr",
+          "expected": "3.0.3",
+          "actual": "3.0.3",
+          "matched": true
+        },
+        {
+          "package": "xfun",
+          "expected": "0.61",
+          "actual": "0.61",
+          "matched": true
+        },
+        {
+          "package": "yaml",
+          "expected": "2.3.12",
+          "actual": "2.3.12",
+          "matched": true
+        }
+      ],
+      "libraryPaths": [
+        "/Users/dinghaixiang/Documents/GitHub项目/clinical-stats-languages-guide/build/首次恢复核查v2.2/分析库v2.2",
+        "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+      ],
+      "limitation": "Same host, isolated package library; not a new OS or a container. R/system libraries must be supplied separately."
+    },
+    {
+      "record": "build/纵向首次恢复核查v2.2/纵向环境恢复记录v2.2.json",
+      "status": "RESTORED_PACKAGE_VERSIONS_MATCH",
+      "R": "R version 4.5.2 (2025-10-31)",
+      "packageCount": 35,
+      "packages": [
+        {
+          "package": "MASS",
+          "expected": "7.3-65",
+          "actual": "7.3-65",
+          "matched": true
+        },
+        {
+          "package": "Matrix",
+          "expected": "1.7-4",
+          "actual": "1.7-4",
+          "matched": true
+        },
+        {
+          "package": "R6",
+          "expected": "2.6.1",
+          "actual": "2.6.1",
+          "matched": true
+        },
+        {
+          "package": "RColorBrewer",
+          "expected": "1.1-3",
+          "actual": "1.1-3",
+          "matched": true
+        },
+        {
+          "package": "Rcpp",
+          "expected": "1.1.2",
+          "actual": "1.1.2",
+          "matched": true
+        },
+        {
+          "package": "RcppEigen",
+          "expected": "0.3.4.0.2",
+          "actual": "0.3.4.0.2",
+          "matched": true
+        },
+        {
+          "package": "Rdpack",
+          "expected": "2.6.6",
+          "actual": "2.6.6",
+          "matched": true
+        },
+        {
+          "package": "S7",
+          "expected": "0.2.2",
+          "actual": "0.2.2",
+          "matched": true
+        },
+        {
+          "package": "boot",
+          "expected": "1.3-32",
+          "actual": "1.3-32",
+          "matched": true
+        },
+        {
+          "package": "cli",
+          "expected": "3.6.6",
+          "actual": "3.6.6",
+          "matched": true
+        },
+        {
+          "package": "cpp11",
+          "expected": "0.5.5",
+          "actual": "0.5.5",
+          "matched": true
+        },
+        {
+          "package": "digest",
+          "expected": "0.6.39",
+          "actual": "0.6.39",
+          "matched": true
+        },
+        {
+          "package": "farver",
+          "expected": "2.1.2",
+          "actual": "2.1.2",
+          "matched": true
+        },
+        {
+          "package": "ggplot2",
+          "expected": "4.0.3",
+          "actual": "4.0.3",
+          "matched": true
+        },
+        {
+          "package": "glue",
+          "expected": "1.8.1",
+          "actual": "1.8.1",
+          "matched": true
+        },
+        {
+          "package": "gtable",
+          "expected": "0.3.6",
+          "actual": "0.3.6",
+          "matched": true
+        },
+        {
+          "package": "isoband",
+          "expected": "0.3.0",
+          "actual": "0.3.0",
+          "matched": true
+        },
+        {
+          "package": "jsonlite",
+          "expected": "2.0.0",
+          "actual": "2.0.0",
+          "matched": true
+        },
+        {
+          "package": "labeling",
+          "expected": "0.4.3",
+          "actual": "0.4.3",
+          "matched": true
+        },
+        {
+          "package": "lattice",
+          "expected": "0.22-7",
+          "actual": "0.22-7",
+          "matched": true
+        },
+        {
+          "package": "lifecycle",
+          "expected": "1.0.5",
+          "actual": "1.0.5",
+          "matched": true
+        },
+        {
+          "package": "lme4",
+          "expected": "2.0-6",
+          "actual": "2.0-6",
+          "matched": true
+        },
+        {
+          "package": "lmerTest",
+          "expected": "3.2-1",
+          "actual": "3.2-1",
+          "matched": true
+        },
+        {
+          "package": "minqa",
+          "expected": "1.2.8",
+          "actual": "1.2.8",
+          "matched": true
+        },
+        {
+          "package": "nlme",
+          "expected": "3.1-168",
+          "actual": "3.1-168",
+          "matched": true
+        },
+        {
+          "package": "nloptr",
+          "expected": "2.2.1",
+          "actual": "2.2.1",
+          "matched": true
+        },
+        {
+          "package": "numDeriv",
+          "expected": "2016.8-1.1",
+          "actual": "2016.8-1.1",
+          "matched": true
+        },
+        {
+          "package": "rbibutils",
+          "expected": "2.4.1",
+          "actual": "2.4.1",
+          "matched": true
+        },
+        {
+          "package": "reformulas",
+          "expected": "0.4.4",
+          "actual": "0.4.4",
+          "matched": true
+        },
+        {
+          "package": "renv",
+          "expected": "1.3.1",
+          "actual": "1.3.1",
+          "matched": true
+        },
+        {
+          "package": "rlang",
+          "expected": "1.3.0",
+          "actual": "1.3.0",
+          "matched": true
+        },
+        {
+          "package": "scales",
+          "expected": "1.4.0",
+          "actual": "1.4.0",
+          "matched": true
+        },
+        {
+          "package": "vctrs",
+          "expected": "0.7.3",
+          "actual": "0.7.3",
+          "matched": true
+        },
+        {
+          "package": "viridisLite",
+          "expected": "0.4.3",
+          "actual": "0.4.3",
+          "matched": true
+        },
+        {
+          "package": "withr",
+          "expected": "3.0.3",
+          "actual": "3.0.3",
+          "matched": true
+        }
+      ],
+      "libraryPaths": [
+        "/Users/dinghaixiang/Documents/GitHub项目/clinical-stats-languages-guide/build/纵向首次恢复核查v2.2/分析库v2.2",
+        "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+      ],
+      "limitation": "Same macOS/arm64 host and system R; isolated fresh package library, not historical 2015 environment or a new OS."
+    }
+  ],
+  "teaching": {
+    "kind": "recomputed",
+    "computedAt": "2026-10-09T02:59:03.448062+00:00",
+    "scope": "two synthetic fixtures only",
+    "crosscheck": {
+      "R-small": 10,
+      "R-clinical": 76,
+      "status": "NUMERICAL_AGREEMENT"
+    }
+  },
+  "nhanes": {
+    "kind": "recomputed",
+    "computedAt": "2026-10-09T02:59:00.752110Z",
+    "scope": "Selected primary models and sample flow; not whole-paper replication",
+    "comparison": {
+      "passed": 72,
+      "total": 72,
+      "currentDefault": {
+        "passed": 16,
+        "total": 32,
+        "checks": [
+          {
+            "field": "linear_crude.DMDEDUC22.lower",
+            "actual": -0.606546939262451,
+            "published": -0.6,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "linear_crude.DMDEDUC22.upper",
+            "actual": -0.301117994321802,
+            "published": -0.3,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_crude.DMDEDUC23.lower",
+            "actual": -0.8358205159466,
+            "published": -0.83,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "linear_crude.DMDEDUC23.upper",
+            "actual": -0.518597564720723,
+            "published": -0.52,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_crude.DMDEDUC24.lower",
+            "actual": -1.22078036664044,
+            "published": -1.22,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_crude.DMDEDUC24.upper",
+            "actual": -0.919539866944803,
+            "published": -0.92,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_crude.DMDEDUC25.lower",
+            "actual": -1.83256355839479,
+            "published": -1.83,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_crude.DMDEDUC25.upper",
+            "actual": -1.47596304437688,
+            "published": -1.48,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC22.lower",
+            "actual": -0.366329633239706,
+            "published": -0.36,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC22.upper",
+            "actual": -0.0962062917495168,
+            "published": -0.1,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC23.lower",
+            "actual": -0.633617041132228,
+            "published": -0.63,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC23.upper",
+            "actual": -0.350411615748533,
+            "published": -0.35,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC24.lower",
+            "actual": -0.929727323625486,
+            "published": -0.93,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC24.upper",
+            "actual": -0.661308330488073,
+            "published": -0.66,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC25.lower",
+            "actual": -1.62986435261246,
+            "published": -1.63,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "linear_adjusted.DMDEDUC25.upper",
+            "actual": -1.30158537476462,
+            "published": -1.3,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "logistic_crude.DMDEDUC22.lower",
+            "actual": 1.14755680633026,
+            "published": 1.15,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "logistic_crude.DMDEDUC22.upper",
+            "actual": 1.75126627109719,
+            "published": 1.74,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC23.lower",
+            "actual": 1.5606129047882,
+            "published": 1.57,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC23.upper",
+            "actual": 2.23755907114356,
+            "published": 2.23,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC24.lower",
+            "actual": 2.21072155984116,
+            "published": 2.22,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC24.upper",
+            "actual": 3.2041996458601,
+            "published": 3.19,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC25.lower",
+            "actual": 3.36075635451607,
+            "published": 3.37,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_crude.DMDEDUC25.upper",
+            "actual": 4.87266902745148,
+            "published": 4.86,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC22.lower",
+            "actual": 1.03329050141626,
+            "published": 1.04,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC22.upper",
+            "actual": 1.57144291755018,
+            "published": 1.57,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC23.lower",
+            "actual": 1.42900858856096,
+            "published": 1.43,
+            "tolerance": 0.0050001,
+            "passed": true
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC23.upper",
+            "actual": 2.0398513029094,
+            "published": 2.03,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC24.lower",
+            "actual": 1.92925359874212,
+            "published": 1.94,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC24.upper",
+            "actual": 2.79446174874037,
+            "published": 2.78,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC25.lower",
+            "actual": 3.11193659425605,
+            "published": 3.12,
+            "tolerance": 0.0050001,
+            "passed": false
+          },
+          {
+            "field": "logistic_adjusted.DMDEDUC25.upper",
+            "actual": 4.49465245789171,
+            "published": 4.48,
+            "tolerance": 0.0050001,
+            "passed": false
+          }
+        ]
+      }
+    }
+  },
+  "longitudinal": {
+    "execution": {
+      "kind": "recomputed",
+      "startedAt": "2026-10-09 02:59:02 UTC",
+      "completedAt": "2026-10-09 02:59:13 UTC",
+      "scope": "Nausea mixed models and data summary; not full paper"
+    },
+    "summary": {
+      "matched": 22,
+      "differences": 5,
+      "unreproduced": 0,
+      "total": 27
+    },
+    "authorRuns": {
+      "binaryUnmodified": {
+        "error": null,
+        "warnings": [],
+        "messages": [],
+        "returned": [
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "14",
+            "OR": 1.767288352552725,
+            "ORCILower": 1.0068285660544085,
+            "ORCIUpper": 3.10212505521992,
+            "ORPValue": 0.04729258489533627
+          },
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "180",
+            "OR": 0.7830263378096263,
+            "ORCILower": 0.4221578900288722,
+            "ORCIUpper": 1.4523718736172901,
+            "ORPValue": 0.43776536781152736
+          },
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "365",
+            "OR": 0.4166650939694612,
+            "ORCILower": 0.20500882802511228,
+            "ORCIUpper": 0.8468406078167223,
+            "ORPValue": 0.015547087109499303
+          }
+        ]
+      },
+      "continuousUnmodified": {
+        "error": "'summary' is not an exported object from 'namespace:lmerTest'",
+        "warnings": [],
+        "messages": "Computing profile confidence intervals ...\n",
+        "returned": null
+      },
+      "continuousCompatible": {
+        "error": null,
+        "warnings": [],
+        "messages": "Computing profile confidence intervals ...\n",
+        "returned": [
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "14",
+            "beta": 0.3496256687474684,
+            "betaCILower": 0.11137013751639972,
+            "betaCIUpper": 0.5878894443791013,
+            "betaPValue": 0.004207600317714773
+          },
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "180",
+            "beta": -0.18769379208383274,
+            "betaCILower": -0.4369792544915669,
+            "betaCIUpper": 0.06163174494736415,
+            "betaPValue": 0.14094759719417765
+          },
+          {
+            "Variable": "Nausea",
+            "CovariateLevel": "365",
+            "beta": -0.29383913583041915,
+            "betaCILower": -0.5568415501977109,
+            "betaCIUpper": -0.030818646115317802,
+            "betaPValue": 0.029080883910949245
+          }
+        ]
+      },
+      "adapter": {
+        "kind": "single namespace dispatch compatibility change; GPL-3 derived file kept in ignored build",
+        "from": "lmerTest::summary(model)",
+        "to": "summary(model)",
+        "occurrences": 1,
+        "originalError": "'summary' is not an exported object from 'namespace:lmerTest'",
+        "sha256": "d23f2f4e8b9042c209014d9f3ab6192c37715dd8774a0a49c53265d3edca4b8a",
+        "limitations": "Not unmodified author-code execution; no formula, optimizer, CI or expected-value changes"
+      }
+    }
+  },
+  "cpp": {
+    "authorCommit": "56bec1a6e230b9c401585eed4d0c7348ad2afe2c",
+    "downloadSha256": "ca310c246e8d4976f3b68fdbcc098a359bdd5506ed81cf2d82f6943895a8f9a3",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-DBOOST_MATH_STANDALONE",
+      "-Ibuild/Boost数学源v2.2/math-56bec1a6e230b9c401585eed4d0c7348ad2afe2c/include",
+      "examples/cpp/welch_demo.cpp",
+      "-o",
+      "build/综合Welchv2.2"
+    ],
+    "exitCode": 0,
+    "license": "Boost Software License 1.0",
+    "sourceSha256": "f6206d11c7a0d6591d523da19c6a1cf4e744fe4a883b23d00e370c02dec0e8df"
+  },
+  "inputs": [
+    {
+      "path": "docs/assets/分析结果v2.2.json",
+      "sha256": "c7a67f8eb004b0e9998ff55b1109312803cb02495e9f1e102052b8cf14504064"
+    },
+    {
+      "path": "docs/assets/纵向论文结果v2.2.json",
+      "sha256": "4eaf984540255e5ec16d37c4e36c884fbf9737bd8a56e44c87e89172d23b9d7b"
+    },
+    {
+      "path": "docs/assets/计算报告记录v2.2.json",
+      "sha256": "979650927b1979cb348269e9a03010501ebbdd77026974f54e42beef68436eec"
+    }
+  ],
+  "limitation": "Same host / system R with fresh isolated libraries and cached pinned packages; no new OS, historical author environment, expert review, AI evaluation or human trial."
+}

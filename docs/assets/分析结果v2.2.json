@@ -1,0 +1,2370 @@
+{
+  "schemaVersion": "2.2",
+  "createdAt": "2026-10-09T02:59:03.558281+00:00",
+  "recordBuilder": {
+    "Python": "3.12.4",
+    "system": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fonttools": "4.66.1",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.10.0",
+      "numpy": "2.2.2",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.15.1",
+      "six": "1.17.0"
+    },
+    "prefix": "build/Python恢复环境v2.2"
+  },
+  "code": [
+    {
+      "path": "scripts/统一结果v2.2.py",
+      "sha256": "61bd76fd3735b2d8fd5dfb0dda2d1466f796a480565494ef365b5e78d61025fe"
+    },
+    {
+      "path": "scripts/分析流水线v2.2.R",
+      "sha256": "09c9af4d31e30772176fc3e7f882203ee3298852f9703889c64268df908f8974"
+    },
+    {
+      "path": "scripts/运行流水线v2.2.R",
+      "sha256": "235fb8d1cafadf1269712d407d6dc4afe54f8f8518cbb754f0af8a60cb899a61"
+    },
+    {
+      "path": "scripts/论文重算v2.2.R",
+      "sha256": "ebbb52ca5780ac98aec00647fb9e0998f882499c808285ed28cfad1a463bdfc1"
+    },
+    {
+      "path": "scripts/恢复环境v2.2.R",
+      "sha256": "302052d9da11f93b52ae8146807121d554ced1d3140d43c2b39bcdeba75457f4"
+    },
+    {
+      "path": "config/R环境锁v2.2.json",
+      "sha256": "543efb8deef66bf586cb0ddaf358a51fad2675631407204eac3c1651397b1ebd"
+    },
+    {
+      "path": "config/Python环境锁v2.2.txt",
+      "sha256": "e320551a6e64d4c507ab39913013b7c29238b39474beedc6b26d881f4c1e8cf1"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "f33cf7f2267829f64fc4e59ca45fc3c151ed39fe350a3074e07e56f3ea16672c"
+    }
+  ],
+  "cases": {
+    "small": {
+      "id": "small",
+      "label": "24 例独立模拟教学",
+      "execution": {
+        "kind": "recomputed",
+        "computedAt": "2026-10-09T02:59:03.448062+00:00",
+        "scope": "two synthetic fixtures only",
+        "crosscheck": {
+          "R-small": 10,
+          "R-clinical": 76,
+          "status": "NUMERICAL_AGREEMENT"
+        }
+      },
+      "data": [
+        {
+          "path": "data/synthetic-independent.csv",
+          "sha256": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079"
+        },
+        {
+          "path": "data/expected-results.json",
+          "sha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89"
+        }
+      ],
+      "code": {
+        "files": [
+          {
+            "path": "examples/python/welch_demo.py",
+            "sha256": "658176305c6906875e145811c667477241b0925d7ff527a51b40418294cf337b"
+          },
+          {
+            "path": "examples/r/welch_demo.R",
+            "sha256": "5f0384d1d98a3d1607154383a386b25e2cb5b30c63cd04cd214cf7346a9bfaf2"
+          }
+        ],
+        "meaning": "implementation at record creation; snapshot mode does not prove the historical executing code"
+      },
+      "population": {
+        "description": "人为构造的独立观测，无患者；全部结局已知",
+        "unit": "独立模拟对象",
+        "sampling": "人为构造"
+      },
+      "denominators": {
+        "eligible": 24,
+        "A": 12,
+        "B": 12,
+        "analyzed": 24,
+        "weighted": false
+      },
+      "estimand": "未调整均值差",
+      "direction": "A−B",
+      "missing": {
+        "rule": "拒绝缺失 / 非有限值，不删除或插补",
+        "A": 0,
+        "B": 0
+      },
+      "environment": {
+        "analysis": {
+          "Python": "3.12.4",
+          "system": "macOS-26.5.1-arm64-arm-64bit",
+          "machine": "arm64",
+          "packages": {
+            "contourpy": "1.4.0",
+            "cycler": "0.12.1",
+            "fonttools": "4.66.1",
+            "kiwisolver": "1.5.1",
+            "matplotlib": "3.10.0",
+            "numpy": "2.2.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "pyparsing": "3.3.3",
+            "python-dateutil": "2.9.0.post0",
+            "scipy": "1.15.1",
+            "six": "1.17.0"
+          },
+          "prefix": "build/Python恢复环境v2.2"
+        },
+        "R": {
+          "computedAt": "2026-10-09T02:59:00.752110Z",
+          "R": "R version 4.5.2 (2025-10-31)",
+          "packages": {
+            "DBI": "1.3.0",
+            "Matrix": "1.7-4",
+            "R6": "2.6.1",
+            "Rcpp": "1.1.2",
+            "RcppArmadillo": "15.6.0-1",
+            "backports": "1.5.1",
+            "base64url": "1.4",
+            "callr": "3.8.0",
+            "cli": "3.6.6",
+            "codetools": "0.2-20",
+            "cpp11": "0.5.5",
+            "data.table": "1.18.6.1",
+            "digest": "0.6.39",
+            "evaluate": "1.0.5",
+            "foreign": "0.8-90",
+            "glue": "1.8.1",
+            "highr": "0.12",
+            "igraph": "2.3.4",
+            "jsonlite": "2.0.0",
+            "knitr": "1.52",
+            "lattice": "0.22-7",
+            "lifecycle": "1.0.5",
+            "magrittr": "2.0.5",
+            "minqa": "1.2.8",
+            "mitools": "2.7",
+            "numDeriv": "2016.8-1.1",
+            "otel": "0.2.0",
+            "pillar": "1.11.1",
+            "pkgconfig": "2.0.3",
+            "prettyunits": "1.2.0",
+            "processx": "3.9.0",
+            "ps": "1.9.3",
+            "renv": "1.3.1",
+            "rlang": "1.3.0",
+            "secretbase": "1.3.1",
+            "survey": "4.5",
+            "survival": "3.8-3",
+            "targets": "1.12.0",
+            "tibble": "3.3.1",
+            "tidyselect": "1.2.1",
+            "utf8": "1.2.6",
+            "vctrs": "0.7.3",
+            "withr": "3.0.3",
+            "xfun": "0.61",
+            "yaml": "2.3.12"
+          },
+          "system": {
+            "sysname": "Darwin",
+            "release": "25.5.0",
+            "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:06 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6030",
+            "machine": "arm64"
+          },
+          "external": {
+            "zlib": "1.2.12",
+            "bzlib": "1.0.8, 13-Jul-2019",
+            "xz": "5.8.4",
+            "libdeflate": "",
+            "PCRE": "10.47 2025-10-21",
+            "ICU": "78.1",
+            "TRE": "TRE 0.8.0 R_fixes (BSD)",
+            "iconv": "Apple or GNU libiconv 1.11 /usr/lib/libiconv.2.dylib",
+            "readline": "8.3",
+            "BLAS": "/opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib"
+          },
+          "libraryPaths": [
+            "build/首次恢复核查v2.2/分析库v2.2",
+            "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+          ],
+          "sourceSha256": {
+            "scripts/统一结果v2.2.py": "61bd76fd3735b2d8fd5dfb0dda2d1466f796a480565494ef365b5e78d61025fe",
+            "scripts/论文重算v2.2.R": "ebbb52ca5780ac98aec00647fb9e0998f882499c808285ed28cfad1a463bdfc1",
+            "scripts/分析流水线v2.2.R": "09c9af4d31e30772176fc3e7f882203ee3298852f9703889c64268df908f8974",
+            "scripts/运行流水线v2.2.R": "235fb8d1cafadf1269712d407d6dc4afe54f8f8518cbb754f0af8a60cb899a61",
+            "scripts/clinical-reportv2.0.py": "4427277f8d8c45b6bfa8d1a414adf1479c2efaacc80ae15c47d28a5f20230765",
+            "scripts/verify-paperv2.1.py": "dbf3a426d44b5d809ada0a0b1f8569740eacf3b4fa6f45c347add14057da607a",
+            "examples/python/welch_demo.py": "658176305c6906875e145811c667477241b0925d7ff527a51b40418294cf337b",
+            "examples/r/welch_demo.R": "5f0384d1d98a3d1607154383a386b25e2cb5b30c63cd04cd214cf7346a9bfaf2",
+            "examples/r/clinical-crosscheckv2.0.R": "8ff5a52713aad57e580daa55220c625d439834703c661cbf1c37c29848709bef",
+            "examples/r/nhanes-replayv2.1.R": "c70050cdb771f8e4015c8b4c5732a45dcfa531b35d66b3df3daaa8a0c5ad4dcd",
+            "scripts/恢复环境v2.2.R": "302052d9da11f93b52ae8146807121d554ced1d3140d43c2b39bcdeba75457f4",
+            "config/R环境锁v2.2.json": "543efb8deef66bf586cb0ddaf358a51fad2675631407204eac3c1651397b1ebd",
+            "config/Python环境锁v2.2.txt": "e320551a6e64d4c507ab39913013b7c29238b39474beedc6b26d881f4c1e8cf1",
+            "requirements.txt": "f33cf7f2267829f64fc4e59ca45fc3c151ed39fe350a3074e07e56f3ea16672c"
+          },
+          "inputSha256": {
+            "data/synthetic-independent.csv": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079",
+            "data/synthetic-clinicalv2.0.csv": "30d4b726e955a285e6231fe43d4909f5c30d0ea1caaadcae2c57826fd440b88b",
+            "data/expected-results.json": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+            "data/clinical-resultsv2.0.json": "264254c981fc381063bc8f783f9b6092708089234ff296bca42cdd018e6d84f9",
+            "data/nhanes-source-manifestv2.1.json": "dee8702dc2f5ddc19a0bb6b5b5f7b35c422b7191c788e059305bf0a184066ceb",
+            "data/paper-targetsv2.1.json": "4b769f15674c96a7f9b0fed79732209a97ea91a515a06ed41c6bf46fa65ffeca",
+            "data/paper-replayv2.1.json": "e0546eb57623a53643bd37aba82361f08b5bf9859546b7c71092eb98887bb38c"
+          },
+          "isolation": "library isolation on same host; base R / OS / BLAS not restored by renv"
+        }
+      },
+      "estimates": [
+        {
+          "id": "primary",
+          "value": 8.083333333333329,
+          "unit": "教学数值，未赋予临床单位",
+          "estimand": "未调整均值差",
+          "direction": "A−B",
+          "ci": {
+            "level": 0.95,
+            "lower": 2.8083940103801677,
+            "upper": 13.35827265628649,
+            "algorithm": "Welch t；Satterthwaite 自由度；双侧"
+          },
+          "metrics": {
+            "t": 3.1837132050193677,
+            "df": 21.34052630177548,
+            "p": 0.004407128441550018
+          }
+        }
+      ],
+      "statistics": [
+        {
+          "variable": "value",
+          "group": "A",
+          "context": "summary",
+          "statName": "mean",
+          "value": 128.75,
+          "denominator": 12,
+          "level": null
+        },
+        {
+          "variable": "value",
+          "group": "B",
+          "context": "summary",
+          "statName": "mean",
+          "value": 120.66666666666667,
+          "denominator": 12,
+          "level": null
+        }
+      ],
+      "diagnostics": {
+        "executed": [
+          "unique IDs / finite values checked by the two implementations"
+        ],
+        "notExecuted": [
+          "分布与极端值解释、独立性的方法学核查；数值一致不能代替这些检查"
+        ]
+      },
+      "warnings": [
+        "只用于模拟教学；没有功效或临床疗效证据"
+      ]
+    },
+    "clinical": {
+      "id": "clinical",
+      "label": "96 例临床统计模拟教学",
+      "execution": {
+        "kind": "recomputed",
+        "computedAt": "2026-10-09T02:59:03.448062+00:00",
+        "scope": "two synthetic fixtures only",
+        "crosscheck": {
+          "R-small": 10,
+          "R-clinical": 76,
+          "status": "NUMERICAL_AGREEMENT"
+        }
+      },
+      "data": [
+        {
+          "path": "data/synthetic-clinicalv2.0.csv",
+          "sha256": "30d4b726e955a285e6231fe43d4909f5c30d0ea1caaadcae2c57826fd440b88b"
+        },
+        {
+          "path": "data/clinical-resultsv2.0.json",
+          "sha256": "264254c981fc381063bc8f783f9b6092708089234ff296bca42cdd018e6d84f9"
+        }
+      ],
+      "code": {
+        "files": [
+          {
+            "path": "scripts/clinical-reportv2.0.py",
+            "sha256": "4427277f8d8c45b6bfa8d1a414adf1479c2efaacc80ae15c47d28a5f20230765"
+          },
+          {
+            "path": "examples/r/clinical-crosscheckv2.0.R",
+            "sha256": "8ff5a52713aad57e580daa55220c625d439834703c661cbf1c37c29848709bef"
+          }
+        ],
+        "meaning": "implementation at record creation; snapshot mode does not prove the historical executing code"
+      },
+      "population": {
+        "description": "96 个独立模拟对象；只按主要结局观测情况纳入",
+        "unit": "独立模拟对象",
+        "sampling": "人为构造"
+      },
+      "denominators": {
+        "eligible": 96,
+        "groupTotal": {
+          "A": 48,
+          "B": 48
+        },
+        "A": 45,
+        "B": 43,
+        "analyzed": 88,
+        "weighted": false
+      },
+      "estimand": "第 28 天未调整收缩压均值差",
+      "direction": "A−B",
+      "missing": {
+        "rule": "observed outcome only; no imputation; baseline missingness does not exclude outcome",
+        "A": 3,
+        "B": 5,
+        "imputation": "none"
+      },
+      "environment": {
+        "analysis": {
+          "Python": "3.12.4",
+          "NumPy": "2.2.2",
+          "SciPy": "1.15.1",
+          "Matplotlib": "3.10.0",
+          "system": "macOS-26.5.1-arm64-arm-64bit",
+          "machine": "arm64",
+          "packages": {
+            "contourpy": "1.4.0",
+            "cycler": "0.12.1",
+            "fonttools": "4.66.1",
+            "kiwisolver": "1.5.1",
+            "matplotlib": "3.10.0",
+            "numpy": "2.2.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "pyparsing": "3.3.3",
+            "python-dateutil": "2.9.0.post0",
+            "scipy": "1.15.1",
+            "six": "1.17.0"
+          },
+          "prefix": "build/Python恢复环境v2.2"
+        },
+        "R": {
+          "computedAt": "2026-10-09T02:59:00.752110Z",
+          "R": "R version 4.5.2 (2025-10-31)",
+          "packages": {
+            "DBI": "1.3.0",
+            "Matrix": "1.7-4",
+            "R6": "2.6.1",
+            "Rcpp": "1.1.2",
+            "RcppArmadillo": "15.6.0-1",
+            "backports": "1.5.1",
+            "base64url": "1.4",
+            "callr": "3.8.0",
+            "cli": "3.6.6",
+            "codetools": "0.2-20",
+            "cpp11": "0.5.5",
+            "data.table": "1.18.6.1",
+            "digest": "0.6.39",
+            "evaluate": "1.0.5",
+            "foreign": "0.8-90",
+            "glue": "1.8.1",
+            "highr": "0.12",
+            "igraph": "2.3.4",
+            "jsonlite": "2.0.0",
+            "knitr": "1.52",
+            "lattice": "0.22-7",
+            "lifecycle": "1.0.5",
+            "magrittr": "2.0.5",
+            "minqa": "1.2.8",
+            "mitools": "2.7",
+            "numDeriv": "2016.8-1.1",
+            "otel": "0.2.0",
+            "pillar": "1.11.1",
+            "pkgconfig": "2.0.3",
+            "prettyunits": "1.2.0",
+            "processx": "3.9.0",
+            "ps": "1.9.3",
+            "renv": "1.3.1",
+            "rlang": "1.3.0",
+            "secretbase": "1.3.1",
+            "survey": "4.5",
+            "survival": "3.8-3",
+            "targets": "1.12.0",
+            "tibble": "3.3.1",
+            "tidyselect": "1.2.1",
+            "utf8": "1.2.6",
+            "vctrs": "0.7.3",
+            "withr": "3.0.3",
+            "xfun": "0.61",
+            "yaml": "2.3.12"
+          },
+          "system": {
+            "sysname": "Darwin",
+            "release": "25.5.0",
+            "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:06 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6030",
+            "machine": "arm64"
+          },
+          "external": {
+            "zlib": "1.2.12",
+            "bzlib": "1.0.8, 13-Jul-2019",
+            "xz": "5.8.4",
+            "libdeflate": "",
+            "PCRE": "10.47 2025-10-21",
+            "ICU": "78.1",
+            "TRE": "TRE 0.8.0 R_fixes (BSD)",
+            "iconv": "Apple or GNU libiconv 1.11 /usr/lib/libiconv.2.dylib",
+            "readline": "8.3",
+            "BLAS": "/opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib"
+          },
+          "libraryPaths": [
+            "build/首次恢复核查v2.2/分析库v2.2",
+            "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+          ],
+          "sourceSha256": {
+            "scripts/统一结果v2.2.py": "61bd76fd3735b2d8fd5dfb0dda2d1466f796a480565494ef365b5e78d61025fe",
+            "scripts/论文重算v2.2.R": "ebbb52ca5780ac98aec00647fb9e0998f882499c808285ed28cfad1a463bdfc1",
+            "scripts/分析流水线v2.2.R": "09c9af4d31e30772176fc3e7f882203ee3298852f9703889c64268df908f8974",
+            "scripts/运行流水线v2.2.R": "235fb8d1cafadf1269712d407d6dc4afe54f8f8518cbb754f0af8a60cb899a61",
+            "scripts/clinical-reportv2.0.py": "4427277f8d8c45b6bfa8d1a414adf1479c2efaacc80ae15c47d28a5f20230765",
+            "scripts/verify-paperv2.1.py": "dbf3a426d44b5d809ada0a0b1f8569740eacf3b4fa6f45c347add14057da607a",
+            "examples/python/welch_demo.py": "658176305c6906875e145811c667477241b0925d7ff527a51b40418294cf337b",
+            "examples/r/welch_demo.R": "5f0384d1d98a3d1607154383a386b25e2cb5b30c63cd04cd214cf7346a9bfaf2",
+            "examples/r/clinical-crosscheckv2.0.R": "8ff5a52713aad57e580daa55220c625d439834703c661cbf1c37c29848709bef",
+            "examples/r/nhanes-replayv2.1.R": "c70050cdb771f8e4015c8b4c5732a45dcfa531b35d66b3df3daaa8a0c5ad4dcd",
+            "scripts/恢复环境v2.2.R": "302052d9da11f93b52ae8146807121d554ced1d3140d43c2b39bcdeba75457f4",
+            "config/R环境锁v2.2.json": "543efb8deef66bf586cb0ddaf358a51fad2675631407204eac3c1651397b1ebd",
+            "config/Python环境锁v2.2.txt": "e320551a6e64d4c507ab39913013b7c29238b39474beedc6b26d881f4c1e8cf1",
+            "requirements.txt": "f33cf7f2267829f64fc4e59ca45fc3c151ed39fe350a3074e07e56f3ea16672c"
+          },
+          "inputSha256": {
+            "data/synthetic-independent.csv": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079",
+            "data/synthetic-clinicalv2.0.csv": "30d4b726e955a285e6231fe43d4909f5c30d0ea1caaadcae2c57826fd440b88b",
+            "data/expected-results.json": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+            "data/clinical-resultsv2.0.json": "264254c981fc381063bc8f783f9b6092708089234ff296bca42cdd018e6d84f9",
+            "data/nhanes-source-manifestv2.1.json": "dee8702dc2f5ddc19a0bb6b5b5f7b35c422b7191c788e059305bf0a184066ceb",
+            "data/paper-targetsv2.1.json": "4b769f15674c96a7f9b0fed79732209a97ea91a515a06ed41c6bf46fa65ffeca",
+            "data/paper-replayv2.1.json": "e0546eb57623a53643bd37aba82361f08b5bf9859546b7c71092eb98887bb38c"
+          },
+          "isolation": "library isolation on same host; base R / OS / BLAS not restored by renv"
+        }
+      },
+      "estimates": [
+        {
+          "id": "primary",
+          "value": 9.028992248061996,
+          "unit": "mmHg",
+          "estimand": "第 28 天未调整收缩压均值差",
+          "direction": "A−B",
+          "ci": {
+            "level": 0.95,
+            "lower": 2.525722225949939,
+            "upper": 15.532262270174055,
+            "algorithm": "Welch t；Satterthwaite 自由度；双侧"
+          },
+          "metrics": {
+            "t": 2.7641945436833995,
+            "df": 77.73622758302501,
+            "p": 0.007122449826520556
+          }
+        }
+      ],
+      "statistics": [
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 46,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "missing",
+          "value": 2,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "mean",
+          "value": 62.14782608695653,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "sd",
+          "value": 12.043951716395243,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "median",
+          "value": 61.849999999999994,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "q1",
+          "value": 53.95,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "A",
+          "context": "summary",
+          "statName": "q3",
+          "value": 69.875,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 45,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "missing",
+          "value": 3,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "mean",
+          "value": 60.715555555555554,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "sd",
+          "value": 11.399181700207407,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "median",
+          "value": 61.1,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "q1",
+          "value": 52.1,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "age",
+          "group": "B",
+          "context": "summary",
+          "statName": "q3",
+          "value": 69.5,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 47,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "missing",
+          "value": 1,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 28,
+          "denominator": 47,
+          "level": "F"
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "percent",
+          "value": 59.57446808510638,
+          "denominator": 47,
+          "level": "F"
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 19,
+          "denominator": 47,
+          "level": "M"
+        },
+        {
+          "variable": "sex",
+          "group": "A",
+          "context": "summary",
+          "statName": "percent",
+          "value": 40.42553191489362,
+          "denominator": 47,
+          "level": "M"
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 46,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "missing",
+          "value": 2,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 21,
+          "denominator": 46,
+          "level": "F"
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "percent",
+          "value": 45.65217391304348,
+          "denominator": 46,
+          "level": "F"
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 25,
+          "denominator": 46,
+          "level": "M"
+        },
+        {
+          "variable": "sex",
+          "group": "B",
+          "context": "summary",
+          "statName": "percent",
+          "value": 54.34782608695652,
+          "denominator": 46,
+          "level": "M"
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 46,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "missing",
+          "value": 2,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "mean",
+          "value": 141.6217391304348,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "sd",
+          "value": 10.861285232798766,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "median",
+          "value": 140.95,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "q1",
+          "value": 135.05,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "q3",
+          "value": 149.075,
+          "denominator": 46,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 47,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "missing",
+          "value": 1,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "mean",
+          "value": 137.8276595744681,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "sd",
+          "value": 15.092320277540232,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "median",
+          "value": 135.6,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "q1",
+          "value": 128.64999999999998,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "q3",
+          "value": 147.89999999999998,
+          "denominator": 47,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "n",
+          "value": 44,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "missing",
+          "value": 4,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "mean",
+          "value": 6.846363636363637,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "sd",
+          "value": 9.399127889011607,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "median",
+          "value": 3.54,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "q1",
+          "value": 2.2125,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "A",
+          "context": "summary",
+          "statName": "q3",
+          "value": 6.85,
+          "denominator": 44,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "n",
+          "value": 45,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "missing",
+          "value": 3,
+          "denominator": 48,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "mean",
+          "value": 5.5024444444444445,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "sd",
+          "value": 6.0227387893924575,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "median",
+          "value": 3.28,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "q1",
+          "value": 1.85,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "baseline-crp",
+          "group": "B",
+          "context": "summary",
+          "statName": "q3",
+          "value": 6.46,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "day28-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "mean",
+          "value": 137.32666666666665,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "day28-sbp",
+          "group": "A",
+          "context": "summary",
+          "statName": "sd",
+          "value": 12.93812899217587,
+          "denominator": 45,
+          "level": null
+        },
+        {
+          "variable": "day28-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "mean",
+          "value": 128.29767441860466,
+          "denominator": 43,
+          "level": null
+        },
+        {
+          "variable": "day28-sbp",
+          "group": "B",
+          "context": "summary",
+          "statName": "sd",
+          "value": 17.286706816456963,
+          "denominator": 43,
+          "level": null
+        }
+      ],
+      "diagnostics": {
+        "executed": {
+          "A": {
+            "shapiroW": 0.9822261577343476,
+            "shapiroP": 0.7104936927214047
+          },
+          "B": {
+            "shapiroW": 0.9526950262054635,
+            "shapiroP": 0.07479948449742387
+          },
+          "levene": {
+            "center": "median",
+            "F": 2.812415283847312,
+            "p": 0.09716882670882415
+          }
+        },
+        "status": "recomputed",
+        "notExecuted": [
+          "Q–Q 图的真人解释、缺失机制与研究方案审核"
+        ],
+        "routing": "P values do not switch the planned analysis"
+      },
+      "warnings": [
+        "结局缺失；仅观测结局分析是预设教学处理，不是通用缺失方案",
+        "基线变量缺失不额外剔除主要结局",
+        "无临床疗效 / 因果或功效证据"
+      ]
+    },
+    "nhanes": {
+      "id": "nhanes",
+      "label": "Nickels 2019：限定 NHANES 模型",
+      "execution": {
+        "kind": "recomputed",
+        "computedAt": "2026-10-09T02:59:00.752110Z",
+        "scope": "Selected primary models and sample flow; not whole-paper replication",
+        "comparison": {
+          "passed": 72,
+          "total": 72,
+          "currentDefault": {
+            "passed": 16,
+            "total": 32,
+            "checks": [
+              {
+                "field": "linear_crude.DMDEDUC22.lower",
+                "actual": -0.606546939262451,
+                "published": -0.6,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "linear_crude.DMDEDUC22.upper",
+                "actual": -0.301117994321802,
+                "published": -0.3,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_crude.DMDEDUC23.lower",
+                "actual": -0.8358205159466,
+                "published": -0.83,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "linear_crude.DMDEDUC23.upper",
+                "actual": -0.518597564720723,
+                "published": -0.52,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_crude.DMDEDUC24.lower",
+                "actual": -1.22078036664044,
+                "published": -1.22,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_crude.DMDEDUC24.upper",
+                "actual": -0.919539866944803,
+                "published": -0.92,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_crude.DMDEDUC25.lower",
+                "actual": -1.83256355839479,
+                "published": -1.83,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_crude.DMDEDUC25.upper",
+                "actual": -1.47596304437688,
+                "published": -1.48,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC22.lower",
+                "actual": -0.366329633239706,
+                "published": -0.36,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC22.upper",
+                "actual": -0.0962062917495168,
+                "published": -0.1,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC23.lower",
+                "actual": -0.633617041132228,
+                "published": -0.63,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC23.upper",
+                "actual": -0.350411615748533,
+                "published": -0.35,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC24.lower",
+                "actual": -0.929727323625486,
+                "published": -0.93,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC24.upper",
+                "actual": -0.661308330488073,
+                "published": -0.66,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC25.lower",
+                "actual": -1.62986435261246,
+                "published": -1.63,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "linear_adjusted.DMDEDUC25.upper",
+                "actual": -1.30158537476462,
+                "published": -1.3,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "logistic_crude.DMDEDUC22.lower",
+                "actual": 1.14755680633026,
+                "published": 1.15,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "logistic_crude.DMDEDUC22.upper",
+                "actual": 1.75126627109719,
+                "published": 1.74,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC23.lower",
+                "actual": 1.5606129047882,
+                "published": 1.57,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC23.upper",
+                "actual": 2.23755907114356,
+                "published": 2.23,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC24.lower",
+                "actual": 2.21072155984116,
+                "published": 2.22,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC24.upper",
+                "actual": 3.2041996458601,
+                "published": 3.19,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC25.lower",
+                "actual": 3.36075635451607,
+                "published": 3.37,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_crude.DMDEDUC25.upper",
+                "actual": 4.87266902745148,
+                "published": 4.86,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC22.lower",
+                "actual": 1.03329050141626,
+                "published": 1.04,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC22.upper",
+                "actual": 1.57144291755018,
+                "published": 1.57,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC23.lower",
+                "actual": 1.42900858856096,
+                "published": 1.43,
+                "tolerance": 0.0050001,
+                "passed": true
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC23.upper",
+                "actual": 2.0398513029094,
+                "published": 2.03,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC24.lower",
+                "actual": 1.92925359874212,
+                "published": 1.94,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC24.upper",
+                "actual": 2.79446174874037,
+                "published": 2.78,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC25.lower",
+                "actual": 3.11193659425605,
+                "published": 3.12,
+                "tolerance": 0.0050001,
+                "passed": false
+              },
+              {
+                "field": "logistic_adjusted.DMDEDUC25.upper",
+                "actual": 4.49465245789171,
+                "published": 4.48,
+                "tolerance": 0.0050001,
+                "passed": false
+              }
+            ]
+          }
+        }
+      },
+      "data": [
+        {
+          "path": "build/papersv2.1/1999-demov2.1.xpt",
+          "sha256": "a17bd1ebfd6007b8dc93f16259cb090678eb6c467a39363b7e932bba15febf89",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/1999-vixv2.1.xpt",
+          "sha256": "2ce0f725f162d6c6659391cb891261ade785a36d831cfe5c61700ef7fbe0945e",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/VIX.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/1999-ecqv2.1.xpt",
+          "sha256": "4fb44b2d66474f63807df62111b5d1decdf0a33b76eb4826bfbcba50e8be6511",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ECQ.XPT",
+          "role": "additional frozen public case input; not fitted in myopia"
+        },
+        {
+          "path": "build/papersv2.1/2001-demov2.1.xpt",
+          "sha256": "6458dc2307cee244ab6ba26f70ec78c7b842ffc68e668bc43f0ab6b9737937d9",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2001-vixv2.1.xpt",
+          "sha256": "753ac073ce081c5d259b78f37b679ac9cc3ef23107c9e05cce078784d936e7d8",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/VIX_B.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2001-ecqv2.1.xpt",
+          "sha256": "4d332934cd100a6e935483e4da3085278ef52eb8f7908941689587dae726829c",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ECQ_B.XPT",
+          "role": "additional frozen public case input; not fitted in myopia"
+        },
+        {
+          "path": "build/papersv2.1/2003-demov2.1.xpt",
+          "sha256": "2a2fdb88263337bfa06f0516bfb419631595f0a0ee88fb96069bed13d1857c6f",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2003-vixv2.1.xpt",
+          "sha256": "a4dd5bf88a3e93a62881312306ffc6a95f7509123394f98a2e08e7bd0f5f9014",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/VIX_C.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2003-ecqv2.1.xpt",
+          "sha256": "4f179b95d7760964014b5d622a672f47008552818bcd4651a2da6e779741c059",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ECQ_C.XPT",
+          "role": "additional frozen public case input; not fitted in myopia"
+        },
+        {
+          "path": "build/papersv2.1/2005-demov2.1.xpt",
+          "sha256": "bf9cc79cce501b2fbe5aa8d5b403b618548d02d4aefeb528335cdd9f4c40a3af",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2005-vixv2.1.xpt",
+          "sha256": "2930f0c81380e2319f15ee6902fdecb61d2bb0277805bd4ee1b6e807cdfdbe25",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/VIX_D.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2005-ecqv2.1.xpt",
+          "sha256": "7b7fd47b01b45e52bebf11d7d662e9737f3b86f3ec4f09175441502ecaefe052",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ECQ_D.XPT",
+          "role": "additional frozen public case input; not fitted in myopia"
+        },
+        {
+          "path": "build/papersv2.1/2007-demov2.1.xpt",
+          "sha256": "02b8e97703d04bc99769c751881bece51ac9ba68cf18a2992a45d3bdfb856147",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2007-vixv2.1.xpt",
+          "sha256": "7f36aa7606cc4ecb7e7dacb57ceaf362c47ceb4b625d614a4264a491876aef1d",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/VIX_E.XPT",
+          "role": "primary myopia input"
+        },
+        {
+          "path": "build/papersv2.1/2007-ecqv2.1.xpt",
+          "sha256": "a136929c19e23f06c08cdd645448ece0502b5a562e75c2cee73629e6b5c12aca",
+          "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ECQ_E.XPT",
+          "role": "additional frozen public case input; not fitted in myopia"
+        },
+        {
+          "path": "data/paper-targetsv2.1.json",
+          "sha256": "4b769f15674c96a7f9b0fed79732209a97ea91a515a06ed41c6bf46fa65ffeca"
+        },
+        {
+          "path": "data/paper-replayv2.1.json",
+          "sha256": "e0546eb57623a53643bd37aba82361f08b5bf9859546b7c71092eb98887bb38c"
+        }
+      ],
+      "code": {
+        "files": [
+          {
+            "path": "examples/r/nhanes-replayv2.1.R",
+            "sha256": "c70050cdb771f8e4015c8b4c5732a45dcfa531b35d66b3df3daaa8a0c5ad4dcd"
+          }
+        ],
+        "meaning": "implementation at record creation; snapshot mode does not prove the historical executing code",
+        "authorCode": {
+          "commit": "8beb4014f3a879b72271fe81ee1182c97b2b1adc",
+          "status": "inspected, not executed; independently reimplemented; no explicit code license"
+        }
+      },
+      "population": {
+        "description": "NHANES 1999–2008；完整核心变量及原文手术排除顺序",
+        "unit": "参与者",
+        "sampling": "MEC10YR；SDMVSTRA / SDMVPSU；设计在纳排后创建；domain 敏感性另存"
+      },
+      "denominators": {
+        "eligible": 51623,
+        "analyzed": 19756,
+        "flow": {
+          "downloaded_demographics": 51623,
+          "complete_core": 21330,
+          "refractive_surgery_yes": 350,
+          "refractive_surgery_missing": 24,
+          "cataract_surgery_yes": 1194,
+          "cataract_surgery_missing": 6,
+          "analysis": 19756
+        },
+        "weighted": false,
+        "meaning": "未加权人数，不是总体规模"
+      },
+      "estimand": "教育与屈光度关联系数 / 近视 OR",
+      "direction": "教育 2–5 各自相对教育 1；非因果效应",
+      "missing": {
+        "rule": "完整核心变量；将指定无效编码转缺失；按原文顺序排除手术及手术缺失",
+        "flow": {
+          "downloaded_demographics": 51623,
+          "complete_core": 21330,
+          "refractive_surgery_yes": 350,
+          "refractive_surgery_missing": 24,
+          "cataract_surgery_yes": 1194,
+          "cataract_surgery_missing": 6,
+          "analysis": 19756
+        }
+      },
+      "environment": {
+        "analysis": {
+          "R": "R version 4.5.2 (2025-10-31)",
+          "survey": "4.5",
+          "foreign": "0.8.90",
+          "jsonlite": "2.0.0"
+        },
+        "R": {
+          "computedAt": "2026-10-09T02:59:00.752110Z",
+          "R": "R version 4.5.2 (2025-10-31)",
+          "packages": {
+            "DBI": "1.3.0",
+            "Matrix": "1.7-4",
+            "R6": "2.6.1",
+            "Rcpp": "1.1.2",
+            "RcppArmadillo": "15.6.0-1",
+            "backports": "1.5.1",
+            "base64url": "1.4",
+            "callr": "3.8.0",
+            "cli": "3.6.6",
+            "codetools": "0.2-20",
+            "cpp11": "0.5.5",
+            "data.table": "1.18.6.1",
+            "digest": "0.6.39",
+            "evaluate": "1.0.5",
+            "foreign": "0.8-90",
+            "glue": "1.8.1",
+            "highr": "0.12",
+            "igraph": "2.3.4",
+            "jsonlite": "2.0.0",
+            "knitr": "1.52",
+            "lattice": "0.22-7",
+            "lifecycle": "1.0.5",
+            "magrittr": "2.0.5",
+            "minqa": "1.2.8",
+            "mitools": "2.7",
+            "numDeriv": "2016.8-1.1",
+            "otel": "0.2.0",
+            "pillar": "1.11.1",
+            "pkgconfig": "2.0.3",
+            "prettyunits": "1.2.0",
+            "processx": "3.9.0",
+            "ps": "1.9.3",
+            "renv": "1.3.1",
+            "rlang": "1.3.0",
+            "secretbase": "1.3.1",
+            "survey": "4.5",
+            "survival": "3.8-3",
+            "targets": "1.12.0",
+            "tibble": "3.3.1",
+            "tidyselect": "1.2.1",
+            "utf8": "1.2.6",
+            "vctrs": "0.7.3",
+            "withr": "3.0.3",
+            "xfun": "0.61",
+            "yaml": "2.3.12"
+          },
+          "system": {
+            "sysname": "Darwin",
+            "release": "25.5.0",
+            "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:06 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6030",
+            "machine": "arm64"
+          },
+          "external": {
+            "zlib": "1.2.12",
+            "bzlib": "1.0.8, 13-Jul-2019",
+            "xz": "5.8.4",
+            "libdeflate": "",
+            "PCRE": "10.47 2025-10-21",
+            "ICU": "78.1",
+            "TRE": "TRE 0.8.0 R_fixes (BSD)",
+            "iconv": "Apple or GNU libiconv 1.11 /usr/lib/libiconv.2.dylib",
+            "readline": "8.3",
+            "BLAS": "/opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblasp-r0.3.30.dylib"
+          },
+          "libraryPaths": [
+            "build/首次恢复核查v2.2/分析库v2.2",
+            "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+          ],
+          "sourceSha256": {
+            "scripts/统一结果v2.2.py": "61bd76fd3735b2d8fd5dfb0dda2d1466f796a480565494ef365b5e78d61025fe",
+            "scripts/论文重算v2.2.R": "ebbb52ca5780ac98aec00647fb9e0998f882499c808285ed28cfad1a463bdfc1",
+            "scripts/分析流水线v2.2.R": "09c9af4d31e30772176fc3e7f882203ee3298852f9703889c64268df908f8974",
+            "scripts/运行流水线v2.2.R": "235fb8d1cafadf1269712d407d6dc4afe54f8f8518cbb754f0af8a60cb899a61",
+            "scripts/clinical-reportv2.0.py": "4427277f8d8c45b6bfa8d1a414adf1479c2efaacc80ae15c47d28a5f20230765",
+            "scripts/verify-paperv2.1.py": "dbf3a426d44b5d809ada0a0b1f8569740eacf3b4fa6f45c347add14057da607a",
+            "examples/python/welch_demo.py": "658176305c6906875e145811c667477241b0925d7ff527a51b40418294cf337b",
+            "examples/r/welch_demo.R": "5f0384d1d98a3d1607154383a386b25e2cb5b30c63cd04cd214cf7346a9bfaf2",
+            "examples/r/clinical-crosscheckv2.0.R": "8ff5a52713aad57e580daa55220c625d439834703c661cbf1c37c29848709bef",
+            "examples/r/nhanes-replayv2.1.R": "c70050cdb771f8e4015c8b4c5732a45dcfa531b35d66b3df3daaa8a0c5ad4dcd",
+            "scripts/恢复环境v2.2.R": "302052d9da11f93b52ae8146807121d554ced1d3140d43c2b39bcdeba75457f4",
+            "config/R环境锁v2.2.json": "543efb8deef66bf586cb0ddaf358a51fad2675631407204eac3c1651397b1ebd",
+            "config/Python环境锁v2.2.txt": "e320551a6e64d4c507ab39913013b7c29238b39474beedc6b26d881f4c1e8cf1",
+            "requirements.txt": "f33cf7f2267829f64fc4e59ca45fc3c151ed39fe350a3074e07e56f3ea16672c"
+          },
+          "inputSha256": {
+            "data/synthetic-independent.csv": "325957e40cff103b00f621e6a1c676fa7191a6ae1338ffbd1ae01e0cddf9a079",
+            "data/synthetic-clinicalv2.0.csv": "30d4b726e955a285e6231fe43d4909f5c30d0ea1caaadcae2c57826fd440b88b",
+            "data/expected-results.json": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+            "data/clinical-resultsv2.0.json": "264254c981fc381063bc8f783f9b6092708089234ff296bca42cdd018e6d84f9",
+            "data/nhanes-source-manifestv2.1.json": "dee8702dc2f5ddc19a0bb6b5b5f7b35c422b7191c788e059305bf0a184066ceb",
+            "data/paper-targetsv2.1.json": "4b769f15674c96a7f9b0fed79732209a97ea91a515a06ed41c6bf46fa65ffeca",
+            "data/paper-replayv2.1.json": "e0546eb57623a53643bd37aba82361f08b5bf9859546b7c71092eb98887bb38c"
+          },
+          "isolation": "library isolation on same host; base R / OS / BLAS not restored by renv"
+        }
+      },
+      "estimates": [
+        {
+          "id": "linear_crude.DMDEDUC22",
+          "value": -0.453832466792126,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC22 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -0.603944486414463,
+            "upper": -0.30372044716979,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 1.02010816220466e-07,
+            "n": 19756
+          },
+          "model": "linear_crude",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -0.606546939262451,
+              "upper": -0.301117994321802,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "linear_crude.DMDEDUC23",
+          "value": -0.677209040333662,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC23 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -0.833117570510222,
+            "upper": -0.521300510157101,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 1.86763593384016e-12,
+            "n": 19756
+          },
+          "model": "linear_crude",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -0.8358205159466,
+              "upper": -0.518597564720723,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "linear_crude.DMDEDUC24",
+          "value": -1.07016011679262,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC24 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -1.21821360206443,
+            "upper": -0.922106631520815,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 2.22701345898021e-22,
+            "n": 19756
+          },
+          "model": "linear_crude",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -1.22078036664044,
+              "upper": -0.919539866944803,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "linear_crude.DMDEDUC25",
+          "value": -1.65426330138584,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC25 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -1.82952509056562,
+            "upper": -1.47900151220606,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 7.22725769889669e-29,
+            "n": 19756
+          },
+          "model": "linear_crude",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -1.83256355839479,
+              "upper": -1.47596304437688,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "linear_adjusted.DMDEDUC22",
+          "value": -0.231267962494611,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC22 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -0.363815649482001,
+            "upper": -0.0987202755072222,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 0.00108737533505244,
+            "n": 19756
+          },
+          "model": "linear_adjusted",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -0.366329633239706,
+              "upper": -0.0962062917495168,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "linear_adjusted.DMDEDUC23",
+          "value": -0.49201432844038,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC23 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -0.63098130504374,
+            "upper": -0.353047351837021,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 2.22044204848326e-09,
+            "n": 19756
+          },
+          "model": "linear_adjusted",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -0.633617041132228,
+              "upper": -0.350411615748533,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "linear_adjusted.DMDEDUC24",
+          "value": -0.79551782705678,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC24 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -0.927229201896041,
+            "upper": -0.663806452217519,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 7.11099164591299e-18,
+            "n": 19756
+          },
+          "model": "linear_adjusted",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -0.929727323625486,
+              "upper": -0.661308330488073,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "linear_adjusted.DMDEDUC25",
+          "value": -1.46572486368854,
+          "unit": "D",
+          "estimand": "教育关联系数",
+          "direction": "DMDEDUC25 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": -1.62680912601207,
+            "upper": -1.30464060136501,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 9.92599052076597e-27,
+            "n": 19756
+          },
+          "model": "linear_adjusted",
+          "modelSpec": {
+            "formula": "SER ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "gaussian"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": -1.62986435261246,
+              "upper": -1.30158537476462,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "logistic_crude.DMDEDUC22",
+          "value": 1.41763095659421,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC22 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 1.15169742758317,
+            "upper": 1.7449700598112,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 0.00154998457822733,
+            "n": 19756
+          },
+          "model": "logistic_crude",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 1.14755680633026,
+              "upper": 1.75126627109719,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "logistic_crude.DMDEDUC23",
+          "value": 1.86867963055536,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC23 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 1.56541142492217,
+            "upper": 2.23070018913791,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 1.6449057353306e-09,
+            "n": 19756
+          },
+          "model": "logistic_crude",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 1.5606129047882,
+              "upper": 2.23755907114356,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "logistic_crude.DMDEDUC24",
+          "value": 2.66150206446253,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC24 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 2.21772377296398,
+            "upper": 3.19408274623449,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 3.95605796580222e-16,
+            "n": 19756
+          },
+          "model": "logistic_crude",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 2.21072155984116,
+              "upper": 3.2041996458601,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "logistic_crude.DMDEDUC25",
+          "value": 4.0467089588283,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC25 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 3.37141072310966,
+            "upper": 4.85727036614416,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 1.02456761642478e-23,
+            "n": 19756
+          },
+          "model": "logistic_crude",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2",
+            "adjustment": [],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 3.36075635451607,
+              "upper": 4.87266902745148,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 71
+            }
+          }
+        },
+        {
+          "id": "logistic_adjusted.DMDEDUC22",
+          "value": 1.2742672561996,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC22 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 1.03733010868231,
+            "upper": 1.56532334946401,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 0.0241240974500569,
+            "n": 19756
+          },
+          "model": "logistic_adjusted",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 1.03329050141626,
+              "upper": 1.57144291755018,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "logistic_adjusted.DMDEDUC23",
+          "value": 1.70732686713611,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC23 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 1.43374967366956,
+            "upper": 2.03310597712932,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 9.54691608992589e-08,
+            "n": 19756
+          },
+          "model": "logistic_adjusted",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 1.42900858856096,
+              "upper": 2.0398513029094,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "logistic_adjusted.DMDEDUC24",
+          "value": 2.32190124365885,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC24 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 1.93591758789937,
+            "upper": 2.78484240186818,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 3.56162828671617e-13,
+            "n": 19756
+          },
+          "model": "logistic_adjusted",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 1.92925359874212,
+              "upper": 2.79446174874037,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        },
+        {
+          "id": "logistic_adjusted.DMDEDUC25",
+          "value": 3.73992960658033,
+          "unit": "OR",
+          "estimand": "优势比 OR",
+          "direction": "DMDEDUC25 相对 DMDEDUC21",
+          "ci": {
+            "level": 0.95,
+            "lower": 3.12260257341309,
+            "upper": 4.47929992156761,
+            "algorithm": "正态 Wald z=qnorm(0.975)；OR 在 log 尺度构造再 exp；匹配原文约定"
+          },
+          "metrics": {
+            "p": 8.55139595943344e-22,
+            "n": 19756
+          },
+          "model": "logistic_adjusted",
+          "modelSpec": {
+            "formula": "myopia ~ DMDEDUC2 + RIAGENDR + age + year",
+            "adjustment": [
+              "RIAGENDR",
+              "age",
+              "year"
+            ],
+            "weighting": "MEC10YR, strata=SDMVSTRA, PSU=SDMVPSU",
+            "family": "quasibinomial"
+          },
+          "metricsMethod": "P from this run's summary.svyglm default; the primary normal CI does not relabel its P as a normal-test P",
+          "ciVariants": {
+            "currentDefault": {
+              "level": 0.95,
+              "lower": 3.11193659425605,
+              "upper": 4.49465245789171,
+              "algorithm": "该次 survey::confint.svyglm 默认 t 区间；软件版本见 environment",
+              "dfResidual": 65
+            }
+          }
+        }
+      ],
+      "statistics": [
+        {
+          "variable": "education",
+          "group": "1",
+          "context": "unweighted description",
+          "statName": "n",
+          "value": 2457,
+          "denominator": 2457,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "1",
+          "context": "unweighted description",
+          "statName": "mean_spherical_equivalent",
+          "value": 0.337543752543753,
+          "denominator": 2457,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "1",
+          "context": "unweighted description",
+          "statName": "myopia_percent",
+          "value": 16.8091168091168,
+          "denominator": 2457,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "2",
+          "context": "unweighted description",
+          "statName": "n",
+          "value": 3275,
+          "denominator": 3275,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "2",
+          "context": "unweighted description",
+          "statName": "mean_spherical_equivalent",
+          "value": -0.143978625954199,
+          "denominator": 3275,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "2",
+          "context": "unweighted description",
+          "statName": "myopia_percent",
+          "value": 23.5419847328244,
+          "denominator": 3275,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "3",
+          "context": "unweighted description",
+          "statName": "n",
+          "value": 4805,
+          "denominator": 4805,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "3",
+          "context": "unweighted description",
+          "statName": "mean_spherical_equivalent",
+          "value": -0.331833506763789,
+          "denominator": 4805,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "3",
+          "context": "unweighted description",
+          "statName": "myopia_percent",
+          "value": 28.5535900104058,
+          "denominator": 4805,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "4",
+          "context": "unweighted description",
+          "statName": "n",
+          "value": 5397,
+          "denominator": 5397,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "4",
+          "context": "unweighted description",
+          "statName": "mean_spherical_equivalent",
+          "value": -0.700665184361683,
+          "denominator": 5397,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "4",
+          "context": "unweighted description",
+          "statName": "myopia_percent",
+          "value": 35.4270891235872,
+          "denominator": 5397,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "5",
+          "context": "unweighted description",
+          "statName": "n",
+          "value": 3822,
+          "denominator": 3822,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "5",
+          "context": "unweighted description",
+          "statName": "mean_spherical_equivalent",
+          "value": -1.21705520669806,
+          "denominator": 3822,
+          "level": null
+        },
+        {
+          "variable": "education",
+          "group": "5",
+          "context": "unweighted description",
+          "statName": "myopia_percent",
+          "value": 45.0287807430665,
+          "denominator": 3822,
+          "level": null
+        }
+      ],
+      "diagnostics": {
+        "executed": {
+          "inputSha256": "15 public files verified",
+          "idsWeightsDesign": "original implementation assertions executed",
+          "models": {
+            "linear_crude": {
+              "converged": true,
+              "observations": 19756,
+              "designDF": 75,
+              "dfResidual": 71,
+              "formula": "SER ~ DMDEDUC2",
+              "deviance": 104077.263873858,
+              "family": "gaussian",
+              "link": "identity"
+            },
+            "linear_adjusted": {
+              "converged": true,
+              "observations": 19756,
+              "designDF": 75,
+              "dfResidual": 65,
+              "formula": "SER ~ DMDEDUC2 + RIAGENDR + age + year",
+              "deviance": 98880.3138474915,
+              "family": "gaussian",
+              "link": "identity"
+            },
+            "logistic_crude": {
+              "converged": true,
+              "observations": 19756,
+              "designDF": 75,
+              "dfResidual": 71,
+              "formula": "myopia ~ DMDEDUC2",
+              "deviance": 24915.1661975613,
+              "family": "quasibinomial",
+              "link": "logit"
+            },
+            "logistic_adjusted": {
+              "converged": true,
+              "observations": 19756,
+              "designDF": 75,
+              "dfResidual": 65,
+              "formula": "myopia ~ DMDEDUC2 + RIAGENDR + age + year",
+              "deviance": 24566.7639392728,
+              "family": "quasibinomial",
+              "link": "logit"
+            }
+          }
+        },
+        "libraryPaths": [
+          "/Users/dinghaixiang/Documents/GitHub项目/clinical-stats-languages-guide/build/首次恢复核查v2.2/分析库v2.2",
+          "/opt/homebrew/Cellar/r/4.5.2_1/lib/R/library"
+        ],
+        "notExecuted": [
+          "残差形状、非线性、影响点与模型稳定性的完整评价",
+          "调整集 / 缺失机制与抽样可识别性的独立方法学审核"
+        ],
+        "warnings": [],
+        "status": "ACTUALLY_EXECUTED_PARTIAL_DIAGNOSTICS"
+      },
+      "warnings": [
+        "只复算选定四个模型与流程，非整篇论文",
+        "原文正态区间与当前默认 t 区间分别保留，不修改期望值",
+        "作者代码未执行；发表方法不等于无错误金标准",
+        "横断面关联不能支持教育的因果效应"
+      ],
+      "sensitivity": {
+        "domain": [
+          {
+            "model": "linear_adjusted_domain",
+            "term": "DMDEDUC22",
+            "n": 19756,
+            "estimate": -0.231267962494611,
+            "lower": -0.366329633239706,
+            "upper": -0.0962062917495168,
+            "normal_lower": -0.363815649482001,
+            "normal_upper": -0.0987202755072222,
+            "p": 0.00108737533505244
+          },
+          {
+            "model": "linear_adjusted_domain",
+            "term": "DMDEDUC23",
+            "n": 19756,
+            "estimate": -0.49201432844038,
+            "lower": -0.633617041132228,
+            "upper": -0.350411615748533,
+            "normal_lower": -0.63098130504374,
+            "normal_upper": -0.353047351837021,
+            "p": 2.22044204848326e-09
+          },
+          {
+            "model": "linear_adjusted_domain",
+            "term": "DMDEDUC24",
+            "n": 19756,
+            "estimate": -0.79551782705678,
+            "lower": -0.929727323625486,
+            "upper": -0.661308330488073,
+            "normal_lower": -0.927229201896041,
+            "normal_upper": -0.663806452217519,
+            "p": 7.11099164591299e-18
+          },
+          {
+            "model": "linear_adjusted_domain",
+            "term": "DMDEDUC25",
+            "n": 19756,
+            "estimate": -1.46572486368854,
+            "lower": -1.62986435261246,
+            "upper": -1.30158537476462,
+            "normal_lower": -1.62680912601207,
+            "normal_upper": -1.30464060136501,
+            "p": 9.92599052076597e-27
+          }
+        ],
+        "status": "separate from publication-matching primary"
+      }
+    }
+  },
+  "boundary": "Engineering / numerical replay / methodology / AI evaluation / human trial are separate; this object does not certify clinical validity."
+}

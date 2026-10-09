@@ -1,8 +1,7 @@
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
-  const engine = window.StatsGuide;
-  if (window.PaperCheck && $('paper-check-count')) $('paper-check-count').textContent = `${window.PaperCheck.passed}/${window.PaperCheck.total}`;
+  const engine = window.StudyCard;
   let currentConfig = null;
   let currentResult = null;
   const form = $('design-form');
@@ -10,13 +9,28 @@
   const config = () => Object.fromEntries(new FormData(form));
   const escapeHTML = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const list = xs => '<ul>' + xs.map(s => '<li>' + escapeHTML(s) + '</li>').join('') + '</ul>';
+  let targetOptionsKey = null;
   function syncFields() {
     const c = config();
-    $('groups-field').hidden = c.goal !== 'compare';
-    $('predictor-field').hidden = c.goal !== 'associate';
-    $('adjust-field').hidden = !['compare','associate'].includes(c.goal);
-    $('distribution-field').hidden = !(c.goal === 'compare' && c.outcome === 'continuous');
-    for (const k of ['groups','predictor','adjust','distribution']) $(k).disabled = $(k + '-field').hidden;
+    const key = `${c.goal}/${c.outcome}`;
+    if (key !== targetOptionsKey) {
+      const before = $('estimand').value;
+      const options = Object.entries(engine.estimands).filter(([k,t]) => k==='unknown' || ((!c.goal || t.goals.includes(c.goal)) && (!c.outcome || t.outcomes.includes(c.outcome))));
+      $('estimand').replaceChildren(new Option('请选择 / 待补充',''),...options.map(([k,t])=>new Option(t.label,k)));
+      $('estimand').value = options.some(([k])=>k===before) ? before : '';
+      targetOptionsKey = key;
+    }
+    const hidden = {
+      groups:c.goal!=='compare', predictor:c.goal!=='associate', adjust:!['compare','associate','causal'].includes(c.goal),
+      adjustBasis:!['compare','associate','causal'].includes(c.goal), adjustBasisType:c.adjust!=='yes' || !['compare','associate','causal'].includes(c.goal),
+      distribution:!(c.goal==='compare' && c.outcome==='continuous'), estimandDetail:!['other','distribution','medianDifference'].includes($('estimand').value),
+      pairs:c.structure!=='paired', discordant:c.structure!=='paired' || c.outcome!=='binary',
+      sampleA:c.goal!=='compare' || c.groups!=='two' || c.structure!=='independent', sampleB:c.goal!=='compare' || c.groups!=='two' || c.structure!=='independent',
+      events:!['binary','survival','count'].includes(c.outcome), eventInfo:c.outcome!=='binary', clusters:c.structure!=='clustered',
+      surveyBasis:c.sampling!=='survey', effectScope:!['repeated','clustered'].includes(c.structure),
+      predictionTime:c.goal!=='predict', predictionHorizon:c.goal!=='predict'
+    };
+    for (const [k,hide] of Object.entries(hidden)) { $(k+'-field').hidden=hide; $(k).disabled=hide; }
   }
   function invalidate() {
     currentConfig = null; currentResult = null;
@@ -24,6 +38,8 @@
     $('download-plan').disabled = true;
     $('prompt-panel').hidden = true;
     $('prompt-text').value = '';
+    $('draft-panel').hidden = true;
+    $('draft-text').value = '';
     $('result-panel').innerHTML = initialResult;
     document.querySelectorAll('.preset').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
   }
@@ -33,23 +49,27 @@
     currentConfig = c; currentResult = r;
     const badge = {candidate:'候选方法 · 条件待核查',review:'需要进一步设计 / 专业讨论',incomplete:'信息不足 · 先补充'}[r.level];
     const refs = r.sources.map(key => engine.sources[key]).filter(Boolean);
-    $('result-panel').innerHTML = `<span class="result-badge ${r.level}">${badge}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.reason)}</p>${r.methods.length ? '<h4>候选讨论起点</h4><div class="method-list">'+list(r.methods)+'</div>' : ''}<h4>先核查 / 补充</h4>${list(r.checks)}<h4>最终需要报告</h4>${list(r.report)}<div class="sources-list">${refs.map(([name,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHTML(name)} ↗</a>`).join('')}</div><p class="result-footnote">规则生成的教学草案。样本量、目标量、假设和数据质量未由此验证，不能直接作为正式分析计划。</p>`;
+    const candidates=r.candidates.map(x=>`<article class="candidate-card"><h4>${escapeHTML(x.name)}</h4><p><strong>回答的量：</strong>${escapeHTML(x.target)}</p><p><strong>选择依据：</strong>${escapeHTML(x.why)}</p><details><summary>适用条件（未验证）</summary>${list(x.conditions)}</details></article>`).join('');
+    $('result-panel').innerHTML = `<span class="result-badge ${r.level}">${badge}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.reason)}</p><p class="target-line"><strong>目标量：</strong>${escapeHTML(r.target)}</p><h4>候选方案与回答的量</h4>${candidates || '<p>关键事实待补充，尚无匹配方案。</p>'}<h4>从填写事实到选择依据</h4>${list(r.rationale.map(x=>x.fact+' → '+x.implication))}<h4>待补充信息</h4>${r.gaps.length ? list(r.gaps.map(x=>x.label+'：'+x.reason)) : '<p>本卡片未发现必填缺口；用户填写事实和适用条件仍未验证。</p>'}<details class="result-detail"><summary>诊断步骤（尚未执行）</summary>${list(r.diagnostics)}</details><details class="result-detail"><summary>其他核查与报告要求</summary>${list(r.checks)}<h4>最终需要报告</h4>${list(r.report)}</details><div class="sources-list">${refs.map(([name,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHTML(name)} ↗</a>`).join('')}</div><p class="result-footnote">用户填写 + 本地教学规则。未读取或分析数据，未执行诊断；未知项不会由 AI 补造。草案仍需研究团队审核。</p>`;
     $('generate-prompt').disabled = false;
     $('download-plan').disabled = false;
     $('prompt-panel').hidden = true;
+    $('draft-panel').hidden = true;
+    $('draft-text').value = '';
   }
+  form.addEventListener('input', () => { syncFields(); invalidate(); });
   form.addEventListener('change', () => { syncFields(); invalidate(); });
   form.addEventListener('submit', event => { event.preventDefault(); syncFields(); showResult(); });
   form.addEventListener('reset', () => { window.setTimeout(() => { syncFields(); invalidate(); }, 0); });
-  const cases = {
-    means:{goal:'compare',design:'randomized',sampling:'simple',outcome:'continuous',structure:'independent',groups:'two',adjust:'no',missing:'none',distribution:'approx'},
-    paired:{goal:'compare',design:'cohort',sampling:'simple',outcome:'binary',structure:'paired',groups:'two',adjust:'no',missing:'none'},
-    survival:{goal:'compare',design:'cohort',sampling:'simple',outcome:'survival',structure:'independent',groups:'two',adjust:'yes',missing:'unknown'}
-  };
+  const cases = engine.examples;
   document.querySelectorAll('.preset').forEach(button => {
     button.setAttribute('aria-pressed','false');
     button.addEventListener('click', () => {
-      for (const field of Object.keys(engine.labels)) if ($(field)) $(field).value = cases[button.dataset.case][field] || '';
+      const example=cases[button.dataset.case];
+      // Populate goal/outcome options before assigning the example's explicit target.
+      for (const field of ['goal','outcome']) $(field).value=example[field] || '';
+      syncFields();
+      for (const field of Object.keys(engine.fields)) if ($(field)) $(field).value = example[field] || '';
       syncFields(); invalidate(); showResult();
       button.classList.add('active'); button.setAttribute('aria-pressed','true');
     });
@@ -73,11 +93,11 @@
   });
   $('download-plan').addEventListener('click', () => {
     if (!currentResult) return;
-    const r = currentResult;
-    const prompt = engine.makePrompt(currentConfig,r);
-    const markdown = `# 统计方法讨论草案\n\n状态：离线规则生成，未验证数据，待研究团队审核。\n日期：${new Date().toLocaleDateString('sv-SE')}\n\n## 候选方法\n\n${r.methods.map(s=>'- '+s).join('\n') || '- 信息不足，尚无候选。'}\n\n## 先核查\n\n${r.checks.map(s=>'- '+s).join('\n')}\n\n## 报告内容\n\n${r.report.map(s=>'- '+s).join('\n')}\n\n## 来源\n\n${r.sources.map(k=>'- ['+engine.sources[k][0]+']('+engine.sources[k][1]+')').join('\n')}\n\n## AI 提问模板\n\n${prompt}\n\n正式分析前补齐目标量、样本量、事件数、变量字典、诊断和缺失方案；保留审核记录。\n`;
+    const markdown = engine.toMarkdown(currentConfig,currentResult)+'\n## AI 提问模板\n\n'+engine.makePrompt(currentConfig,currentResult);
+    $('draft-text').value = markdown;
+    $('draft-panel').hidden = false;
     const url = URL.createObjectURL(new Blob([markdown],{type:'text/markdown;charset=utf-8'}));
-    const a = document.createElement('a'); a.href = url; a.download = '统计方法讨论草案v2.0.md';
+    const a = document.createElement('a'); a.href = url; a.download = '研究卡片与方法草案v2.2.md';
     document.body.appendChild(a); a.click(); a.remove(); window.setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   const tools = {
@@ -112,12 +132,24 @@
     $('quiz-reveal').setAttribute('aria-expanded',String(expanded));
     $('quiz-reveal').textContent = expanded ? '收起解析' : '展开解析';
   });
-  // Exact values are written into this local file by scripts/build_assets.py.
-  if (window.DEMO_RESULT) {
-    const d = window.DEMO_RESULT;
+  // Derived by scripts/统一结果v2.2.py from the same canonical result object.
+  if (window.RESULT_VIEW && window.RESULT_VIEW.small) {
+    const d = window.RESULT_VIEW.small;
     $('demo-diff').textContent = d.difference.toFixed(2);
     $('demo-ci').textContent = `[${d.ci_low.toFixed(2)}, ${d.ci_high.toFixed(2)}]`;
     $('demo-p').textContent = d.p_value.toFixed(4);
+    $('demo-legend').textContent = d.legend;
+  }
+  if (window.RESULT_VIEW && window.RESULT_VIEW.nhanes) {
+    const paper = window.RESULT_VIEW.nhanes;
+    const comparison = paper.comparison;
+    $('paper-result-legend').textContent = paper.legend;
+    $('paper-check-count').textContent = `${comparison.passed}/${comparison.total}`;
+    $('paper-default-differences').textContent = `${comparison.currentDefault.total-comparison.currentDefault.passed}/${comparison.currentDefault.total}`;
+  }
+  if (window.RESULT_VIEW && $('result-source-status')) $('result-source-status').textContent = '结果来源：统一结果对象 v2.2；24 例 / 96 例 / NHANES 的上次记录状态为 '+Object.values(window.RESULT_VIEW.status).map(s=>s==='recomputed'?'实际重算':'导入旧快照').join(' / ')+'。本页面展示保存产物，打开不会重新计算。';
+  if (window.LONGITUDINAL_VIEW) {
+    for (const key of ['summary','design','linear','binary','legend','limitation']) $('longitudinal-'+key).textContent = window.LONGITUDINAL_VIEW[key];
   }
   syncFields();
 })();

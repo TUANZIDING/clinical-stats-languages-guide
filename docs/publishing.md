@@ -1,8 +1,8 @@
 # GitHub 发布说明
 
-本项目先提供完整本地候选包。推送仓库与发布 Pages 是不同的动作：前者上传项目文件，后者让网页可从互联网上访问。
+本项目提供可离线使用的教学项目。推送仓库与发布 Pages 是不同的动作：前者上传项目文件，后者让网页可从互联网上访问。
 
-当前状态（2026-10-08）：用户已确认创建公开仓库，项目已推送至 [TUANZIDING/clinical-stats-languages-guide](https://github.com/TUANZIDING/clinical-stats-languages-guide)，自动检查首次执行通过。GitHub Pages 尚未启用。
+发布流程（2026-10-09）：升级分支通过 PR 并入实际默认分支，再从该分支手动部署 Pages。实际合并、检查和部署结果以 [PR](https://github.com/TUANZIDING/clinical-stats-languages-guide/pulls) 和 [Actions](https://github.com/TUANZIDING/clinical-stats-languages-guide/actions) 为准；第2–6步的本地验收是发布前历史记录。论文原文、SI、公共个体缓存、包库及运行日志继续留在忽略的 `build/`，不进入公共仓库或网页。
 
 ## 1. 确认仓库范围
 
