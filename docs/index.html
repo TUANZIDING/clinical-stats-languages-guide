@@ -24,7 +24,7 @@
   <header class="site-header">
     <a class="wordmark" href="#main" aria-label="医学统计学习实验室首页"><span class="mark" aria-hidden="true">Σ</span><span>医学统计<span class="wordmark-sub">学习实验室</span></span></a>
     <nav aria-label="主导航"><a href="#navigator">方法向导</a><a href="#software">选工具</a><a href="#ai">AI 协作</a><a href="#learning">学习路径</a><a href="#reporting">统计实操</a><a href="#published">论文验证</a></nav>
-    <span class="edition">研究、复算与核查 v2.2 <span>2026.10</span></span>
+    <span class="edition">研究、复算与核查 v2.3 <span>2026.10</span></span>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -105,6 +105,7 @@
       <div class="ai-layout"><div class="ai-sequence"><article><span>01</span><div><h3>给设计与变量字典</h3><p>人群、结局、目标量、分析单位、组别、时间点与样本量。先使用去标识化的设计描述。</p></div></article><article><span>02</span><div><h3>让它补缺口、比候选</h3><p>要求解释条件、效应量、局限和诊断，并给出可打开核查的来源。</p></div></article><article><span>03</span><div><h3>模拟运行，核对结果</h3><p>检查参数、方向、配对和缺失；用另一实现或已知结果复核。</p></div></article><article><span>04</span><div><h3>人工确认，保留记录</h3><p>由研究团队确认正式方案，保存提示词、代码、版本、诊断与修改记录。</p></div></article></div>
       <div class="prompt-example"><div class="prompt-label"><span class="status-dot"></span> A BETTER PROMPT</div><blockquote>“我想估计两组的均值差。每位对象只测一次，分组设计与缺失情况如下……<br><br>请先问必须补充的信息，再比较候选方法、适用条件、效应量和诊断。引用请提供可核查链接，代码请先使用模拟数据。”</blockquote><div class="prompt-note">请勿要求“帮我得到显著结果”。<br>网页只生成提问文本，不会发送数据或调用模型。</div><a class="button light" href="#navigator">用我的设计生成提问 ↑</a></div></div>
       <p class="source-line">AI 风险与人工监督依据：<a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank" rel="noopener noreferrer">WHO 生成式 AI 指南说明</a>。本流程是教学设计，未做 AI 决策准确性验证。</p>
+      <p class="reading-note"><a href="AI测评框架v2.3.md">v2.3 离线 AI 测评框架与运行说明 →</a>：10 个调试、8 个保留情境；固定输出只核查工程断言，18 条参考答案均待统计人员审阅，没有真实模型调用或 AI 正确率。</p>
     </div></section>
 
     <section class="learning-section section" id="learning" aria-labelledby="learning-title"><div class="wrap">
@@ -176,7 +177,7 @@ result.confidence_interval(0.95)</code></pre></div></div><p class="small">这两
       <p><a href="论文验证v2.1.md">查看逐项结果、访问条件、SCIE 核查状态和重跑步骤 ↗</a></p>
     </section>
 
-    <section class="sources-section section" id="sources" aria-labelledby="sources-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">READ THE SOURCE</p><h2 id="sources-title">让每一步，有据可查。</h2></div><p>基础来源核查：2026-10-08；本轮运行核查：2026-10-09<br>来源支持原理与工具角色，不构成软件排名。</p></div><div class="source-grid">
+    <section class="sources-section section" id="sources" aria-labelledby="sources-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">READ THE SOURCE</p><h2 id="sources-title">让每一步，有据可查。</h2></div><p>基础来源核查：2026-10-08；统计运行记录：2026-10-09；收尾界面核查：2026-10-10<br>来源支持原理与工具角色，不构成软件排名。</p></div><div class="source-grid">
       <a href="https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf" target="_blank" rel="noopener noreferrer"><span>01 / REPORTING</span><strong>SAMPL 医学统计报告指南 ↗</strong><p>方法、效应量、置信区间与复核信息。</p></a>
       <a href="https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf" target="_blank" rel="noopener noreferrer"><span>02 / INTERPRETATION</span><strong>ASA 关于 P 值的声明 ↗</strong><p>不能只凭阈值判断意义与证据。</p></a>
       <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm" target="_blank" rel="noopener noreferrer"><span>03 / METHOD</span><strong>NIST 两样本 t 检验 ↗</strong><p>独立、配对及方差条件。</p></a>

@@ -2,17 +2,15 @@
 
 本项目提供可离线使用的教学项目。推送仓库与发布 Pages 是不同的动作：前者上传项目文件，后者让网页可从互联网上访问。
 
-发布流程（2026-10-09）：升级分支通过 PR 并入实际默认分支，再从该分支手动部署 Pages。实际合并、检查和部署结果以 [PR](https://github.com/TUANZIDING/clinical-stats-languages-guide/pulls) 和 [Actions](https://github.com/TUANZIDING/clinical-stats-languages-guide/actions) 为准；第2–6步的本地验收是发布前历史记录。论文原文、SI、公共个体缓存、包库及运行日志继续留在忽略的 `build/`，不进入公共仓库或网页。
+本次复核（2026-10-10）：现有公开仓库是 `TUANZIDING/clinical-stats-languages-guide`，实际默认分支为 `codex/clinical-stats-guide`。升级分支通过 PR 并入该分支，再手动部署 Pages。实际合并、检查和部署结果以 [PR](https://github.com/TUANZIDING/clinical-stats-languages-guide/pulls)、[Actions](https://github.com/TUANZIDING/clinical-stats-languages-guide/actions)及[收尾记录](../发布记录v2.3.md)为准；第2–6步的本地验收是发布前历史记录。论文原文、SI、公共个体缓存、包库及运行日志继续留在忽略的 `build/`，不进入公共仓库或网页。
 
 ## 1. 确认仓库范围
 
-建议名称：`clinical-stats-languages-guide`。确认账号、名称和**公开 / 私有**可见性；不要把已有同名仓库视为可覆盖目标。
-
-完成确认后，可以用 GitHub 网页创建空仓库，或使用已登录账号的 GitHub CLI 创建并推送。本地代码目录不要包含 `.env`、凭证、患者明细或未获授权第三方材料。
+本项目使用上述现有仓库，不另建仓库。提交前核查当前分支、远程与文件范围；通过升级 PR 保留历史，不强推或绕过保护。本地代码目录不要包含 `.env`、凭证、患者明细或未获授权第三方材料。
 
 ## 2. 查看检查结果
 
-远端 `Check teaching project` 工作流会检查规则关键分支、本地链接、R/Python/C++ 数值对照。需要在实际 GitHub Actions 日志中确认通过；工作流文件存在不表示已经执行。
+远端 `Check teaching project` 工作流会检查规则关键分支、本地链接、R/Python/C++ 数值对照及 v2.3 固定输出的离线工程断言。需要在实际 GitHub Actions 日志中确认通过；工作流文件存在不表示已经执行。原生 Promptfoo 是另行可选核查，不在 CI 中安装；预设断言失败与执行错误须分开报告。
 
 ## 3. 启用 GitHub Pages
 

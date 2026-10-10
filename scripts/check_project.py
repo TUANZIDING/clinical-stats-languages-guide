@@ -38,7 +38,12 @@ class PageParser(HTMLParser):
 
 for path in ROOT.rglob('*.md'):
     if any(part in ('.git','build','node_modules','.venv','__pycache__') for part in path.relative_to(ROOT).parts):continue
-    for raw in re.findall(r'!?\[[^\]]*\]\(([^)\s]+)\)',path.read_text(encoding='utf-8')):check_link(path,raw)
+    content=path.read_text(encoding='utf-8')
+    for raw in re.findall(r'!?\[[^\]]*\]\(([^)\s]+)\)',content):check_link(path,raw)
+    # GitHub homepages also use HTML images, language links and explicit anchors.
+    parser=PageParser();parser.feed(content)
+    if len(parser.ids)!=len(set(parser.ids)):errors.append(f'{path.relative_to(ROOT)}: duplicate HTML anchors')
+    for raw in parser.refs:check_link(path,raw,set(parser.ids))
 for path in (ROOT/'docs').rglob('*.html'):
     parser=PageParser();parser.feed(path.read_text(encoding='utf-8'))
     if len(parser.ids)!=len(set(parser.ids)):errors.append('Duplicate HTML IDs')

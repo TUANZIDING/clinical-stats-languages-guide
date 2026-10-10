@@ -1,0 +1,132 @@
+{
+  "version": "2.3",
+  "frozenBeforeModelRun": true,
+  "actualModelRuns": 0,
+  "referenceReview": "pending-statistician-review",
+  "policy": "案例、分组或参考答案改变须新版本和新冻结，解释原因，不根据模型成绩改期望；同 sourceStudyId / family 不跨分组",
+  "files": {
+    "data/AI调试案例v2.3.json": "0b517a73d4a4ec3fef7f658df813b54c64424c600ca4082ad65adfabf8776e48",
+    "data/AI保留案例v2.3.json": "e395b56b18d476290f6badbcbe99ffce273dcd129e15a973e979a25dfc251a36",
+    "data/AI测评来源v2.3.json": "3be1c6e6e8aae4047e72705e0fa55b17d15c8aabf09f68631718be69e3265c2d"
+  },
+  "studies": {
+    "tuning": [
+      {
+        "caseId": "T-01",
+        "familyId": "fiction-crp-unknown",
+        "sourceStudyId": "fiction-crp-unknown"
+      },
+      {
+        "caseId": "T-02",
+        "familyId": "synthetic-independent-24",
+        "sourceStudyId": "synthetic-independent-24"
+      },
+      {
+        "caseId": "T-03",
+        "familyId": "fiction-rehab-paired",
+        "sourceStudyId": "fiction-rehab-paired"
+      },
+      {
+        "caseId": "T-04",
+        "familyId": "paper-nickels-2019",
+        "sourceStudyId": "10.1371/journal.pone.0211196"
+      },
+      {
+        "caseId": "T-05",
+        "familyId": "paper-ahlin-2015",
+        "sourceStudyId": "10.1371/journal.pone.0121760"
+      },
+      {
+        "caseId": "T-06",
+        "familyId": "fiction-hypertension-dropout",
+        "sourceStudyId": "fiction-hypertension-dropout"
+      },
+      {
+        "caseId": "T-07",
+        "familyId": "fiction-one-year-mortality",
+        "sourceStudyId": "fiction-one-year-mortality"
+      },
+      {
+        "caseId": "T-08",
+        "familyId": "fiction-inpatient-prediction-unknown",
+        "sourceStudyId": "fiction-inpatient-prediction-unknown"
+      },
+      {
+        "caseId": "T-09",
+        "familyId": "fiction-rare-infection",
+        "sourceStudyId": "fiction-rare-infection"
+      },
+      {
+        "caseId": "T-10",
+        "familyId": "fiction-case-control-matching",
+        "sourceStudyId": "fiction-case-control-matching"
+      }
+    ],
+    "holdout": [
+      {
+        "caseId": "H-01",
+        "familyId": "fiction-neonatal-target-unknown",
+        "sourceStudyId": "fiction-neonatal-target-unknown"
+      },
+      {
+        "caseId": "H-02",
+        "familyId": "fiction-screen-paired-binary",
+        "sourceStudyId": "fiction-screen-paired-binary"
+      },
+      {
+        "caseId": "H-03",
+        "familyId": "fiction-survey-repeated",
+        "sourceStudyId": "fiction-survey-repeated"
+      },
+      {
+        "caseId": "H-04",
+        "familyId": "fiction-oncology-repeated",
+        "sourceStudyId": "fiction-oncology-repeated"
+      },
+      {
+        "caseId": "H-05",
+        "familyId": "fiction-pregnancy-missing-covariate",
+        "sourceStudyId": "fiction-pregnancy-missing-covariate"
+      },
+      {
+        "caseId": "H-06",
+        "familyId": "fiction-competing-discharge",
+        "sourceStudyId": "fiction-competing-discharge"
+      },
+      {
+        "caseId": "H-07",
+        "familyId": "fiction-readmission-prediction",
+        "sourceStudyId": "fiction-readmission-prediction"
+      },
+      {
+        "caseId": "H-08",
+        "familyId": "fiction-cluster-rare-outbreak",
+        "sourceStudyId": "fiction-cluster-rare-outbreak"
+      }
+    ]
+  },
+  "preModelSourceCorrection": {
+    "date": "2026-10-09",
+    "reason": "方法来源自查补充 lm、clogit 和精确二项接口；此前通用来源不足以指向这些具体接口。研究问题、合理方法、数字目标、容差、阈值及 7 条样例预期结果均未改变；模型尚未运行。",
+    "files": [
+      {
+        "path": "data/AI测评来源v2.3.json",
+        "beforeSha256": "180a4b5e86c9d36dab64669db15a1b89855f2221766b8c83a2b6d670d2b5521f",
+        "localPriorSnapshot": "build/AI来源初稿v2.3.json",
+        "afterSha256": "3be1c6e6e8aae4047e72705e0fa55b17d15c8aabf09f68631718be69e3265c2d"
+      },
+      {
+        "path": "data/AI调试案例v2.3.json",
+        "beforeSha256": "7d5b7de45b71026e7b26aa035814123449a8dc940c5df564b36a939e5d9de845",
+        "localPriorSnapshot": "build/AI调试初稿v2.3.json",
+        "afterSha256": "0b517a73d4a4ec3fef7f658df813b54c64424c600ca4082ad65adfabf8776e48"
+      },
+      {
+        "path": "data/AI保留案例v2.3.json",
+        "beforeSha256": "4e8246122421cb98317eb3a4c9332f274c78c9483e0f98feb275323f4641c983",
+        "localPriorSnapshot": "build/AI保留初稿v2.3.json",
+        "afterSha256": "e395b56b18d476290f6badbcbe99ffce273dcd129e15a973e979a25dfc251a36"
+      }
+    ]
+  }
+}

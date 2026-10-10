@@ -1,0 +1,882 @@
+{
+  "version": "2.3",
+  "split": "holdout",
+  "unitOfEvaluation": "研究情境 / sourceStudyId；数值或输出变体不是独立研究",
+  "exposure": "公开可审阅保留集，不是保密盲测；看过并用于调参即失去保留属性",
+  "cases": [
+    {
+      "id": "H-01",
+      "familyId": "fiction-neonatal-target-unknown",
+      "title": "研究问题不等于目标量",
+      "tags": [
+        "insufficient",
+        "unknown-target"
+      ],
+      "input": {
+        "question": "虚构两组新生儿住院时长研究，数据每人一条且无调查抽样。希望证明两组一样；尚未定均值、中位数还是等效界值，也未说明缺失与结局取值。",
+        "known": {
+          "targetId": "unknown",
+          "unit": "person",
+          "dependence": "independent",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "target",
+            "text": "关注哪一种分布量，比较方向？"
+          },
+          {
+            "key": "equivalence",
+            "text": "是否真正设计等效研究，预设界值和依据？"
+          },
+          {
+            "key": "missing",
+            "text": "出院 / 死亡如何定义住院时长，缺失和分布？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "clarify",
+            "targetId": "unknown",
+            "basis": "先定义目标与等效设计，不把不显著当一样。",
+            "conditions": [
+              "目标确定后再选择对应的均值、分位数或等效推断"
+            ],
+            "diagnosticRequirements": [
+              "outcome-definition"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-01-E1",
+            "description": "P>0.05 证明等效",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-01-E2",
+            "description": "自动选中位数而不告知目标改变",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "stats",
+            "sampl"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "target",
+            "margin",
+            "outcome-definition"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [
+          "target",
+          "equivalence"
+        ],
+        "prohibitedMethodIds": []
+      },
+      "sourceStudyId": "fiction-neonatal-target-unknown"
+    },
+    {
+      "id": "H-02",
+      "familyId": "fiction-screen-paired-binary",
+      "title": "只有前后阳性总数",
+      "tags": [
+        "paired",
+        "sparse"
+      ],
+      "input": {
+        "question": "虚构 48 人筛查前后各测一次阳性 / 阴性，仅有前后阳性总数。目标是前后阳性比例变化及 CI；尚无逐人配对四格表。",
+        "known": {
+          "targetId": "paired-risk-difference",
+          "unit": "person",
+          "dependence": "paired",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "discordant-pairs",
+            "text": "逐对四格表、两类不一致对与完整配对人数？"
+          },
+          {
+            "key": "missing",
+            "text": "缺失配对及原因？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "paired-proportion",
+            "targetId": "paired-risk-difference",
+            "basis": "配对比例差估计须利用联合结构。",
+            "conditions": [
+              "先取得逐对表再估计区间；McNemar 仅对称性检验不是完整效应区间"
+            ],
+            "diagnosticRequirements": [
+              "pair-id",
+              "discordant-pairs"
+            ]
+          },
+          {
+            "id": "mcnemar",
+            "targetId": "paired-risk-difference",
+            "basis": "配对二分类对称性检验作为附加分析。",
+            "conditions": [
+              "稀疏不一致对时讨论精确二项方案；效应与 CI 需另估计"
+            ],
+            "diagnosticRequirements": [
+              "discordant-pairs"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-02-E1",
+            "description": "独立卡方 / Fisher 代替配对",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-02-E2",
+            "description": "用边际阳性总数编造不一致对或 CI",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "mcnemar",
+            "sampl",
+            "exact-binomial"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "paired-table",
+            "complete-pairs",
+            "ci-algorithm"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [
+          "discordant-pairs"
+        ],
+        "prohibitedMethodIds": [
+          "independent-chi-square",
+          "fisher-independent"
+        ]
+      },
+      "sourceStudyId": "fiction-screen-paired-binary"
+    },
+    {
+      "id": "H-03",
+      "familyId": "fiction-survey-repeated",
+      "title": "复杂抽样叠加重复记录",
+      "tags": [
+        "complex-survey",
+        "repeated"
+      ],
+      "input": {
+        "question": "虚构国家分层整群调查，同一对象两次测量，目标是糖尿病子总体中两组的人群平均差。已有权重但权重组件、PSU、分层、时间与重复 ID 还未核对。",
+        "known": {
+          "targetId": "marginal-mean-difference",
+          "unit": "person",
+          "dependence": "repeated",
+          "sampling": "complex"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "survey-design",
+            "text": "权重组件、PSU、分层、domain 和设计自由度？"
+          },
+          {
+            "key": "repeated-design",
+            "text": "重复 ID、时点及目标是哪个时点还是对象平均？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "joint-design-model",
+            "targetId": "marginal-mean-difference",
+            "basis": "方案须同时尊重调查设计和对象内相关。",
+            "conditions": [
+              "明确目标和联合方差方法；不能把普通 GEE 或 svyglm 直接视为已经解决两种结构"
+            ],
+            "diagnosticRequirements": [
+              "joint-variance",
+              "domain"
+            ]
+          },
+          {
+            "id": "survey-person-summary",
+            "targetId": "marginal-mean-difference",
+            "basis": "若目标确为每人预定汇总的均值差，可先按人汇总再做调查分析。",
+            "conditions": [
+              "汇总及缺失规则预定，明确可能改变目标；不冒充访视特异效应"
+            ],
+            "diagnosticRequirements": [
+              "summary-definition",
+              "domain"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-03-E1",
+            "description": "普通独立检验或只有权重的常规标准误",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-03-E2",
+            "description": "只给 GEE / svyglm 名称便宣称两种结构都解决",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "cdc",
+            "gee"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "weight-component",
+            "person-id",
+            "design-df",
+            "joint-variance"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [
+          "survey-design",
+          "repeated-design"
+        ],
+        "prohibitedMethodIds": [
+          "welch",
+          "ordinary-ols"
+        ]
+      },
+      "sourceStudyId": "fiction-survey-repeated"
+    },
+    {
+      "id": "H-04",
+      "familyId": "fiction-oncology-repeated",
+      "title": "重复测量与差异失访",
+      "tags": [
+        "repeated",
+        "missing"
+      ],
+      "input": {
+        "question": "虚构随机两组肿瘤教学设计，基线及 30/60/90 天生活质量评分。目标为随机组在 90 天的平均差；后两次失访较多，死亡者不再有评分。",
+        "known": {
+          "targetId": "mean-difference",
+          "unit": "person",
+          "dependence": "repeated",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "target",
+            "text": "死亡后的结局如何定义，目标人群 / 干预后事件策略？"
+          },
+          {
+            "key": "missing",
+            "text": "各组各访视缺失、死亡和原因，MAR 是否可辩护？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "mixed-continuous",
+            "targetId": "mean-difference",
+            "basis": "定义目标后，用组×访视及相关结构估计指定对比。",
+            "conditions": [
+              "随机效应与残差、MAR 及死亡策略须论证；不能因收敛就完成诊断"
+            ],
+            "diagnosticRequirements": [
+              "random-effects",
+              "residual",
+              "missing-sensitivity"
+            ]
+          },
+          {
+            "id": "weighted-gee",
+            "targetId": "mean-difference",
+            "basis": "明确边际目标及可辩护失访模型后讨论加权 GEE。",
+            "conditions": [
+              "普通 GEE 不自动解决差异失访；死亡后不存在评分不能随意插补"
+            ],
+            "diagnosticRequirements": [
+              "weight-model",
+              "missing-sensitivity"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-04-E1",
+            "description": "把所有行作独立观察",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-04-E2",
+            "description": "死亡和失访填零或声称收敛证明 MAR",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-04-E3",
+            "description": "忽略死亡后目标量问题",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "mixed",
+            "gee",
+            "mice",
+            "sampl"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "patient-visit-count",
+            "intercurrent-events",
+            "contrast",
+            "missing-rule"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [
+          "target"
+        ],
+        "prohibitedMethodIds": []
+      },
+      "sourceStudyId": "fiction-oncology-repeated"
+    },
+    {
+      "id": "H-05",
+      "familyId": "fiction-pregnancy-missing-covariate",
+      "title": "缺失协变量与调整依据",
+      "tags": [
+        "missing",
+        "adjustment"
+      ],
+      "input": {
+        "question": "虚构孕期队列：希望估计暴露与固定 28 天结局的 OR，预定协变量缺失 15%。同事建议全部填零并用单因素 P<0.05 选变量。已知每人一次测量；缺失原因与协变量角色未定。",
+        "known": {
+          "targetId": "odds-ratio",
+          "unit": "person",
+          "dependence": "independent",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "adjustment",
+            "text": "预定方案、领域与因果结构支持哪些变量？中介或碰撞变量？"
+          },
+          {
+            "key": "missing",
+            "text": "缺失模式、原因及可用辅助变量？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "multiple-imputation",
+            "targetId": "odds-ratio",
+            "basis": "论证插补条件、变量角色和分析模型相容性后讨论 MI。",
+            "conditions": [
+              "报告模型、合并规则、诊断与 MNAR 敏感性；不自动无偏"
+            ],
+            "diagnosticRequirements": [
+              "imputation",
+              "missing-sensitivity"
+            ]
+          },
+          {
+            "id": "observed-analysis",
+            "targetId": "odds-ratio",
+            "basis": "完整病例作为有假设约束的分析 / 敏感性方案。",
+            "conditions": [
+              "报告分母与选择机制；与全体目标联系须说明"
+            ],
+            "diagnosticRequirements": [
+              "selection",
+              "missing-pattern"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-05-E1",
+            "description": "填零等于处理缺失",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-05-E2",
+            "description": "单因素显著定义混杂",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-05-E3",
+            "description": "把 OR 写成风险比",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "mice",
+            "sampl"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "missing-count",
+            "adjustment-role",
+            "pooling",
+            "odds-scale"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [],
+        "prohibitedMethodIds": []
+      },
+      "sourceStudyId": "fiction-pregnancy-missing-covariate"
+    },
+    {
+      "id": "H-06",
+      "familyId": "fiction-competing-discharge",
+      "title": "院内死亡与出院竞争事件",
+      "tags": [
+        "survival",
+        "competing-risk"
+      ],
+      "input": {
+        "question": "虚构住院队列，起点入院；目标是 30 天内院内死亡的累计发生概率。出院存活后不再可能发生院内死亡，死亡 / 出院日期及状态可提供。",
+        "known": {
+          "targetId": "cumulative-incidence",
+          "unit": "person",
+          "dependence": "independent",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "event-definition",
+            "text": "转院、其他离院、行政删失和日期如何编码？"
+          },
+          {
+            "key": "comparison",
+            "text": "描述概率还是比较 / 调整关联，哪些预设变量？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "aalen-johansen",
+            "targetId": "cumulative-incidence",
+            "basis": "出院是竞争事件，估计死亡 CIF。",
+            "conditions": [
+              "核对多状态编码、删失、在险人数和预定时点"
+            ],
+            "diagnosticRequirements": [
+              "competing-state",
+              "risk-set"
+            ]
+          },
+          {
+            "id": "competing-risk-model",
+            "targetId": "cumulative-incidence",
+            "basis": "需要调整概率时讨论与 CIF 相容的模型和标准化。",
+            "conditions": [
+              "Fine–Gray 或原因别模型需说明尺度；亚分布 HR 和原因别 HR 本身不是风险比或 CIF"
+            ],
+            "diagnosticRequirements": [
+              "model-assumptions",
+              "cif-calibration"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-06-E1",
+            "description": "把出院删失后 1−KM 写成真实院内死亡累计发生概率",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-06-E2",
+            "description": "HR 当作 30 天风险比",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-06-E3",
+            "description": "普通二分类忽略不完整随访",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "survival",
+            "sampl"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "time-origin",
+            "competing-code",
+            "risk-set",
+            "horizon"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [],
+        "prohibitedMethodIds": [
+          "one-minus-km-as-cif"
+        ]
+      },
+      "sourceStudyId": "fiction-competing-discharge"
+    },
+    {
+      "id": "H-07",
+      "familyId": "fiction-readmission-prediction",
+      "title": "预测可用时点与患者划分",
+      "tags": [
+        "prediction-time",
+        "prediction"
+      ],
+      "input": {
+        "question": "虚构出院时预测 30 天再入院。患者可能多次住院，只有出院前变量可以用于该次预测。提议随机分割住院数据行，让同一患者同时进入训练和测试。",
+        "known": {
+          "targetId": "prediction",
+          "unit": "person",
+          "dependence": "repeated",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "validation",
+            "text": "按患者及时间划分如何避免重复身份或时间泄漏，部署人群是什么？"
+          },
+          {
+            "key": "events",
+            "text": "样本 / 再入院事件、失访和死者如何处理？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "penalized-prediction",
+            "targetId": "prediction",
+            "basis": "可用惩罚回归形成预定窗口风险预测。",
+            "conditions": [
+              "需训练内部处理与患者 / 时间验证，核查校准、判别及临床用途"
+            ],
+            "diagnosticRequirements": [
+              "patient-split",
+              "calibration",
+              "discrimination"
+            ]
+          },
+          {
+            "id": "validated-ml",
+            "targetId": "prediction",
+            "basis": "候选 ML 也须遵守相同预测设计与验证。",
+            "conditions": [
+              "调参、特征选择和插补只能在训练 / 重采样内部完成；不能保证优于回归"
+            ],
+            "diagnosticRequirements": [
+              "patient-split",
+              "time-leakage",
+              "calibration"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-07-E1",
+            "description": "同一患者训练测试交叉泄漏",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-07-E2",
+            "description": "用未来再入院信息预测",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-07-E3",
+            "description": "只报告训练准确率或 AUC 就宣称临床有效",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "tripod"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "available-at-index",
+            "horizon",
+            "patient-split",
+            "nested-preprocessing"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [],
+        "prohibitedMethodIds": []
+      },
+      "sourceStudyId": "fiction-readmission-prediction"
+    },
+    {
+      "id": "H-08",
+      "familyId": "fiction-cluster-rare-outbreak",
+      "title": "少聚类与稀疏事件",
+      "tags": [
+        "clustered",
+        "sparse"
+      ],
+      "input": {
+        "question": "虚构 8 个病区按病区随机分配预防方案，共 5 个感染事件。目标人群平均风险差，但聚类大小、分配限制和人群分母未说明。能否按所有患者独立 Logistic？",
+        "known": {
+          "targetId": "risk-difference",
+          "unit": "person",
+          "dependence": "clustered",
+          "sampling": "simple"
+        },
+        "dataScope": "项目模拟教学设计或既有许可公共数据汇总；无患者明细"
+      },
+      "reference": {
+        "review": {
+          "status": "pending-statistician-review",
+          "reviewer": null,
+          "reviewDate": null,
+          "adjudication": null
+        },
+        "mustAsk": [
+          {
+            "key": "cluster-design",
+            "text": "各病区人数、事件、分配方案 / 限制及独立聚类数？"
+          },
+          {
+            "key": "target",
+            "text": "患者平均还是病区平均风险差，如何加权？"
+          }
+        ],
+        "acceptablePlans": [
+          {
+            "id": "cluster-summary",
+            "targetId": "risk-difference",
+            "basis": "少量随机化聚类可讨论预定聚类汇总和设计相符推断。",
+            "conditions": [
+              "定义权重 / 目标；需极谨慎评估精度，不能按大量个体视为足够"
+            ],
+            "diagnosticRequirements": [
+              "cluster-leverage",
+              "small-cluster"
+            ]
+          },
+          {
+            "id": "randomization-inference",
+            "targetId": "risk-difference",
+            "basis": "按实际随机分配方案讨论随机化推断。",
+            "conditions": [
+              "需要分配机制与可检验目标；检验不自动提供所需效应 CI"
+            ],
+            "diagnosticRequirements": [
+              "assignment-support",
+              "small-cluster"
+            ]
+          }
+        ],
+        "severeErrors": [
+          {
+            "id": "H-08-E1",
+            "description": "普通个体 Logistic 当独立样本且写 RR / 风险差",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-08-E2",
+            "description": "忽略 8 聚类 / 5 事件的不稳定",
+            "humanReviewRequired": true
+          },
+          {
+            "id": "H-08-E3",
+            "description": "固定事件阈值保证分析足够",
+            "humanReviewRequired": true
+          }
+        ],
+        "citationRequirements": {
+          "sourceIds": [
+            "cluster",
+            "firth",
+            "sampl"
+          ],
+          "requirements": [
+            "逐项引用支持目标量、设计与限制的官方文档、方法论文或指南",
+            "提供题名、URL / DOI、支持的主张；打开来源核查，不能由模型自称引用已验证",
+            "方法 API 文档不能单独证明因果、缺失或总体推广条件"
+          ]
+        },
+        "calculationRequirements": {
+          "mode": "no-results-without-data",
+          "checks": [
+            "cluster-count",
+            "cluster-denominator",
+            "effect-scale",
+            "assignment"
+          ],
+          "numericTargets": [],
+          "requirements": [
+            "无原始输入或未运行时标为未计算；不编造效应、CI 或 P 值",
+            "核对分析单位、分母、比较方向、缺失、算法、版本及实际执行记录",
+            "同一论文的多个数值仍归于一个研究情境"
+          ]
+        },
+        "blockingQuestions": [
+          "cluster-design",
+          "target"
+        ],
+        "prohibitedMethodIds": [
+          "ordinary-logistic"
+        ]
+      },
+      "sourceStudyId": "fiction-cluster-rare-outbreak"
+    }
+  ]
+}

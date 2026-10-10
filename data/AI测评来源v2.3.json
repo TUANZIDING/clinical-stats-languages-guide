@@ -1,0 +1,148 @@
+{
+  "version": "2.3",
+  "checkedDate": "2026-10-09",
+  "scope": "已核查官方入口和方法主题；具体案例参考答案未经统计人员审阅。链接存在不证明每条方法主张已验证。",
+  "sources": [
+    {
+      "id": "stats",
+      "title": "R stats：t.test",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+      "scope": "均值差、Welch、配对与区间；不是选择方法的完整依据",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "mcnemar",
+      "title": "R stats：mcnemar.test",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/mcnemar.test.html",
+      "scope": "配对分类表；R 此接口为近似检验，精确方案需另核查",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "cdc",
+      "title": "CDC NHANES：方差估计",
+      "url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx",
+      "scope": "权重、分层、PSU、子总体与方差",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "mixed",
+      "title": "lme4：glmer",
+      "url": "https://lme4.github.io/lme4/reference/glmer.html",
+      "scope": "相关结构、条件均值、优化与积分算法",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "gee",
+      "title": "geepack 官方手册",
+      "url": "https://cran.r-project.org/web/packages/geepack/geepack.pdf",
+      "scope": "GEE 接口、对象 ID 与相关结构；缺失假设另论证",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "mice",
+      "title": "mice 官方接口",
+      "url": "https://amices.org/mice/reference/mice.html",
+      "scope": "多重插补实现；MAR、模型与敏感性仍需论证",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "survival",
+      "title": "survival：竞争风险与多状态",
+      "url": "https://cran.r-project.org/web/packages/survival/vignettes/compete.pdf",
+      "scope": "KM、Cox、多状态与竞争风险目标的区别",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "tripod",
+      "title": "TRIPOD+AI 报告规范入口",
+      "url": "https://www.tripod-statement.org/",
+      "scope": "预测设计、数据来源、验证和透明报告",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "firth",
+      "title": "logistf 官方手册",
+      "url": "https://cran.r-project.org/web/packages/logistf/logistf.pdf",
+      "scope": "Firth 修正与分离；不保证稀疏数据足够",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "cluster",
+      "title": "Cochrane：聚类随机试验",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-23",
+      "scope": "聚类分配单位、相关性及小聚类数限制",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "sampl",
+      "title": "SAMPL 报告指南",
+      "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+      "scope": "效应、区间、方法与分母报告",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "nhanes-paper",
+      "title": "Nickels 2019 论文",
+      "url": "https://doi.org/10.1371/journal.pone.0211196",
+      "scope": "既有 NHANES 限定复现，不是整篇论文复现",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "medplot-paper",
+      "title": "Ahlin 2015 论文",
+      "url": "https://doi.org/10.1371/journal.pone.0121760",
+      "scope": "既有重复访视复现，保留 22 一致 / 5 差异",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "promptfoo",
+      "title": "Promptfoo 配置",
+      "url": "https://www.promptfoo.dev/docs/configuration/reference/",
+      "scope": "cases / vars / assert / providerOutput / 自定义 -c 路径",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "promptfoo-js",
+      "title": "Promptfoo JavaScript 断言",
+      "url": "https://www.promptfoo.dev/docs/configuration/expected-outputs/javascript/",
+      "scope": "文件回调和 pass / score / reason 接口",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "promptfoo-echo",
+      "title": "Promptfoo Echo",
+      "url": "https://www.promptfoo.dev/docs/providers/echo/",
+      "scope": "回显或核对既有输出，不调用模型 API",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "lm",
+      "title": "R stats：lm",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html",
+      "scope": "线性模型与组别均值对比；异方差推断需要额外方差方案",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "clogit",
+      "title": "R survival：clogit",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/survival/html/clogit.html",
+      "scope": "匹配组条件 Logistic 和条件似然接口",
+      "citationSupportReview": "pending-statistician-review"
+    },
+    {
+      "id": "exact-binomial",
+      "title": "R stats：binom.test",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/binom.test.html",
+      "scope": "不一致配对条件下的精确二项检验；不是配对比例差 CI 接口",
+      "citationSupportReview": "pending-statistician-review"
+    }
+  ],
+  "upstream": {
+    "project": "promptfoo/promptfoo",
+    "version": "0.124.1",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/promptfoo/promptfoo/blob/main/LICENSE",
+    "npmIntegrity": "sha512-Y6fq/WGTL7lPvDsirNSmmmcPLhURwRao03iv8fCoLbFq6H1eqg5VVTmXiap5Jl+fiRaQQZXYMHb2N1gQm1tGyQ==",
+    "use": "借鉴案例、断言和比较接口；测评器及案例原创，不复制上游实现。工具安装仅在忽略目录，保留其许可。"
+  }
+}

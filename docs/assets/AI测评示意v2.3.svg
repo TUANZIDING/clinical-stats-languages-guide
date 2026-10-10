@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="530" viewBox="0 0 1120 530" role="img" aria-labelledby="title desc">
+  <title id="title">统计选择 AI 测评 v2.3：案例、断言与审阅</title>
+  <desc id="desc">十个调试情境与八个保留情境按研究分开冻结。手写样例用于检查断言。真实模型、参考答案和科学判断仍待审阅与验证，不能给出 AI 正确率。</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b182a"/><stop offset="1" stop-color="#112b37"/></linearGradient></defs>
+  <rect width="1120" height="530" rx="24" fill="url(#bg)"/>
+  <g font-family="system-ui, sans-serif" fill="#edf6f6">
+    <text x="44" y="57" font-size="29" font-weight="700">统计选择 AI · 测评框架 v2.3</text>
+    <text x="44" y="92" font-size="17" fill="#b5ccd1">先核查信息与设计，再评价依据；本轮没有模型调用或 AI 正确率</text>
+    <rect x="44" y="126" width="300" height="109" rx="15" fill="#18483f" stroke="#74d6b8"/>
+    <text x="65" y="161" font-size="22" font-weight="700">调试集 · 10 个情境</text>
+    <text x="65" y="193" font-size="17">可用于调整提示词</text>
+    <text x="65" y="219" font-size="15" fill="#b9d6ce">手写样例只检验断言行为</text>
+    <rect x="44" y="258" width="300" height="112" rx="15" fill="#23354d" stroke="#90b5eb"/>
+    <text x="65" y="295" font-size="22" font-weight="700">保留集 · 8 个情境</text>
+    <text x="65" y="327" font-size="17">冻结提示词后再用</text>
+    <text x="65" y="353" font-size="15" fill="#c7d7ec">公开保留集不是秘密盲测</text>
+    <path d="M360 235h40m-13-9 13 9-13 9 M705 235h40m-13-9 13 9-13 9" fill="none" stroke="#8ad7cf" stroke-width="3"/>
+    <rect x="415" y="126" width="278" height="244" rx="15" fill="#173647" stroke="#70cad6"/>
+    <text x="437" y="161" font-size="22" font-weight="700">离线契约断言</text>
+    <text x="437" y="200" font-size="17">格式 · 必问 key · 设计</text>
+    <text x="437" y="235" font-size="17">来源身份 · 数值与方向</text>
+    <text x="437" y="274" font-size="17" fill="#ffe0a1">可以发现部分错误</text>
+    <text x="437" y="309" font-size="17" fill="#ffe0a1">无法证明理由与引用成立</text>
+    <text x="437" y="345" font-size="16">按研究情境计数，保留差异</text>
+    <rect x="758" y="126" width="318" height="244" rx="15" fill="#40372e" stroke="#e6c796"/>
+    <text x="780" y="161" font-size="22" font-weight="700">统计人员审阅 · 待完成</text>
+    <text x="780" y="200" font-size="17">目标量与候选方案是否合理</text>
+    <text x="780" y="235" font-size="17">逐项核查严重错误与引用</text>
+    <text x="780" y="270" font-size="17">计算证据、分歧和裁定记录</text>
+    <text x="780" y="308" font-size="17" fill="#ffe0a1">18 条参考答案均未获审阅</text>
+    <text x="780" y="345" font-size="16">自动分数不替代科学判断</text>
+    <path d="M44 400h1032" stroke="#496672"/>
+    <text x="44" y="438" font-size="20" font-weight="700">工程检查 ≠ 数值重跑 ≠ 方法学认可 ≠ AI 实测 ≠ 真人试用</text>
+    <text x="44" y="478" font-size="17" fill="#b5ccd1">同一论文的多个数字和多个输出，仍只算一个研究情境。</text>
+  </g>
+</svg>
