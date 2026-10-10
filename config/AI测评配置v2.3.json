@@ -1,0 +1,18 @@
+{
+  "version": "2.3",
+  "tuningCases": "data/AI调试案例v2.3.json",
+  "holdoutCases": "data/AI保留案例v2.3.json",
+  "sources": "data/AI测评来源v2.3.json",
+  "freeze": "data/AI案例冻结v2.3.json",
+  "prompt": "templates/AI测评提示词v2.3.md",
+  "fixtures": "data/AI断言样例v2.3.json",
+  "mechanicalThreshold": 80,
+  "weights": {"format": 10, "clarifications": 25, "design": 20, "candidateMetadata": 15, "citationMetadata": 10, "calculationContract": 20},
+  "modelCalls": "disabled",
+  "gradingModel": "disabled",
+  "accuracyAggregation": "disabled",
+  "unitOfEvaluation": "sourceStudyId",
+  "defaultSplit": "tuning",
+  "holdoutPolicy": "never use for prompt adjustment; public and reviewable, not a confidential blind set",
+  "reportBoundary": "mechanical assertions only; scientific judgement and citation support pending human review"
+}

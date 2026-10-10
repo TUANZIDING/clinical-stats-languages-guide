@@ -1,0 +1,579 @@
+{
+  "version": "2.3",
+  "kind": "assertion-fixtures-not-model-outputs",
+  "modelCalls": 0,
+  "warning": "实现者手写的固定断言样例；不表示 AI 表现或经统计人员批准的参考答案。",
+  "records": [
+    {
+      "id": "F-01",
+      "caseId": "T-02",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": true,
+      "purpose": "引用既有均值结果；不是本轮计算",
+      "output": {
+        "caseId": "T-02",
+        "decision": "conditional-candidates",
+        "targetId": "mean-difference",
+        "unit": "person",
+        "dependence": "independent",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "distribution",
+            "text": "请查看组别图形、极端值及有限值。",
+            "why": "不能用正态性 P 值取代结构和目标判断。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "welch",
+            "targetId": "mean-difference",
+            "rationale": "估计 A−B 的未调整总体均值差，独立设计不要求等方差。",
+            "direction": "A-B",
+            "provisional": true,
+            "conditions": [
+              "教学独立性由设计声明，需核对异常值和数据质量；不是临床疗效证明。"
+            ],
+            "diagnostics": [
+              "distribution",
+              "independence"
+            ],
+            "citationIds": [
+              "stats",
+              "sampl"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "Welch、方向和双侧区间接口。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "sampl",
+            "title": "SAMPL 报告指南",
+            "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+            "claim": "效应和区间以及分析分母需报告。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "reported-from-source",
+          "checks": [
+            "direction",
+            "denominator",
+            "ci-algorithm",
+            "source-version"
+          ],
+          "values": [
+            {
+              "key": "difference",
+              "value": 8.083333333333329,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_low",
+              "value": 2.8083940103801677,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_high",
+              "value": 13.35827265628649,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            }
+          ]
+        },
+        "warnings": [
+          "引用已保存的模拟结果，本轮没有执行统计代码；来源及科学适用性仍需人工核查。"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "caseId": "T-02",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": true,
+      "purpose": "不同候选保留均值目标；具体条件仍待人工评价",
+      "output": {
+        "caseId": "T-02",
+        "decision": "conditional-candidates",
+        "targetId": "mean-difference",
+        "unit": "person",
+        "dependence": "independent",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "distribution",
+            "text": "请查看组别图形、极端值及有限值。",
+            "why": "不能用正态性 P 值取代结构和目标判断。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "mean-regression",
+            "targetId": "mean-difference",
+            "rationale": "仅组别的线性模型表达同一均值对比；需论证异方差处理，不能把不同区间自动称为 Welch。",
+            "direction": "A-B",
+            "provisional": true,
+            "conditions": [
+              "条件均值与工作方差 / 区间须另核查；不按单因素 P 值调整。"
+            ],
+            "diagnostics": [
+              "residual",
+              "variance"
+            ],
+            "citationIds": [
+              "lm",
+              "sampl"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "Welch、方向和双侧区间接口。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "sampl",
+            "title": "SAMPL 报告指南",
+            "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+            "claim": "效应和区间以及分析分母需报告。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "lm",
+            "title": "R stats：lm",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html",
+            "claim": "线性模型的组别均值对比接口；异方差推断条件需另论证。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "not-run",
+          "checks": [
+            "direction",
+            "denominator",
+            "ci-algorithm",
+            "source-version"
+          ],
+          "values": []
+        },
+        "warnings": [
+          "这是另一种有条件的讨论；没有实际拟合回归，来源对该具体方法的支持待统计人员审阅。"
+        ]
+      }
+    },
+    {
+      "id": "F-03",
+      "caseId": "T-03",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": true,
+      "purpose": "保留配对并追问完整对和差值",
+      "output": {
+        "caseId": "T-03",
+        "decision": "conditional-candidates",
+        "targetId": "mean-change",
+        "unit": "person",
+        "dependence": "paired",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "complete-pairs",
+            "text": "完整配对数及缺失原因？",
+            "why": "30 个对象不保证 30 个完整对。"
+          },
+          {
+            "key": "difference-shape",
+            "text": "逐对差值图形及异常值？",
+            "why": "推断平均变化的条件要在差值上讨论。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "paired-t",
+            "targetId": "mean-change",
+            "rationale": "在患者的第 7 天−基线差值上推断总体平均变化。",
+            "direction": "day7-baseline",
+            "provisional": true,
+            "conditions": [
+              "对象间独立、差值推断条件与完整配对分析假设仍需核查。"
+            ],
+            "diagnostics": [
+              "difference-shape",
+              "pair-id"
+            ],
+            "citationIds": [
+              "stats"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "配对接口和配对缺失处理。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "not-run",
+          "checks": [
+            "pair-id",
+            "complete-pairs",
+            "direction"
+          ],
+          "values": []
+        },
+        "warnings": [
+          "未提供实际评分值，不计算 P 值；前后变化不自动构成因果治疗效果。"
+        ]
+      }
+    },
+    {
+      "id": "F-04",
+      "caseId": "T-03",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": false,
+      "purpose": "方法 ID 与配对结构冲突",
+      "output": {
+        "caseId": "T-03",
+        "decision": "conditional-candidates",
+        "targetId": "mean-change",
+        "unit": "person",
+        "dependence": "paired",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "complete-pairs",
+            "text": "完整配对数及缺失原因？",
+            "why": "30 个对象不保证 30 个完整对。"
+          },
+          {
+            "key": "difference-shape",
+            "text": "逐对差值图形及异常值？",
+            "why": "推断平均变化的条件要在差值上讨论。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "welch",
+            "targetId": "mean-change",
+            "rationale": "忽略同一人的关联，按两个独立样本比较。",
+            "direction": "day7-baseline",
+            "provisional": true,
+            "conditions": [
+              "对象间独立、差值推断条件与完整配对分析假设仍需核查。"
+            ],
+            "diagnostics": [
+              "difference-shape",
+              "pair-id"
+            ],
+            "citationIds": [
+              "stats"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "配对接口和配对缺失处理。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "not-run",
+          "checks": [
+            "pair-id",
+            "complete-pairs",
+            "direction"
+          ],
+          "values": []
+        },
+        "warnings": [
+          "未提供实际评分值，不计算 P 值；前后变化不自动构成因果治疗效果。"
+        ]
+      }
+    },
+    {
+      "id": "F-05",
+      "caseId": "T-02",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": false,
+      "purpose": "故意调换效应符号，冻结目标不变",
+      "output": {
+        "caseId": "T-02",
+        "decision": "conditional-candidates",
+        "targetId": "mean-difference",
+        "unit": "person",
+        "dependence": "independent",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "distribution",
+            "text": "请查看组别图形、极端值及有限值。",
+            "why": "不能用正态性 P 值取代结构和目标判断。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "welch",
+            "targetId": "mean-difference",
+            "rationale": "估计 A−B 的未调整总体均值差，独立设计不要求等方差。",
+            "direction": "A-B",
+            "provisional": true,
+            "conditions": [
+              "教学独立性由设计声明，需核对异常值和数据质量；不是临床疗效证明。"
+            ],
+            "diagnostics": [
+              "distribution",
+              "independence"
+            ],
+            "citationIds": [
+              "stats",
+              "sampl"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "Welch、方向和双侧区间接口。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "sampl",
+            "title": "SAMPL 报告指南",
+            "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+            "claim": "效应和区间以及分析分母需报告。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "reported-from-source",
+          "checks": [
+            "direction",
+            "denominator",
+            "ci-algorithm",
+            "source-version"
+          ],
+          "values": [
+            {
+              "key": "difference",
+              "value": -8.083333333333329,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_low",
+              "value": 2.8083940103801677,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_high",
+              "value": 13.35827265628649,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            }
+          ]
+        },
+        "warnings": [
+          "引用已保存的模拟结果，本轮没有执行统计代码；来源及科学适用性仍需人工核查。"
+        ]
+      }
+    },
+    {
+      "id": "F-06",
+      "caseId": "T-02",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": false,
+      "purpose": "来源 ID 与 URL 不符",
+      "output": {
+        "caseId": "T-02",
+        "decision": "conditional-candidates",
+        "targetId": "mean-difference",
+        "unit": "person",
+        "dependence": "independent",
+        "sampling": "simple",
+        "questions": [
+          {
+            "key": "distribution",
+            "text": "请查看组别图形、极端值及有限值。",
+            "why": "不能用正态性 P 值取代结构和目标判断。"
+          }
+        ],
+        "candidates": [
+          {
+            "methodId": "welch",
+            "targetId": "mean-difference",
+            "rationale": "估计 A−B 的未调整总体均值差，独立设计不要求等方差。",
+            "direction": "A-B",
+            "provisional": true,
+            "conditions": [
+              "教学独立性由设计声明，需核对异常值和数据质量；不是临床疗效证明。"
+            ],
+            "diagnostics": [
+              "distribution",
+              "independence"
+            ],
+            "citationIds": [
+              "stats",
+              "sampl"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://example.invalid/fake-method",
+            "claim": "Welch、方向和双侧区间接口。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "sampl",
+            "title": "SAMPL 报告指南",
+            "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+            "claim": "效应和区间以及分析分母需报告。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "reported-from-source",
+          "checks": [
+            "direction",
+            "denominator",
+            "ci-algorithm",
+            "source-version"
+          ],
+          "values": [
+            {
+              "key": "difference",
+              "value": 8.083333333333329,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_low",
+              "value": 2.8083940103801677,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            },
+            {
+              "key": "ci_high",
+              "value": 13.35827265628649,
+              "sourcePath": "data/expected-results.json",
+              "sourceSha256": "7e874697b7033dbcc48ad470de87e7d0ab43d3652a312039848a265bf33d2f89",
+              "direction": "A-B",
+              "algorithm": "Welch / two-sided / 95% CI"
+            }
+          ]
+        },
+        "warnings": [
+          "引用已保存的模拟结果，本轮没有执行统计代码；来源及科学适用性仍需人工核查。"
+        ]
+      }
+    },
+    {
+      "id": "F-07",
+      "caseId": "T-01",
+      "origin": "developer-authored-fixture",
+      "modelId": null,
+      "expectedAutomatedPass": false,
+      "purpose": "信息不足却补成独立样本且不追问",
+      "output": {
+        "caseId": "T-01",
+        "decision": "conditional-candidates",
+        "targetId": "mean-difference",
+        "unit": "person",
+        "dependence": "independent",
+        "sampling": "simple",
+        "questions": [],
+        "candidates": [
+          {
+            "methodId": "welch",
+            "targetId": "mean-difference",
+            "rationale": "估计 A−B 的未调整总体均值差，独立设计不要求等方差。",
+            "direction": "A-B",
+            "provisional": true,
+            "conditions": [
+              "教学独立性由设计声明，需核对异常值和数据质量；不是临床疗效证明。"
+            ],
+            "diagnostics": [
+              "distribution",
+              "independence"
+            ],
+            "citationIds": [
+              "stats",
+              "sampl"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "sourceId": "stats",
+            "title": "R stats：t.test",
+            "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html",
+            "claim": "Welch、方向和双侧区间接口。",
+            "status": "provided-unverified"
+          },
+          {
+            "sourceId": "sampl",
+            "title": "SAMPL 报告指南",
+            "url": "https://www.equator-network.org/reporting-guidelines/sampl/",
+            "claim": "效应和区间以及分析分母需报告。",
+            "status": "provided-unverified"
+          }
+        ],
+        "calculation": {
+          "status": "not-run",
+          "checks": [
+            "design",
+            "denominator",
+            "no-fabrication"
+          ],
+          "values": []
+        },
+        "warnings": [
+          "信息未知但已经指定独立方法；这是故意错误的框架样例。"
+        ]
+      }
+    }
+  ]
+}

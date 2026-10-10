@@ -24,6 +24,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y r-base libboost-dev
       - name: Check method rules
         run: npm test
+      - name: Check offline AI evaluation contracts and intentional failures (no model calls)
+        run: npm run eval:offline
       - name: Check clinical reporting and R cross-check
         run: python tests/clinical-reportv2.0.py
       - name: Check published-paper aggregate snapshot against frozen targets
@@ -62,3 +64,8 @@ jobs:
           node --check docs/assets/纵向论文视图v2.2.js
           node --check docs/assets/clinical-resultsv2.0.js
           node --check docs/assets/paper-checkv2.1.js
+          node --check scripts/AI测评引擎v2.3.cjs
+          node --check scripts/AI离线测评v2.3.cjs
+          node --check scripts/Promptfoo断言v2.3.cjs
+          node --check scripts/Promptfoo结果核查v2.3.cjs
+          node --check tests/AI测评测试v2.3.cjs
